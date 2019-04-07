@@ -1,0 +1,193 @@
+
+// ----------------------------------------------------------------------------
+// 弶婜忬懺                                                                    
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	BGM(4,0,0)
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1814)
+	ON_SKIP(2)
+	KAGI("d1814",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1814")
+
+	SET_MOTION("switch","HOOK",0)
+	HIDE_CHR("gate")
+	HIDE_CHR("switch")
+	HIDE_CHR("wall2")
+
+	//僄儗儀乕僞傪尒偣傞偐偳偆偐
+	CHECK_GAME_FLAG(805)
+	OFF_JUMP NEXT2
+	SHOW_CHR("gate")
+	SHOW_CHR("switch")
+	SHOW_CHR("wall2")
+
+
+NEXT2:
+	CHECK_ENTRY_GATE("0861_0097")
+	OFF_JUMP NEXT3
+
+	CINEMA_OFF(0)
+
+//	FADE_IN(-1)
+	GAME_FLAG_OFF(3000)
+
+	CHECK_GAME_FLAG(812)
+	ON_JUMP NEXT4
+	// 僄儕傾僱乕儉昞帵
+//	DISP_PLACE(3)
+//	ENTRY_IMG(0,"AREANAME02",0)
+//		// 兛偑'1'偺帪偼'壛嶼儌乕僪'側偺偱乽摟柧乿偵偡傞帪偼丄
+//		// 僨傿僼儏乕僘傪'0x00ffffff'偱偼側偔'0xff000000'偲偟側偄偲偄偗側偄偺僨僗丅
+//		//  教咦材 昞帵埵抲 Tex TX  TY  TW  TH 兛 僨傿僼儏乕僘 僗儁僉儏儔 奼戝 夞 拞 Fit
+//		SET_IMG( 0, 192,166, 0,  0, 96,255, 48, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+//		SET_IMG( 2, 192,166, 0,  0,144,255, 48, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+//		SET_IMG( 1, 224,206, 0,  0,224,255, 16, 1, 0xff000000, 0xff000000, 0,1, 0, 0,1)
+//		SET_IMG( 3, 192,206, 0,  0,240,255, 16, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+//		IMG_ON(0)
+//		IMG_ON(1)
+//		IMG_ON(2)
+//		IMG_ON(3)
+//
+//		// 敪惗傑偱偵'娫'偑梸偟偄応崌偼偙傫側晽偵偟傑偡丅
+//		SUSPEND_IMG(0,60)
+//		SUSPEND_IMG(1,30)
+//		SUSPEND_IMG(2,180)
+//		SUSPEND_IMG(3,180)
+//
+//		// 僼僃乕僪僀儞
+//		COLOR_IMG    (0, 0xffffffff, 0xff000000, 60, 1)
+//		COLOR_IMG_EX (2, 0xffffffff, 0xff000000, 15, 1, 0, 1, 1)
+//		COLOR_IMG    (1, 0xffffffff, 0xff000000, 10, 1)
+//		SCALE_IMG    (1, 0.75,1,                 30, 1)
+//		COLOR_IMG_EX (3, 0xffffffff, 0xff000000, 15, 1, 0, 1, 1)
+//
+//		// 120僼儗屻偵巜掕偟偨RES偵旘偽偟丄偦偙偱幭傞側傝從偔側傝岲偒偵弌棃傑偡丅
+//		TIMER_IMG(0,120,"kesu")
+
+	END
+NEXT3:
+	FADE_IN(-1)
+	CINEMA_OFF(0)
+	END
+NEXT4:
+	GAME_FLAG_OFF(812)
+	END
+
+}
+
+// 儅僢僾柤徚偡偧--------------------------------------------------------------
+//		DEF("kesu")
+//		RES("IMG")
+//		{
+//			COLOR_IMG(0, 0xff000000, 0xff000000, 15, 1)
+//			COLOR_IMG(1, 0xff000000, 0xff000000, 15, 1)
+//
+//			CINEMA_OFF(0)
+//			END
+//		}
+
+
+// ----------------------------------------------------------------------------
+// 僇僊奐偗
+// ----------------------------------------------------------------------------
+
+DEF("d1814")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1814)
+}
+
+
+// ----------------------------------------------------------------------------
+// 徃崀婡
+// ----------------------------------------------------------------------------
+
+DEF("switch")
+
+RES("CLICK")
+{
+SEL("#C1升降机|#C2　拉动拉杆　|取消")
+	check_select(0)
+	on_jump SW_MOVE
+	END
+
+SW_MOVE:
+
+	GAME_FLAG_ON(3000)
+
+
+	SWITCH_OFF("switch")
+	WAIT(60)
+	CINEMA_ON(0)
+	STOP_PC(0)
+	WAIT(30)
+	SHAKE(0,5)
+
+	SE("SE_ELEV1")
+
+	WAIT(60)
+
+	SET_MOTION("gate","EMPTY2",0)
+
+	SE("SE_ELEV2")
+
+	MOVE_VEC("gate",0,10,0,360)
+	MOVE_VEC("switch",0,10,0,360)
+
+	QUAKE(1,1,120)
+	WAIT(60)
+	FADE_OUT(-1)
+	WAIT(60)
+//仸僄儗儀乕僞偵堦搙偱傕忔偭偨傜偳偪傜偐傜偱傕忔傟傞傛偆偵偟偰傒偨丅
+//	GAME_FLAG_OFF(805)
+	ENTRY_MAP("0855_0861t")
+
+END
+}
+
+
+// ----------------------------------------------------------------------------
+// 栧(exit)
+// ----------------------------------------------------------------------------
+
+DEF("gate")
+RES("CLICK")
+{
+	CINEMA_ON(0)
+
+	STOP_PC(0)
+	ACTIVE_CHR("SCREEN")
+SEL("　要返回镇上吗？　|#C2返回|取消")
+
+	CHECK_SELECT(0)
+	ON_JUMP SEL1
+	JUMP SEL2
+
+SEL1:
+	WAIT(30)
+	SWITCH_ON("gate")
+	FADE_OUT(-1)
+	GAME_FLAG_ON(3000)
+	WAIT(40)
+	SE("SE_CHG_AREA")
+	WAIT(20)
+	ENTRY_MAP("0097_0861")
+
+SEL2:
+	CINEMA_OFF(0)
+	END
+}
+
+RES("INIT")
+{
+	// 儅僢僾偺夞揮妏搙傪嫮惂曄峏乮強梫帪娫 1 僼儗乕儉偱曽岦 6 偵夞揮乯
+	RESET_MAP_ROT_Y(7,1)
+}
+

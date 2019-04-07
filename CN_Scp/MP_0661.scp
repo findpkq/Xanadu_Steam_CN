@@ -1,0 +1,92 @@
+
+// ----------------------------------------------------------------------------
+// マップ初期化                                                                
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	// ウィルススライム
+	put_monster("m00",178,18,0,0,0)
+	put_monster("m01",178,18,0,0,1)
+	put_monster("m02",178,18,0,0,2)
+	put_monster("m03",178,18,0,0,3)
+	put_monster("m04",178,18,0,0,4)
+	put_monster("m05",178,18,0,0,5)
+	put_monster("m06",178,18,0,0,6)
+	put_monster("m07",178,18,0,0,7)
+	put_monster("m08",178,18,0,0,8)
+
+	// カギ設定
+	CHECK_GAME_FLAG(1671)
+	ON_SKIP(2)
+	KAGI("d1671",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1671")
+
+	// カギ設定
+	CHECK_GAME_FLAG(1672)
+	ON_SKIP(2)
+	KAGI("d1672",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1672")
+
+	// カギ設定
+	CHECK_GAME_FLAG(1673)
+	ON_SKIP(2)
+	KAGI("d1673",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1673")
+
+	// カギ設定
+	CHECK_GAME_FLAG(1676)
+	ON_SKIP(2)
+	KAGI("d1676",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1676")
+
+	// カギ設定
+	CHECK_GAME_FLAG(1677)
+	ON_SKIP(2)
+	KAGI("d1677",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1677")
+}
+
+
+// ----------------------------------------------------------------------------
+// カギ開け
+// ----------------------------------------------------------------------------
+
+DEF("d1671")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1671)
+}
+
+DEF("d1672")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1672)
+}
+
+DEF("d1673")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1673)
+}
+
+DEF("d1676")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1676)
+}
+
+DEF("d1677")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1677)
+}
+
+

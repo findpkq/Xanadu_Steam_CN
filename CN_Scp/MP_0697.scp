@@ -1,0 +1,90 @@
+
+// ----------------------------------------------------------------------------
+// マップ初期化時にボスパーツを全部読み込む                                                                      
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+RES("INIT")
+{
+
+	// コア
+	load_chr("M_0322\ARM_322a",0)
+	// ＤＳ
+	load_chr("M_0322\ARM_322b",1)
+	// ヒットマップ
+	load_chr("M_0322\M_0322h",8)
+	set_collision_obj("body",8)
+	
+	
+	lock_camera("ボス戦")
+//	set_scroll_rect(-5,-5, 5,25)
+	set_scroll_rect(-0,-2.5, 0,15)
+//	reset_map_rot_y(0,1)
+
+// ＨＰリンク設定
+link_hp_chr("core","body")
+	
+	// ビット隠す（呼び出しはプログラム側でやる）
+	hide_chr("bit1")
+	hide_chr("bit2")
+	hide_chr("bit3")
+	hide_chr("bit4")
+}
+
+
+// コア //////////////////////////////////////////////////////////////////////
+DEF("core")
+
+RES("INIT")
+{
+	// ＰＣをa10の足場に置く
+//	set_pos("PC",13.35,0,13.35)
+//	set_deg_ex("PC","body")
+
+//	set_collision_obj("body",8)
+//	disp_hp_bar("core")
+//	QUAKE(3,2,400)
+//	bgm(18,0,-1)
+
+
+}
+
+
+
+RES("KILL")
+{
+	
+}
+
+
+
+
+
+
+
+// 胴体 //////////////////////////////////////////////////////////////////////
+
+DEF("body")
+
+RES("KILL")
+{
+	stop_pc(0)
+	set_motion("body","DYING",0)
+	delete_efc("body")
+	delete_efc("core")
+	delete_efc("bit1")
+	delete_efc("bit2")
+	delete_efc("bit3")
+	delete_efc("bit4")
+
+	kill_chr("body",0,1,120)
+	kill_chr("core",0,1,120)
+
+	kill_chr("bit1",0,1,120)
+	kill_chr("bit2",0,1,120)
+	kill_chr("bit3",0,1,120)
+	kill_chr("bit4",0,1,120)
+
+	wait(120)
+}
+

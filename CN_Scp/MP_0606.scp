@@ -1,0 +1,138 @@
+
+// ----------------------------------------------------------------------------
+// 儅僢僾弶婜壔                                                                
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	// 僑僽儕儞僔儍乕儅儞
+	put_monster("m00",402,16,0,0,0)
+	put_monster("m01",402,16,0,0,1)
+	put_monster("m02",402,16,0,0,2)
+	put_monster("m03",402,16,0,0,3)
+	// 僑僽儕儞僸乕儔乕
+	put_monster("m04",540,16,0,0,4)
+	put_monster("m05",540,16,0,0,5)
+	put_monster("m06",540,16,0,0,6)
+
+	// 愇憸巊梡嵪傒側傜柧柵傾僯儊傪巭傔偰偍偔
+	check_game_flag(3949)
+	off_skip 1
+	room_flag_on(253)
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1610)
+	ON_SKIP(2)
+	KAGI("d1610",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1610")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1611)
+	ON_SKIP(2)
+	KAGI("d1611",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1611")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1612)
+	ON_SKIP(2)
+	KAGI("d1612",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1612")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1624)
+	ON_SKIP(2)
+	KAGI("d1624",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1624")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1625)
+	ON_SKIP(2)
+	KAGI("d1625",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1625")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1626)
+	ON_SKIP(2)
+	KAGI("d1626",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1626")
+}
+
+
+// ----------------------------------------------------------------------------
+// 僇僊奐偗
+// ----------------------------------------------------------------------------
+
+DEF("d1610")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1610)
+}
+
+DEF("d1611")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1611)
+}
+
+DEF("d1612")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1612)
+}
+
+DEF("d1624")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1624)
+}
+
+DEF("d1625")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1625)
+}
+
+DEF("d1626")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1626)
+}
+
+
+// ----------------------------------------------------------------------------
+// 愇憸偺儕傾僋僔儑儞
+// ----------------------------------------------------------------------------
+DEF("Statue")
+RES("CLICK")
+{
+	check_game_flag(3949)
+	on_jump no_res
+
+	check_spirit_lv_max(0)
+	on_jump max_lv
+
+	// 傑偩LV偑忋偘傜傟傞側傜儗儀儖傾僢僾
+	room_flag_on(253)
+	attach_efc("EFC_SPIRIT_LVUP2","Statue","POS")
+	wait(50)
+	spirit_lv_up( 1 )
+SYS_EX("守护精灵等级上升1级！",-1,0X00000200)
+	game_flag_on(3949)
+	end
+
+max_lv:
+SYS("现在寄宿中的守护精灵|已经不能再升级。")
+	end
+
+no_res:
+SYS("好像没有任何反应。")
+	end
+}

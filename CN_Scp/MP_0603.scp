@@ -1,0 +1,376 @@
+
+// ----------------------------------------------------------------------------
+// 儅僢僾弶婜壔                                                                
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	HIDE_CHR("Liese")
+	// 惓柺斷偺尞偼偁偗偰偟傑偆
+	GAME_FLAG_ON(1600)
+	HIDE_CHR("d1600")
+
+	// 僀乕價儖傾僀
+	put_monster("m00",404,16,0,0,0)
+	put_monster("m01",404,16,0,0,1)
+	put_monster("m02",404,16,0,0,2)
+	put_monster("m03",404,16,0,0,3)
+	put_monster("m04",404,16,0,0,4)
+	// 僉儅僀儔
+	put_monster("m05",406,16,0,0,5)
+	put_monster("m06",406,16,0,0,6)
+	put_monster("m07",406,16,0,0,7)
+	// 僉儅僀儔
+	put_monster("m08",406,16,0,0,8)
+	put_monster("m09",406,16,0,0,9)
+	put_monster("m10",406,16,0,0,10)
+	put_monster("m11",406,16,0,0,11)
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1600)
+	ON_SKIP(2)
+	KAGI("d1600",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1600")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1601)
+	ON_SKIP(2)
+	KAGI("d1601",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1601")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1608)
+	ON_SKIP(2)
+	KAGI("d1608",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1608")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1609)
+	ON_SKIP(2)
+	KAGI("d1609",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1609")
+
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1615)
+	ON_SKIP(2)
+	KAGI("d1615",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1615")
+
+	// 悈栧奐偒屻乮亀奼挘僷僢僋亁偺帪偩偗偙偺晹壆偵捛壛僟儞僕儑儞傊偺擖傝岥傪嶌傞乯
+	check_expansion_pack(0)
+	off_jump DANGEON
+	CHECK_GAME_FLAG(643)
+	OFF_JUMP DANGEON
+	EFC("EFC_WARP_MX",0,7.4,16.25)
+
+//	CHECK_GAME_FLAG(986)
+//	OFF_JUMP DANGEON
+//	game_flag_off(986)
+//	warp_chr("PC", 1)
+//	EFC("EFC_WARP_TX", 0.02,7.25,13.19)
+DANGEON:
+
+}
+
+
+// ----------------------------------------------------------------------------
+// 僇僊奐偗
+// ----------------------------------------------------------------------------
+
+DEF("d1600")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1600)
+}
+
+DEF("d1601")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1601)
+}
+
+DEF("d1608")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1608)
+}
+
+DEF("d1609")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1609)
+}
+
+DEF("d1615")
+RES("KAGI")
+{
+	GAME_FLAG_ON(1615)
+}
+
+//////////////////////////////////////////////////////////////////////
+// 儕乕僛儘僢僩僀儀儞僩
+
+DEF("Liese")
+
+RES("INIT")
+{
+	// EV C-11 崟偒壴壟
+	CHECK_GAME_FLAG(3710)
+	ON_JUMP EXIT
+
+	// EV C-9 乻枺乼偺儘乕儗儔僀
+	CHECK_GAME_FLAG(3708)
+	OFF_JUMP EXIT
+
+//--------------------------------------------------------------------
+
+	set_skip_label("SKIP")
+
+	CINEMA_ON(0)
+	STOP_PC(0)
+	PC_WEAPON( 0, 1 )
+	wait(60)
+
+	look_chr("PC", "-")
+	INIT_WALK_DST("PC")
+	set_walk_dst("PC", 9.48,2.00,8.23)
+	walk_pos("PC",0,0.022)
+	wait_walk("PC")
+	wait(60)
+	set_deg("PC", 320)
+	wait(60)
+	set_deg("PC", 215)
+	wait(60)
+
+	INIT_WALK_DST("PC")
+	set_walk_dst("PC", 6.81,2.13,3.22)
+	walk_pos("PC",0,0.022)
+	wait(120)
+
+	cross_fade(120)
+	SET_SPOT_ORG( 1, -0.00,10.50,22.33 )
+	permit_script_camera(1)
+	set_script_camera(-0.00,10.50,22.33,  0,180.0,0.0, 40, 30.0)
+	stop_walk("PC")
+	set_pos("PC", 2.67,2.00,-3.59)
+	set_deg("PC", 339)
+	wait(120)
+
+	move_script_look_at(0,-2,-10, 800, 1)
+	rotate_script_camera(2,0,0, 800, 1)
+
+		ENTRY_IMG(0,"AREANAME06",0)
+
+		// 兛偑'1'偺帪偼'壛嶼儌乕僪'側偺偱乽摟柧乿偵偡傞帪偼丄
+		// 僨傿僼儏乕僘傪'0x00ffffff'偱偼側偔'0xff000000'偲偟側偄偲偄偗側偄偺僨僗丅
+		//  教咦材 昞帵埵抲 Tex TX  TY  TW  TH 兛 僨傿僼儏乕僘 僗儁僉儏儔 奼戝 夞 拞 Fit
+		SET_IMG( 0, 192,166, 0,  0,  0,255, 48, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+		SET_IMG( 2, 192,166, 0,  0, 48,255, 48, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+		SET_IMG( 1, 208,206, 0,  0,224,255, 16, 1, 0xff000000, 0xff000000, 0,1, 0, 0,1)
+		SET_IMG( 3, 192,206, 0,  0,240,255, 16, 1, 0xff000000, 0xff000000, 1,1, 0, 1,1)
+		IMG_ON(0)
+		IMG_ON(1)
+		IMG_ON(2)
+		IMG_ON(3)
+
+		// 敪惗傑偱偵'娫'偑梸偟偄応崌偼偙傫側晽偵偟傑偡丅
+		SUSPEND_IMG(0,60)
+		SUSPEND_IMG(1,30)
+		SUSPEND_IMG(2,300)
+		SUSPEND_IMG(3,300)
+
+		// 僼僃乕僪僀儞
+		COLOR_IMG    (0, 0xffffffff, 0xff000000, 60, 1)
+		COLOR_IMG_EX (2, 0xffffffff, 0xff000000, 15, 1, 0, 1, 1)
+		COLOR_IMG    (1, 0xffffffff, 0xff000000, 10, 1)
+		SCALE_IMG    (1, 0.9,1,                 30, 1)
+		SCALE_IMG    (3, 1.2, 1,                  1, 1)
+		COLOR_IMG_EX (3, 0xffffffff, 0xff000000, 15, 1, 0, 1, 1)
+
+	wait(300)
+
+		COLOR_IMG(0, 0xff000000, 0xff000000, 15, 1)
+		COLOR_IMG(1, 0xff000000, 0xff000000, 15, 1)
+
+	wait(300)
+
+//	wait(600)
+
+//仴婏娾忛丒峀娫
+
+MSG_EX("#S3#C0女性的声音「…………骑士大人。」",-1,2)
+	wait_camera(0)
+
+	set_deg("PC", 200)
+
+	cross_fade(120)
+	SHOW_CHR("Liese")
+	SET_SPOT_ORG( 1, 0.00,2.00,0.0 )
+	set_script_camera(0.00,2.00,0.0,  0,180.0,0.0, 20, 30.0)
+
+	wait(120)
+
+//丂丂忛偺惓柺擖傝岥偵崟偄僪儗僗傪傑偲偭偨儕乕僛偑棫偭偰偄傞丅
+//丂丂擖傝岥偐傜庡恖岞偺傎偆傊桰慠偲曕偒巒傔傞儕乕僛丅
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", 0.0,2.00,-3.51)
+	walk_pos("Liese",0,0.03)
+	wait(120)
+
+MSG_EX("#S3#C0黑衣女性「恭喜你啊。|　　　　　终于到达奇岩城了呢。」",-1,2)
+MSG_EX("#S3#C0黑衣女性「我一直相信着，|　　　　　　骑士大人一定可以成功的。」",-1,2)
+MSG_EX("#S3#C0黑衣女性「不过，还不能……|　　　　　还不能大意。」",-1,2)
+MSG_EX("#S3#C0黑衣女性「直到得到圣剑屠龙剑。」",-1,2)
+
+//丂丂儕乕僛丄庡恖岞偺慜偱僗僩僢僾丅
+
+	cross_fade(120)
+	set_script_camera(0.0,2.00,0.71,  -15,180.0,0.0, 12, 30.0)
+
+	set_deg_EX("PC", "Liese")
+//	MSG_EX("#S3#C0丠丠丠乽扤偩偐暘偐傝傑偣傫偐丠乿",-1,2)
+
+	wait_walk("Liese")
+	set_deg_EX("PC", "Liese")
+	wait(60)
+
+	set_deg_EX("Liese","PC")
+	wait(120)
+
+	cross_fade(120)
+	set_script_camera_EX("Liese",1,  -12,60.0,0.0, 7, 15.0)
+	wait(60)
+	rotate_script_camera(0,10,0, 800, 1)
+
+MSG_EX("#S3#C0黑衣女性「…………你没认出我是谁吗？」",-1,2)
+MSG_EX("#S3#C0黑衣女性「是我啊，祭司莉丝。」",-1,2)
+//	MSG_EX("#S3#C0丠丠丠乽巹偱偡乧乧嵳巌偺儕乕僛偱偡丅乿",-1,2)
+
+//丂丂崱搙偼嬍嵗偺慜偵曕偒弌偡儕乕僛丅
+//丂丂嬍嵗偺墶傑偱恑傒丄廃傝傪尒搉偟側偑傜儊僢僙乕僕丅
+
+	cross_fade(120)
+	set_script_camera(0.0,2.00,0.71,  -1,180.0,0.0, 12, 30.0)
+	wait(80)
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", 0.00,2.00,0.83)
+	walk_pos("Liese",0,0.03)
+	set_deg("PC", 320)
+
+	move_script_look_at(0,3,0, 800, 1)
+	rotate_script_camera(10,0,0, 800, 1)
+
+	wait_walk("Liese")
+
+	wait(60)
+
+	set_deg("Liese", 340)
+	wait(60)
+	set_deg("Liese", 20)
+	wait(60)
+
+MSG_EX("#S3#C0莉丝「啊啊，真让人怀念啊……」",-1,2)
+MSG_EX("#S3#C0莉丝「又回到这里来了呢。」",-1,2)
+
+	wait_camera(0)
+
+//丂丂儕乕僛儘僢僩丄庡恖岞偺傎偆傊怳傝岦偔丅
+
+	set_deg_EX("Liese","PC")
+	wait(60)
+
+	cross_fade(120)
+	set_script_camera_EX("Liese",1,  -8,180.0,0.0, 10, 15.0)
+	wait(120)
+	rotate_script_camera(0,-10,0, 1000, 1)
+
+MSG_EX("#S3#C0莉丝「骑士大人，我有话想对你说。」",-1,2)
+MSG_EX("#S3#C0莉丝「我的本名是莉丝洛特……」",-1,2)
+MSG_EX("#S3#C0莉丝「是仙那度第十四王朝的第一公主。」",-1,2)
+	wait(60)
+
+MSG_EX("#S3#C0莉丝洛特「而且…………」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「我就是在数百年前嫁给了加尔西斯，|　　　　　被人称作『黑色新娘』的人。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「我的丈夫加尔西斯给了体弱多病的我|　　　　　这种力量和这个身体。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「你好像很吃惊啊……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「呵呵，这也是难免的。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「不久我亲爱的丈夫就要再度降临了。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「现在我要|　　　　　去做迎接他的准备了。」",-1,2)
+	wait(60)
+
+MSG_EX("#S3#C0莉丝洛特「然后，骑士大人……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「我希望你|　　　　　无论如何能够找到圣剑。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「圣剑屠龙剑和它的使用者|　　　　　对我丈夫来说是最大的障碍……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「如果能除掉他们，|　　　　　作为妻子的我会非常高兴的。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「呵呵，骑士大人得到圣剑的时候……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「就是我要杀了你的时候。」",-1,2)
+
+//丂丂儕乕僛儘僢僩偺懌尦偵僽儔僢僋僆僯僉僗偺杺曽恮偑昤偐傟傞丅
+
+	cross_fade(120)
+//	set_script_camera_EX("PC",1,  -10,302.0,0.0, 7, 15.0)
+	set_script_camera_EX("Liese",2,  -6,165.0,0.0, 6.5, 15.0)
+	rotate_script_camera(4,0,0, 800, 1)
+	wait(120)
+
+MSG_EX("#S3#C0莉丝洛特「……我必须要走了。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「关于圣剑的所在，|　　　　　我来告诉一个线索吧。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「圣剑是有守护者的。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「奇岩城出现的同时，|　　　　　那个守护者也应该觉醒了。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「去找找那个人比较好。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「那么，骑士大人。|　　　　　期待着下次与你见面哦。」",-1,2)
+
+	wait(120)
+
+	wait(60)
+	SET_MOTION("Liese","EMPTY20",10)
+	wait(110)
+	ATTACH_EFC("EFC_WARP_E","Liese","POS")
+	wait(100)
+	ATTACH_EFC("EFC_WARP_T","Liese","POS")
+	warp_chr("Liese",0)
+	wait(120)
+
+	fade_out(120)
+	wait(120)
+
+//--------------------------------------------------------------------
+
+SKIP:
+	hide_chr("Liese")
+	DELETE_EFC("Liese")
+
+	COLOR_IMG(0, 0x00000000, 0x00000000, 1, 0)
+	COLOR_IMG(1, 0x00000000, 0x00000000, 1, 0)
+	COLOR_IMG(2, 0x00000000, 0x00000000, 1, 0)
+	COLOR_IMG(3, 0x00000000, 0x00000000, 1, 0)
+
+	STOP_WALK("PC")
+	set_pos("PC", 2.67,2.00,-3.59)
+	set_deg("PC", 320)
+
+	// EV C-11 崟偒壴壟
+	GAME_FLAG_ON(3710)
+	set_pos("PC", 2.67,2.00,-3.59)
+	SET_SPOT_ORG( 0, 0.00,0.00,0.00 )
+
+	wait(60)
+
+	FOCUS_CHR("PC")
+	permit_script_camera(0)
+	fade_in(60)
+	CINEMA_OFF(0)
+
+
+EXIT:
+	END
+}

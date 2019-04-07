@@ -1,0 +1,431 @@
+// ==========================================================================
+// 釱擖傝岥丄僈儞僟儖僠儏傾偺愇憸偁傝
+// ==========================================================================
+//
+// ROOM_FLAG
+//	0 僔儏僩僁儖儉
+//
+
+// ----------------------------------------------------------------------------
+// 儅僢僾                                                                    
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	// SE嵞惗
+	SE("SE_BIRD")
+
+	CHECK_ENTRY_GATE("0790_09c6")
+	OFF_JUMP NEXT2
+	DISP_PLACE(2)
+
+//-- 忛偑弌尰屻 ------------------------------------------------------
+NEXT2:
+//	// EV C-3 婏娾忛弌尰
+//	check_game_flag(3702)
+//	off_jump NEXT
+	// TK 僔儍儖偲忛偑尰傟偨偙偲偵偮偄偰榖偡
+	check_game_flag(3723)
+	off_jump NEXT
+
+	HIDE_CHR("Aniece")
+	HIDE_CHR("Light")
+	LOAD_MAP("MP_0756")
+	LOAD_HITMAP("MP_0756h")
+
+	HIDE_CHR("hana1")
+	HIDE_CHR("hana2")
+	HIDE_CHR("hana3")
+	HIDE_CHR("kusa1")
+	HIDE_CHR("kusa2")
+	HIDE_CHR("kusa3")
+
+	// 3705	EV C-6 僪償僅儖僓乕僋
+	check_game_flag(3705)
+	on_jump EXIT
+
+	STOP_PC(0)
+	CANCEL_PC_WARP(0)
+	set_motion("PC", "STAND",-1)
+	ENTRY_CHR(0, 40)
+	ENTRY_CHR(1, 38)
+	PUT_CHR( 0, "Dvorak",  -3.31,0.13,-0.03, 104)
+	PUT_CHR( 1, "Sturm",   2.96,0.13,-0.07, 271)
+
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+NEXT:
+	set_rain_inf("EFC_HINOKO4",1, 45, 15,30)
+	rain(1)
+
+//--------------------------------------------------------------------
+
+	HIDE_CHR("Aniece")
+
+	// EV B-1 惞寱偺扵嶕傊(僔儍儖偲偺夛榖)
+	check_game_flag(3600)
+	off_jump EXIT
+	// 3601	EV B-2 僈儞僟儖僠儏傾慜(傾僯僄僗偲偺夛榖)
+	check_game_flag(3601)
+	off_jump EV_Aniece
+
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+EV_Aniece:
+	// 傾僯僄僗弶婜嵗昗
+	SHOW_CHR("Aniece")
+	set_pos("Aniece", -1.88,0.13,-1.12)
+	set_deg("Aniece", 45.0)
+
+	// 僌儔僨傿僂僗丄僶僢僋儔乕丄儘乕僽
+	load_npc_eqp(00,10)
+	load_npc_eqp(60,11)
+	load_npc_eqp(80,12)
+
+	// EV B-2 僈儞僟儖僠儏傾慜(傾僯僄僗偲偺夛榖)
+	check_game_flag(3601)
+	on_jump EXIT
+
+	fade_out(0)
+	stop_bgm(1,2000)
+
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+EXIT:
+	end
+}
+
+//////////////////////////////////////////////////////////////////////
+// 傾僯僄僗
+
+DEF("Aniece")
+
+RES("INIT")
+{
+	// EV B-1 惞寱偺扵嶕傊(僔儍儖偲偺夛榖)
+	check_game_flag(3600)
+	off_jump EXIT
+	// EV B-2 僈儞僟儖僠儏傾慜(傾僯僄僗偲偺夛榖)
+	check_game_flag(3601)
+	off_jump EV_Aniece
+
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+EV_Aniece:
+
+//仴杒偺堚愓丒釱偺僈儞僟儖僠儏傾慜
+
+	STOP_PC(0)
+	set_motion("PC", "STAND",-1)
+	CINEMA_ON(0)
+
+//弶婜僇儊儔
+	permit_script_camera(1)
+	set_script_camera(-1.00,3.0,-0.01,  -10.5,270.0,0.0, 15, 20.0)
+
+//丂丂儅僢僾偵擖偭偨傜丄僀儀儞僩奐巒丅
+//丂丂僈儞僟儖僠儏傾偺愇憸慜偱傾僯僄僗偑暔巚偄偵傆偗偭偰偄傞丅
+
+	fade_in(120)
+	move_script_look_at(4,-1.5,0, 600, 1)
+	PC_WEAPON(0,1)
+	wait(120)
+	
+
+	set_skip_label("SKIP")
+
+MSG_EX("#S3#C0高傲的女性「犹如时间停止一般的寂静中|　　　　　　却能感觉到强有力的脉搏的这种表现力……」",-1,2)
+MSG_EX("#S3#C0高傲的女性「就像一触即发的样子。」",-1,2)
+	wait(60)
+
+//	愇憸傪扥擮偵尒傗傞傾僯乕
+	cross_fade(80)
+	set_script_camera(1.15,1.25,-0.75,  -13,210,0,  3.65, 15)
+	rotate_script_camera( -10,-30,0,2000,0)
+	move_script_look_at( 0,0.2,0, 2000, 0)
+	set_deg("Aniece", 90)
+	set_pos("Aniece",1.15,0.125,-1)
+	set_motion("Aniece", "EMPTY19",0)
+	wait(400)
+	set_motion("Aniece", "EMPTY18",0)
+MSG_EX("#S3#C0高傲的女性「如果是仙那度时期的物品，|　　　　　　作为美术品的价值是很高的……」",-1,2)
+MSG_EX("#S3#C0高傲的女性「不过可惜拿不回去啊。」",-1,2)
+	WAIT(90)
+
+//	PC偺懌壒丄揮傇傾僯僄僗
+	se("SE_FOOT_C")
+	wait(5)
+	se("SE_FOOT_C")
+	wait(30)
+	set_motion("Aniece", "EMPTY17",4)
+	WAIT(35)
+	set_motion("Aniece", "EMPTY13",5)
+MSG_EX("#S3#C0高傲的女性「谁！？」",-1,2)
+	set_motion("Aniece", "EMPTY14",5)
+	WAIT(50)
+	fade_out(30)
+MSG_EX("#S3#C0高傲的女性「……啊！」",-1,2)
+	wait(5)
+
+//丂丂婲偒忋偑偭偰夛榖
+	WAIT(90)
+	BGM( 18, 1, 1000 )
+	set_script_camera(-1.00,1.0,-1.1,  -10.5,290.0,0.0, 9, 20.0)
+	SCALE_SCRIPT_CAMERA( 0.9, 2000, 1)
+		set_motion("Aniece", "EMPTY16",0)
+		set_pos("Aniece",1.0,0.125,-1.1)
+		set_deg("Aniece", 270)
+	fade_in(90)
+		set_pos("PC", -10.03,0.00,-0.02)
+		set_deg("PC", 90.0)
+		INIT_WALK_DST("PC")
+		set_walk_dst("PC", -6.02,0.00,-0.02)
+		walk_pos("PC",0,0.022)
+		wait_walk("PC")
+MSG_EX("#S3#C0高傲的女性「疼疼疼……」",-1,2)
+	set_motion("Aniece", "EMPTY15",15)
+	WAIT(60)
+MSG_EX("#S3#C0高傲的女性「不要吓我啊！」",-1,2)
+MSG_EX("#S3#C0高傲的女性「哎，你是……？」",-1,2)
+	set_motion("Aniece", "EMPTY20",-1)
+MSG_EX("#S3#C0高傲的女性「……骑士？」",-1,2)
+MSG_EX("#S3#C0高傲的女性「唔……真是了不起啊。」",-1,2)
+MSG_EX("#S3#C0高傲的女性「我名叫阿尼艾丝。|　　　　　　盗贼兼财宝猎人。」",-1,2)
+	WAIT(30)
+
+//峏偵夛榖
+	cross_fade(30)
+	set_script_camera(-1.00,3.0,-0.01,  -10.5,270.0,0.0, 15, 20.0)
+	WAIT(30)
+MSG_EX("#S3#C0阿尼艾丝「……你那种眼神是什么呀？」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「话虽如此，|　　　　不可能所有的人都像你一样那么出色。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「首先，|　　　　这个世界根本不可能这么公平。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「那，优秀的骑士大人|　　　　来这种地方到底要干什么呢？」",-1,2)
+
+	set_motion("Aniece", "EMPTY20",-1)
+
+MSG_EX("#S3#C0阿尼艾丝「……奇岩城！？」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「好大的口气啊……」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「只凭精湛的剑术，|　　　　可是到不了那座城堡的。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「因为这个岛上的遗迹|　　　　连我都感到很棘手。」",-1,2)
+
+	// 3615	EV B-2c 墌斦斷傪挷傋偨
+	CHECK_GAME_FLAG(3615)
+	ON_JUMP EV_Looked_Door
+
+	// 墌斦斷傪尒偰偄側偄
+MSG_EX("#S3#C0阿尼艾丝「这道门用钥匙也打不开，|　　　　我正感到为难呢。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「上面有个圆洞的门……|　　　　到底怎么才能打开呢？」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「我想应该有什么东西可以作为钥匙，|　　　　那会是什么东西呢……嗯～……」",-1,2)
+
+	jump EV_END
+
+EV_Looked_Door:
+
+	// 偡偱偵墌斦斷傪尒偰偄傞
+MSG_EX("#S3#C0阿尼艾丝「这道门用钥匙也打不开，|　　　　我正感到为难呢。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「不过现在我已经把谜题解开了。」",-1,2)
+MSG_EX("#S3#C0阿尼艾丝「用我刚才得到的圆盘式的钥匙|　　　　应该就能够打开了。」",-1,2)
+
+//屻張棟
+EV_END:
+	focus_chr("PC")
+	reset_map_rot_y(2,0)
+
+	cross_fade(60)
+	set_script_camera_EX("PC",0,-35,270,0.0, 20, 15.0)
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	BGM( -1, 0, 1000)
+	wait(60)
+
+	// EV B-2 僈儞僟儖僠儏傾慜(傾僯僄僗偲偺夛榖)僼儔僌僆儞
+	game_flag_on(3601)
+
+EXIT:
+	end
+
+SKIP:
+	//奺僉儍儔偺埵抲傪巜掕偺埵抲傊
+	set_motion("Aniece", "STAND",-1)
+	set_pos("Aniece",1.0,0.125,-1.1)
+	set_deg("Aniece", 270)
+	STOP_WALK("PC")
+	set_pos("PC", -6.02,0.00,-0.02)
+	set_deg("PC", 90)
+	reset_map_rot_y(2,0)
+	CROSS_FADE(60)
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	BGM( -1, 0, 1000)
+
+	// 3615	EV B-2c 墌斦斷傪挷傋偨
+	CHECK_GAME_FLAG(3615)
+	OFF_JUMP EV_NO_LOOK
+
+EV_NO_LOOK:
+	// EV B-2 僈儞僟儖僠儏傾慜(傾僯僄僗偲偺夛榖)
+	game_flag_on(3601)
+	focus_chr("PC")
+	fade_in(60)
+	wait(60)
+	END
+
+}
+
+RES("CLICK")
+{
+	FOCUS_CHR("Aniece")
+SET_NAME("ANIECE", "阿尼艾丝")
+	SET_MOTION("Aniece", "EMPTY20",-1)
+
+	// 3615	EV B-2c 墌斦斷傪挷傋偨
+	CHECK_GAME_FLAG(3615)
+	OFF_JUMP TALK1
+
+MSG("普通钥匙打不开的门之谜|终于解开了。")
+MSG("用你刚刚得到的|那个圆盘一样的钥匙就可以打开了。")
+	jump EXIT
+
+TALK1:
+MSG("那扇有个圆洞的门……|到底怎么才能打开呢？")
+MSG("说起来，|你从宝箱中得到过一个圆形的石板吧……")
+	jump EXIT
+
+EXIT:
+	SET_MOTION("Aniece","STAND",-1)
+	END
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// 僪償僅儖僓乕僋偲僔儏僩僁儖儉
+
+DEF("Sturm")
+RES("INIT")
+{
+	// EV C-3 婏娾忛弌尰
+	check_game_flag(3702)
+	off_jump EXIT
+
+	// 3705	EV C-6 僪償僅儖僓乕僋
+	check_game_flag(3705)
+	on_jump EXIT
+
+//--------------------------------------------------------------------
+	CINEMA_ON(0)
+	STOP_PC(0)
+	set_motion("PC", "STAND",-1)
+
+	BGM( 18, 0, -1 )
+	cross_fade(60)
+
+	permit_script_camera(1)
+	set_script_camera(3.69,0.13,-0.00,  -20.0,270.0,0.0, 10, 15.0)
+	move_script_look_at(-1,0,0, 700, 1)
+
+	set_skip_label("SKIP")
+
+MSG_EX("#S3#C0德沃夏克「修特威尔姆啊，让开一点。」",-1,2)
+
+MSG_EX("#S3#C0修特威尔姆「………………………………」",-1,2)
+
+MSG_EX("#S3#C0德沃夏克「奇岩城的障壁|　　　　　不可能从外面解除。」",-1,2)
+MSG_EX("#S3#C0德沃夏克「只有通过『缝隙』|　　　　　进入城堡内部了。」",-1,2)
+MSG_EX("#S3#C0德沃夏克「守护这里的刚达尔奇的|　　　　　石化状态也被解开了……」",-1,2)
+MSG_EX("#S3#C0德沃夏克「现在应该可以从里面的祠堂进入『缝隙』。」",-1,2)
+
+MSG_EX("#S3#C0修特威尔姆「冷静点……德沃夏克。」",-1,2)
+MSG_EX("#S3#C0修特威尔姆「你不至于会忘掉|　　　　　幽禁在那里的是谁吧……」",-1,2)
+
+	wait(60)
+
+MSG_EX("#S3#C0德沃夏克「背叛了仙那度和我们七导师，|　　　　　造就了黑色新娘的女人，洛蕾莱……」",-1,2)
+MSG_EX("#S3#C0德沃夏克「我知道那家伙的力量有多强大。」",-1,2)
+MSG_EX("#S3#C0德沃夏克「五百年前，好不容易才把那家伙|　　　　　封印在缝隙里的不是别人，正是我。」",-1,2)
+
+MSG_EX("#S3#C0修特威尔姆「那么，为什么……」",-1,2)
+
+MSG_EX("#S3#C0德沃夏克「这不用我说你也知道吧。|　　　　　是为了及早救出公主。」",-1,2)
+MSG_EX("#S3#C0德沃夏克「在奇岩城现身的现在，|　　　　　已经一刻也不能犹豫了。」",-1,2)
+MSG_EX("#S3#C0德沃夏克「让我去吧。」",-1,2)
+
+//丂丂僪償僅儖僓乕僋丄僔儏僩僁儖儉傪旔偗偰杒曽柺傊嫀偭偰偄偔丅
+//丂丂僔儏僩僁儖儉偼偦偺傑傑丅怳傝曉偭偨傝偟側偄丅
+
+	LOOK_CHR("Sturm","Dvorak")
+	INIT_WALK_DST("Dvorak")
+	set_walk_dst("Dvorak", -1.37,0.13,-1.12)
+	set_walk_dst("Dvorak",  4.03,0.13,-1.30)
+	set_walk_dst("Dvorak",  6.09,0.13,-0.58)
+	walk_pos("Dvorak",0,0.03)
+	wait(240)
+	fade_out(60)
+	wait(60)
+	wait_walk("Dvorak")
+
+MSG_EX("#S3#C0德沃夏克「不战斗的人亦是弱者……」",-1,2)
+MSG_EX("#S3#C0德沃夏克「这是我的使命，我必须要去。」",-1,2)
+
+SKIP:
+	BGM( -1, 0, -1 )
+	HIDE_CHR("Dvorak")
+	LOOK_CHR("Sturm","-")
+
+	game_flag_on(3705)
+
+	CINEMA_OFF(0)
+	FOCUS_CHR("PC")
+	permit_script_camera(0)
+	fade_in(60)
+
+
+EXIT:
+	end
+
+}
+
+RES("CLICK")
+{
+	FOCUS_CHR("Sturm")
+SET_NAME("STURM", "修特威尔姆")
+	SET_MOTION("Sturm", "ATTACK1",-1)
+
+	check_room_flag(0)
+	on_jump TALK2
+
+MSG("你…………")
+MSG("原来如此，你是大家都在谈论的那个骑士啊。")
+//	MSG("儎僣傪捛偄偐偗傞側傜巭傔偼偣傫乧乧|偦傟偑偍慜偺掕傔側偺偩傠偆丅")
+MSG("因为奇岩城的出现，|命运之轮开始转动了……")
+MSG("事到如今任何人都不能阻止了……")
+	room_flag_on(0)
+	end
+
+//丂丂仸埲崀丄孞傝曉偟
+TALK2:
+MSG("因为你让奇岩城出现，|命运之轮开始转动了……")
+MSG("事到如今任何人都不能阻止了……")
+	end
+}
+
+
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------

@@ -1,0 +1,382 @@
+
+// ----------------------------------------------------------------------------
+// 儅僢僾弶婜壔                                                                
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	// 僇僊愝掕
+	CHECK_GAME_FLAG(1689)
+	ON_SKIP(2)
+	//KAGI("d1689",1)
+	SKIP(1)
+	INIT_SWITCH_ON("d1689")
+
+//--------------------------------------------------------------------
+
+	ENTRY_CHR( 0, 072)
+	ENTRY_CHR( 1, 398)
+	ENTRY_CHR( 2,  36)
+	ENTRY_CHR( 3,  37)
+	ENTRY_CHR( 4,  38)
+	ENTRY_CHR( 5,  39)
+	ENTRY_CHR( 6,  40)
+	ENTRY_CHR( 7,  41)
+
+	// 3800	EV 嵳抎偺壴壟
+	check_game_flag(3800)
+	on_jump NEXT
+
+	// 嵟弶偺僀儀儞僩梡偼儕乕僛偺傒
+	PUT_CHR( 0, "Liese",       -0.03,4.88,22.46,   0)
+//	PUT_CHR( 1, "Fleurette",    0.00,0.70, 8.50, 180)
+//	PUT_CHR( 2, "Avatarlaha",  -1.35,0.25, 0.75, 120)
+//	PUT_CHR( 7, "Beatrice",    -2.10,0.00,-0.70,  95)
+//	PUT_CHR( 6, "Dvorak",      -2.20,0.00,-2.40,  90)
+//	PUT_CHR( 3, "Tiowald",      1.35,0.25, 0.75, 240)
+//	PUT_CHR( 4, "Sturm",        2.10,0.00,-0.70, 265)
+//	PUT_CHR( 5, "Gandaltua",    2.20,0.00,-2.40, 270)
+
+	jump EXIT
+
+NEXT:
+
+	// 3801	EV 儃僗愴摤慜僀儀儞僩
+	check_game_flag(3801)
+	on_jump NEXT2
+
+	//杺朄偱晻偠傜傟偨
+	PUT_CHR( 7, "Beatrice",    -3.31,2.06,-12.65, 351)
+	PUT_CHR( 6, "Dvorak",      -0.26,2.06, -8.98, 359)
+	PUT_CHR( 5, "Gandaltua",    1.90,2.06, -9.41, 350)
+	PUT_CHR( 4, "Sturm",       -1.42,2.19,-14.25, 348)
+	PUT_CHR( 3, "Tiowald",      1.43,2.06,-12.88, 346)
+
+	jump EXIT
+
+NEXT2:
+
+	// 媬墖偵棃偨
+	PUT_CHR( 1, "Fleurette",   -0.50,2.06,-11.62, 151)
+	PUT_CHR( 2, "Avatarlaha",  -2.87,2.06, -9.66, 147)
+
+	//杺朄偱晻偠傜傟偨
+	PUT_CHR( 7, "Beatrice",    -3.31,2.06,-12.65, 351)
+	PUT_CHR( 6, "Dvorak",      -0.26,2.06, -8.98, 359)
+	PUT_CHR( 5, "Gandaltua",    1.90,2.06, -9.41, 350)
+	PUT_CHR( 4, "Sturm",       -1.42,2.19,-14.25, 348)
+	PUT_CHR( 3, "Tiowald",      1.43,2.06,-12.88, 346)
+
+EXIT:
+	end
+}
+
+
+// ----------------------------------------------------------------------------
+// 僇僊奐偗
+// ----------------------------------------------------------------------------
+
+//DEF("d1689")
+//RES("KAGI")
+//{
+//	GAME_FLAG_ON(1689)
+//}
+
+//--------------------------------------------------------------------
+//-- 僀儀儞僩 
+//--------------------------------------------------------------------
+
+DEF("Liese")
+RES("INIT")
+{
+	// 3800	EV 嵳抎偺壴壟
+	check_game_flag(3800)
+	on_jump EXIT
+
+//--------------------------------------------------------------------
+
+	STOP_PC(0)
+	set_deg_EX("PC", "Liese")
+	PC_WEAPON( 0, 1 )
+
+	STOP_BGM(0, 120)
+
+SYS("周围充满了非常邪恶的气氛。")
+	WAIT(30)
+
+	cross_fade(120)
+
+	CINEMA_ON(0)
+
+	permit_script_camera(1)
+	set_script_camera(0.00,0.13,-21.56,  -15.0,180.0,0.0, 12, 30.0)
+	move_script_look_at( 0,9,42, 700, 1)
+	rotate_script_camera(20,0,0, 800, 1)
+
+	set_skip_label("SKIP")
+
+	wait_camera(0)
+//丂丂夋柺價僗僞僒僀僘壔偟偰丄僀儀儞僩儉乕價乕奐巒丅
+//丂丂晹壆偺墱傊僗僋儘乕儖偟偰丄嵳抎偵婩傝傪曺偘偰偄傞
+//丂丂儕乕僛傪塮偟弌偡丅偦偺傑傑偺巔惃偱僙儕僼昞帵丅
+
+MSG_EX("#S3#C0莉丝洛特「……骑士大人，你果然还是来了啊。」",-1,2)
+
+//丂丂嵳抎偺慜偱棫偪忋偑傝丄
+//丂丂庡恖岞偺傎偆傪岦偔儕乕僛儘僢僩丅
+
+	move_script_look_at(  0,-1, 0, 300, 1)
+	rotate_script_camera(-25,0, 0, 300, 1)
+
+	set_deg_EX("Liese", "PC")
+
+MSG_EX("#S3#C0莉丝洛特「呵呵，不要摆出那种表情。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「你可是来到了|　　　　　我丈夫即将再度降临的地方啊。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「这可以作为炫耀的资本哦。」",-1,2)
+
+	wait_camera(0)
+
+	set_pos("PC", 0.0,4.06,9.41)
+	set_deg("PC", 0)
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", 0.00,4.88,19.74)
+	walk_pos("Liese",0,0.03)
+
+	move_script_look_at( 0, 0,-12, 300, 1)
+	rotate_script_camera(-10,0,0, 300, 1)
+
+	wait(120)
+
+//丂丂僇儊儔堷偔側偳娫傪偮側偖僇儊儔儚乕僋傕偟偔偼愗傝懼偊傪
+//丂丂晅偗偰壓偝偄丅
+
+MSG_EX("#S3#C0莉丝洛特「在镇上的时候，|　　　　　我受到了骑士大人很多帮助。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「如果可以的话，|　　　　　真的想把你召入我们阵营……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「但是，就像我之前说的……」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「作为妻子，不能看着丈夫加尔西斯的仇敌——|　　　　　圣剑的存在而置之不理。」",-1,2)
+
+	wait_camera(0)
+
+//丂丂嵳抎傪曕偄偰崀傝丄庡恖岞偺惓柺偵棫偮儕乕僛儘僢僩丅
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", -3.61,4.88,19.10)
+	set_walk_dst("Liese", -3.85,4.88,16.69)
+	set_walk_dst("Liese", -3.20,4.88,14.39)
+	set_walk_dst("Liese", -2.10,5.00,12.80)
+	walk_pos("Liese",0,0.03)
+
+	move_script_look_at( 0, 0, 0, 300, 1)
+	rotate_script_camera(-5,-40,0, 300, 1)
+
+	wait(120)
+	set_deg_EX("PC", "Liese")
+
+MSG_EX("#S3#C0莉丝洛特「今晚会召开一场宴会。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「让我们在祝福的酒杯中|　　　　　装满骑士大人的鲜血吧。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「如果是圣剑勇者之血的话，|　　　　　对我丈夫来说应该是最特别的美酒了……」",-1,2)
+
+	wait_walk("Liese")
+//	set_deg_EX("Liese", "PC")
+	wait_camera(0)
+
+MSG_EX("#S3#C0男人的声音「……骑士啊，请躲开一下。」",-1,2)
+
+	PUT_CHR( 7, "Beatrice",    -3.31,2.06,-12.65, 351)
+	PUT_CHR( 6, "Dvorak",      0.04,2.06,-11.81, 359)
+	PUT_CHR( 5, "Gandaltua",  1.90,2.06,-9.41, 350)
+	PUT_CHR( 4, "Sturm",      -1.42,2.19,-14.25, 348)
+	PUT_CHR( 3, "Tiowald",    1.58,2.19,-13.93, 346)
+
+//丂丂師偺弖娫丄庡恖岞偺攚屻偐傜僪償僅儖僓乕僋偺僗僉儖偑鄖楐丅
+//丂丂旘傃戅偭偰偐傢偡庡恖岞丅僗僉儖媄偑捈寕偡傞傕丄巜愭堦偮摦
+//丂丂偐偝偢偵忈暻傪挘偭偰偐傢偡儕乕僛儘僢僩丅惡偺偟偨曽岦傪
+//丂丂僉僢偲尒悩偊傞丅擖傝岥偱寱傪峔偊偰偄傞僪償僅儖僓乕僋丅
+//丂丂懠偺摫巘偨偪傕偡偱偵晹壆傊擖傝崬傫偱偄傞忬懺丅
+
+	// 傛偗偨屻偺埵抲
+	set_pos("PC", 2.20,4.06,9.37, 292)
+	set_deg_EX("PC", "Liese")
+
+
+	cross_fade(60)
+	set_script_camera(0.11,2.06,-8.00,  -32.0,20.0,0.0, 12, 15.0)
+	rotate_script_camera(0,-10,0, 300, 1)
+	move_script_look_at( 0, 0, -4, 300, 1)
+
+	wait(120)
+
+	SET_MOTION("Gandaltua","ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「哎呀呀……|　　　　　　你依然还是缺乏优雅的气质啊。」",-1,2)
+
+	SET_MOTION("Beatrice","ATTACK1",-1)
+MSG_EX("#S3#C0贝亚特里奇「骑士大人，我们来帮忙了哦。」",-1,2)
+
+	INIT_WALK_DST("Tiowald")
+	set_walk_dst("Tiowald", 1.43,2.06,-12.88)
+	walk_pos("Tiowald",0,0.01)
+MSG_EX("#S3#C0提欧巴特「好久不见了，莉丝洛特公主……」",-1,2)
+	wait_walk("Tiowald")
+	SET_MOTION("Tiowald","ATTACK1",-1)
+MSG_EX("#S3#C0提欧巴特「不，应该说『黑色新娘』。」",-1,2)
+
+MSG_EX("#S3#C0莉丝洛特「………………………………」",-1,2)
+
+	wait(120)
+	SET_MOTION("Sturm","ATTACK1",-1)
+MSG_EX("#S3#C0修特威尔姆「……加尔西斯好像就在这里面。」",-1,2)
+
+	INIT_WALK_DST("Dvorak")
+	set_walk_dst("Dvorak", -0.26,2.06,-8.98)
+	walk_pos("Dvorak",0,0.05)
+	wait_walk("Dvorak")
+	SET_MOTION("Dvorak","ATTACK1",-1)
+MSG_EX("#S3#C0德沃夏克「给我们让路吧。」",-1,2)
+
+//丂丂僪償僅儖僓乕僋偑慜偵弌傛偆偲偡傞偑丄儕乕僛偑
+//丂丂庤傪偐偞偡偲崟偄墛偑尰傟偰摫巘偨偪偺懱傪敍傝忋偘傞丅
+
+	set_deg_EX("Liese", "Dvorak")
+
+	cross_fade(60)
+	set_script_camera(-2.44,4.88,13.22,  -12.0,160.0,0.0, 8, 15.0)
+	rotate_script_camera(0, 5,0, 40, 1)
+	move_script_look_at( 0, 0, 2, 40, 1)
+
+MSG_EX("#S3#C0莉丝洛特「退下，无礼的人！」",-1,2))
+MSG_EX("#S3#C0莉丝洛特「失去力量的手下败将们，|　　　　　到现在还想说些什么……」",-1,2)
+
+MSG_EX("#S3#C0德沃夏克「哼……」",-1,2)
+
+//丂丂儕乕僛儘僢僩丄嵳抎偺榚偵偁傞弌岥晅嬤傑偱曕偄偰怳傝岦偔丅
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", -3.99,4.88,15.89)
+	set_walk_dst("Liese", -4.41,4.88,18.93)
+	set_walk_dst("Liese", -8.90,4.00,21.58)
+	set_walk_dst("Liese", -9.74,4.00,25.58)
+	walk_pos("Liese",0,0.03)
+
+	move_script_look_at( -5, 1, 10, 300, 1)
+	rotate_script_camera(-5, 0, 0, 300, 1)
+
+	wait_walk("Liese")
+
+	wait(60)
+	se("SE_DOOR")
+	switch_on("d1689")
+	GAME_FLAG_ON(1689)
+	wait(60)
+
+	set_deg_EX("Liese", "PC")
+
+MSG_EX("#S3#C0莉丝洛特「骑士大人，有人来捣乱了啊……|　　　　　请到这边来。」",-1,2)
+MSG_EX("#S3#C0莉丝洛特「我丈夫在等你。」",-1,2)
+
+//丂丂尵偄抲偄偰丄斷偺岦偙偆偵徚偊傞儕乕僛儘僢僩丅
+
+	INIT_WALK_DST("Liese")
+	set_walk_dst("Liese", -9.52,4.00,27.79)
+	walk_pos("Liese",0,0.03)
+
+	fade_out(120)
+	wait(200)
+	hide_chr("Liese")
+
+	jump NEXT
+
+SKIP:
+	//杺朄偱晻偠傜傟偨忬懺偵偡傞
+	PUT_CHR( 7, "Beatrice",    -3.31,2.06,-12.65, 351)
+	PUT_CHR( 6, "Dvorak",      -0.26,2.06, -8.98, 359)
+	PUT_CHR( 5, "Gandaltua",    1.90,2.06, -9.41, 350)
+	PUT_CHR( 4, "Sturm",       -1.42,2.19,-14.25, 348)
+	PUT_CHR( 3, "Tiowald",      1.43,2.06,-12.88, 346)
+	hide_chr("Liese")
+
+	// 傛偗偨屻偺埵抲
+	set_pos("PC", 2.20,4.06,9.37, 292)
+	set_deg_EX("PC", "Liese")
+
+	// 僪傾奐偔
+	INIT_SWITCH_ON("d1689")
+	GAME_FLAG_ON(1689)
+
+NEXT:
+//丂丂佀憖嶌僼儕乕偵丅
+
+	FOCUS_CHR("PC")
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	fade_in(60)
+
+	BGM(-1)
+
+	// 3800	EV 嵳抎偺壴壟
+	game_flag_on(3800)
+
+EXIT:
+	end
+
+}
+
+//////////////////////////////////////////////////////////////////////
+// 儃僗愴摤奐巒僀儀儞僩懕偒
+
+DEF("Fleurette")
+
+RES("INIT")
+{
+	// 3800	EV 嵳抎偺壴壟
+	check_game_flag(3800)
+	off_jump EXIT
+
+	// 3801	EV 儃僗愴摤慜僀儀儞僩
+	check_game_flag(3801)
+	off_jump EXIT
+
+	STOP_PC(0)
+	PC_WEAPON( 0, 1 )
+//	HIDE_CHR("PC")
+
+	reset_camera(0)
+
+	permit_script_camera(1)
+	set_script_camera(-0.72,2.56,-11.39,  -16.0,160.0,0.0, 8, 15.0)
+	fade_in(60)
+
+//	set_skip_label("SKIP")
+
+	wait_camera(0)
+
+//仴婏娾忛丒嵳抎晹壆
+
+//丂丂僼僃乕僪傾僂僩敳偗偱摫巘偨偪偺偄傞嵳抎晹壆偱僼儘乕儗僢僩
+//丂丂偑摫巘偨偪偺庺敍傪夝彍偟偰偄傞偲偙傠偵丄抧恔偲抧嬁偒偑
+//丂丂巒傑傞丅
+
+MSG_EX("#S3#C0贝亚特里奇「公主殿下……那是……」",-1,2)
+
+MSG_EX("#S3#C0芙罗蕾特「……没错，|　　　　　和我封印屠龙剑相同的巫女封印术……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「不过……到底封印了什么……」",-1,2)
+
+//丂丂僥傿僆僶儖僩丄壗偐巚偄摉偨傞僼僔偑偁傞巇憪丅
+
+MSG_EX("#S3#C0提欧巴特「……难道是…………」",-1,2)
+
+//丂丂堦摨丄僥傿僆僶儖僩偺傎偆傪岦偔丅
+
+MSG_EX("#S3#C0提欧巴特「我们……|　　　　　也许弄错了件很重要的事情……」",-1,2)
+
+//丂丂夋柺僼僃乕僪傾僂僩
+
+	fade_out(60)
+	wait(80)
+	ENTRY_MAP("0685_0683")
+
+EXIT:
+	end
+}

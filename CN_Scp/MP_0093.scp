@@ -1,0 +1,1863 @@
+// ============================================================================
+// 帥堾乮弶婜壔乯
+// ============================================================================
+
+
+//-- ROOM_FLAG -------------------------------------------------------
+// 0 僄儕僢僋夛榖
+// 1 傾僀儔夛榖
+// 2 儕乕僛夛榖
+// 3 傾僾僒儔僗傪慖傫偩
+// 4 儊儖僋儕僂僗傪慖傫偩
+// 5 儕乕僼僃儖僩傪慖傫偩
+// 6  僪償僅儖僓乕僋
+// 7  僈儞僟儖僠儏傾
+// 8  僔儏僩僁儖儉
+// 9  儀傾僩儕乕僠僃
+// 10 傾僶僞乕儔僴
+// 11 僥傿僆僶儖僩
+// 12 
+// 13 
+// 14 
+// 15 
+
+///////////////
+DEF("MAP")
+RES("INIT")
+{
+	ATTACH_EFC("EFC_99JIIN_KAGE","kage","POS")
+
+
+	// 揦堳偲僇僂儞僞乕偺娭楢晅偗
+	link_ev_pop("Liese2","Liese")
+
+	// 僔儍儖偼婎杮揑偵偄側偄
+	HIDE_CHR("Char")
+
+//--------------------------------------------------------------------
+	// EV C-12 惞寱偺涋彈昉
+	CHECK_GAME_FLAG(3711)
+	OFF_JUMP NEXT2
+
+	// 儕乕僛偄側偄
+	HIDE_CHR("Liese")
+
+	// 3800	EV 嵳抎偺壴壟
+	CHECK_GAME_FLAG(3800)
+	on_jump EXIST_FLEURETTE
+
+	// 3804	EV D-0-1 僼儘乕儗僢僩偺夞憐
+	check_game_flag(3804)
+	on_jump EXIST_FLEURETTE
+
+	// 4017	0627	億乕僞儖僄儕傾俆丄拞斦丂奨偱僼儘乕儗偺僀儀儞僩婲摦偵傕棙梡偟傑偡
+	check_game_flag(4017)
+	on_jump NO_FLEURETTE
+
+	// 僼儘乕儗僢僩偵偐傢傞
+EXIST_FLEURETTE:
+	ENTRY_CHR(0, 398)
+	PUT_CHR( 0, "Fleurette",    0.00,0.50,3.23, 180)
+	jump EXIT
+
+NO_FLEURETTE:
+	// 僇僂儞僞乕傕掆巭
+	HIDE_CHR("Liese2")
+	jump EXIT
+
+//--------------------------------------------------------------------
+NEXT2:
+	// EV C-11 崟偒壴壟
+	CHECK_GAME_FLAG(3710)
+	OFF_JUMP NEXT
+
+	ENTRY_CHR(0, 398)
+	ENTRY_CHR(1,  36)
+	ENTRY_CHR(2,  37)
+	ENTRY_CHR(3,  38)
+	ENTRY_CHR(4,  39)
+	ENTRY_CHR(5,  40)
+	ENTRY_CHR(6,  41)
+	PUT_CHR( 0, "Fleurette",    0.00,0.70, 8.50, 180)
+	PUT_CHR( 1, "Avatarlaha",   1.35,0.25, 0.75, 240)
+	PUT_CHR( 6, "Beatrice",    -2.10,0.00,-0.70,  95)
+	PUT_CHR( 5, "Dvorak",       2.10,0.00,-0.70, 265)
+	PUT_CHR( 2, "Tiowald",     -1.35,0.25, 0.75, 120)
+	PUT_CHR( 3, "Sturm",       -2.20,0.00,-2.40,  90)
+	PUT_CHR( 4, "Gandaltua",    2.20,0.00,-2.40, 270)
+	load_npc_eqp(7,00)
+	DVORAK(0)
+
+	// 儕乕僛偄側偄
+	HIDE_CHR("Liese")
+	//HIDE_CHR("Liese2")
+	jump EXIT
+//--------------------------------------------------------------------
+NEXT:
+	// EV B-11 儕乕僛偺攋杺栴僀儀儞僩
+	check_game_flag(3610)
+	on_jump EXIT
+	// 1		僇僯僌儌傪搢偟偨偐丠
+	check_game_flag( 1)
+	off_jump EXIT
+
+NO_LIESE:
+	HIDE_CHR("Liese")
+	HIDE_CHR("Liese2")
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+EXIT:
+	END
+
+}
+
+
+//////////////////////////////////////////////////////////////////////
+// 儕乕僛儘僢僩僀儀儞僩
+
+DEF("Liese")
+
+RES("INIT")
+{
+
+	// EV 愒巕傪書偄偨曣恊
+	check_game_flag(3514)
+	on_jump NEXT
+
+	jump EVENT1
+
+//--------------------------------------------------------------------
+
+NEXT:
+	jump EXIT
+
+
+//-- 愒巕傪書偄偨曣恊偺崀楈偺媀幃 ------------------------------------
+
+EVENT1:
+	stop_bgm(1,1000)
+
+	ENTRY_CHR(7, 534)
+	PUT_CHR( 7, "Mother1",    0.00,0.50, 2, 00)
+	set_pos("Mother1",0,0.5,2)
+	set_deg_ex("Mother1","Liese")
+	set_deg_ex("Liese","Mother1")
+
+	STOP_PC(0)
+	set_motion("PC", "STAND",-1)
+	set_deg_ex("PC","Mother1")
+	look_chr("PC", "Mother1")
+
+//丂丂惛楈摪偵擖傞偲丄嵳巌儕乕僛偑崀楈偺媀幃傪峴偭偰偄傞儉乕價乕丅
+//丂丂僀儀儞僩愱梡俶俹俠(愒巕傪書偄偨曣恊)偑嵳抎偺慜偵偐偑傫偱
+//丂丂偄偰丄岝偵曪傑傟偰偄傞丅
+//丂丂埲崀丄崀楈偺媀幃僀儀儞僩夋柺傊丅
+//丂丂埲慜偁偭偨僀儀儞僩傪棳梡偟傑偡丅
+//    摨偠僇儊儔偑懕偄偰偟傑偆偺偱丄偙偭偪偺偼庒姳偁偭偝傝傔偵偟偰傒傑偟偨乮堜
+
+	set_skip_label("SKIP3")
+
+	// SE嵞惗
+	SE("SE_EVENT_00")
+
+	set_motion("Liese","EMPTY4",0)
+	set_motion("Liese2","EMPTY1",0)
+
+	CINEMA_ON(0)
+	permit_script_camera(1)
+	set_script_camera(0.12,0.50,-4.56,  -45.5,225.0,0.0, 12, 15.0)
+	move_script_look_at(0.0,0.00,5.0, 200, 1)
+	wait(200)
+
+	fade_out(60)
+	wait(100)
+
+	permit_script_camera(1)
+	set_script_camera_ex("Liese",1, -5,200,0, 5, 40)
+	scale_script_camera( 1.2, 380, 0 )
+	fade_in(60)
+	wait(300)
+
+	cross_fade(40)
+	SET_SCRIPT_CAMERA( 0.2,0.5,1,  -60,-30,0, 6, 30 )
+	scale_script_camera( 0.8, 360, 0 )
+	wait(300)
+
+	fade_out(60)
+	wait(60)
+	STOP_ENV_SE("SE_EVENT_00", 2000)
+	wait(120)
+
+//丂丂媀幃偑廔傢傞偲丄婎杮夋柺偵栠偟偰
+//丂丂埲壓偺儊僢僙乕僕傪昞帵丅
+
+	set_pos("PC",1.24,0.50,-4.52)
+	set_motion("Liese2","STAND",0)
+	DELETE_EFC("Liese2")
+	DELETE_EFC("Liese")
+	set_motion("Liese","STAND",0)
+
+	//嵗傝榁攌偲憓偘懼偊
+	HIDE_CHR("Mother1")
+	ENTRY_CHR(8, 122)
+	PUT_CHR( 8, "Mother2",    0.00,0.50, 2, 00)
+	set_pos("Mother2",0,0.5,2)
+	set_deg_ex("Mother2","Liese")
+	LOOK_CHR("Mother2","Liese")
+	LOOK_CHR("PC","Mother2")
+
+	// BGM 栠偡
+	bgm(-1, 0, -1)
+	set_script_camera_EX("Mother2",1,-45,225.0,0.0, 12, 15.0)
+	fade_in(60)
+	wait(60)
+
+MSG_EX("#S3#C0莉丝「……这样降灵的仪式就结束了。」",-1,2)
+MSG_EX("#S3#C0莉丝「卡片中的守护精灵|　　　已经顺利地寄宿在孩子的身体里了。」",-1,2)
+
+	LOOK_CHR("Mother2","-")
+MSG_EX("#S3#C0母亲「哦哦，小宝宝……太好了。」",-1,2)
+MSG_EX("#S3#C0母亲「莉丝大人，非常感谢您。」",-1,2)
+	set_motion("Mother2","ATTACK2",30)
+	WAIT(70)
+
+MSG_EX("#S3#C0莉丝「不客气……|　　　祝愿孩子的身心都能健康地成长。」",-1,2)
+MSG_EX("#S3#C0莉丝「愿新的生命之光受到守护精灵的保佑。」",-1,2)
+	WAIT(30)
+
+//丂丂僀儀儞僩屻丄恊巕偑戅応偟偰僾儗僀儎乕偵憖嶌嫋壜丅
+
+	INIT_WALK_DST("Mother2")
+	set_walk_dst("Mother2", 0.07,0.50,-4.40)
+	walk_pos("Mother2",0,0.02)
+	move_script_look_at(0.0,0.00,-5.0, 200, 1)
+
+	wait_walk("Mother2")
+
+	se("SE_DOOR")
+	switch_on("Door1")
+	wait(60)
+
+	INIT_WALK_DST("Mother2")
+	set_walk_dst("Mother2", 0.07,0.50,-7.40)
+	walk_pos("Mother2",0,0.02)
+
+	fade_out(60)
+	wait(60)
+
+SKIP3:
+	// BGM 栠偡
+	bgm(-1, 0, -1)
+	STOP_ENV_SE("SE_EVENT_00")
+	HIDE_CHR("Mother1")
+	HIDE_CHR("Mother2")
+	LOOK_CHR("PC","-")
+	set_pos("PC",1.24,0.50,-4.52)
+	set_motion("Liese2","STAND",0)
+	DELETE_EFC("Liese2")
+	DELETE_EFC("Liese")
+	set_motion("Liese","STAND",0)
+
+	// EV 愒巕傪書偄偨曣恊
+	game_flag_on(3514)
+
+	FOCUS_CHR("PC")
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	fade_in(60)
+	switch_off("Door1")
+	end
+
+EXIT:
+	END
+
+}
+
+RES("CLICK")
+{
+MSG_EX("#S3#C0莉丝「您进到这里来让我很为难啊，骑士大人。」",-1,2)
+	end
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "僈乕僨傿傾儞偺曄峏" //////////////////////////////////////////////////
+@change_card
+{
+//	call_shop(7)
+	call_shop(5)
+	ret
+}
+
+// "儃乕僫僗妱傝怳傝" //////////////////////////////////////////////////
+@division_bonus
+{
+	call_shop(6)
+	ret
+}
+
+// "儗儀儖僟僂儞" //////////////////////////////////////////////////
+@leveldown
+{
+	CHECK_LEVEL(2)
+	OFF_JUMP NOT_LEVEL
+
+MSG("骑士大人，|您想要重新修炼吗……")
+MSG("武器熟练度以外的状态|都会回到上一次升级前的数值哦。")
+MSG("即使这样也没关系吗？")
+SEL("#C1　下降等级　|#C2　下降等级　|还是算了")
+	check_select(0)
+	on_jump LEVEL
+
+	ret
+
+LEVEL:
+	LEVEL_DOWN(0)
+SYS("#C2等级下降了。")
+MSG("后退也是需要勇气的……|骑士大人的气魄真是了不起。")
+	ret
+
+NOT_LEVEL:
+MSG("如果在此之上再继续解放能力值的话，|骑士大人您自身就会崩溃了。")
+MSG("下降等级的事情，|请您最好重新考虑一下……")
+	ret
+}
+
+
+
+
+// "僇乕僪偺娪掕" ////////////////////////////////////////////////////////
+@analyze_card
+{
+	check_card(0)
+	on_jump analyze
+	
+SYS("没有卡片。")
+	ret
+	
+analyze:
+	call_shop(9)
+	ret
+}
+
+// "僈乕僨傿傾儞偺墈棗" //////////////////////////////////////////////////
+@card_library
+{
+	call_shop(8)
+	ret
+}
+
+///////////////
+//-- 儕乕僛儘僢僩偺嵳抎 ----------------------------------------------
+DEF("Liese2")
+RES("CLICK")
+{
+	// EV C-12 惞寱偺涋彈昉
+	CHECK_GAME_FLAG(3711)
+	OFF_JUMP NEXT2
+
+//-- 僼儘乕儗僶乕僕儑儞 ----------------------------------------------
+
+	set_deg_ex("Fleurette","")
+	active_chr("Fleurette")
+	focus_chr("Fleurette")
+SET_NAME("FLEURETTE","芙罗蕾特")
+
+	// 3807	TK 嵳抎偺壴壟屻丄僼儘乕儗僢僩偵榖偟偐偗偨
+	CHECK_GAME_FLAG(3807)
+	on_jump SelMenuF
+
+	// 3800	EV 嵳抎偺壴壟
+	CHECK_GAME_FLAG(3800)
+	on_jump TALK2
+
+SelMenuF:
+SEL("#C1　想要做什么？　|#C2对话|守护精灵的降灵|能力值分配|下降等级|取消")
+
+	check_select(0)
+	on_jump TALK2
+	check_select(1)
+	on_jump GURDIAN2
+	check_select(2)
+	on_jump BONUS2
+	check_select(3)
+	on_jump LEVEL2
+
+	jump EXIT
+
+// 夛榖
+TALK2:
+	call TALK_Fleurette
+	jump SelMenuF
+
+// "僈乕僨傿傾儞偺曄峏"
+GURDIAN2:
+	call change_card
+	jump SelMenuF
+
+// "儃乕僫僗"
+BONUS2:
+	call division_bonus
+	jump SelMenuF
+
+// "儗儀儖"
+LEVEL2:
+	call leveldown
+	jump SelMenuF
+
+//-- 儕乕僛僶乕僕儑儞 ------------------------------------------------
+NEXT2:
+
+	set_deg_ex("Liese","")
+	active_chr("Liese")
+	focus_chr("Liese")
+SET_NAME("LIESE","莉丝")
+//	set_motion("Liese","ATTACK1",-1)
+
+	// 弶傔偰僈乕僨傿傾儞僇乕僪傪帩偭偰偒偨偲偒偺儊僢僙乕僕
+	call LIESE_CARD
+
+SelMenu:
+
+	// EV C-4 憡帡偺擇恖
+	check_game_flag(3703)
+	on_jump SelMenu3
+
+//	// EV C-2 儕乕僛偑搢傟傞
+//	check_game_flag(3701)
+//	on_jump SelMenu2
+
+	//3622	EV B-9e 僀儞僼僃儖僲搢偟偨屻丄儕乕僛偲榖偟偨
+	check_game_flag(3622)
+	on_jump SelMenu2
+
+	// EV 僀儞僼僃儖僲傪搢偟偨
+	check_game_flag(4)
+	on_jump TALK
+
+	// EV B-11 儕乕僛偺攋杺栴僀儀儞僩
+	check_game_flag(3610)
+	on_jump SelMenu2
+
+	// EV 僇僯僌儌傪搢偟偨
+	check_game_flag(1)
+	on_jump TALK
+
+	// 3531	EV 崀楈偺媀幃杮曇
+	check_game_flag(3531)
+	on_jump SelMenu2
+
+	// TK 儕乕僛偐傜僇僊傪傕傜偭偨
+	check_game_flag(3517)
+	on_jump SelMenu1
+
+	// GF[奨奜傟偺堚愓偺榖傪暦偄偨]
+	CHECK_GAME_FLAG(3512)
+	ON_JUMP TALK
+
+	// TK 儕乕僛偲弶傔偰榖偟偨
+	check_game_flag(3515)
+	off_jump TALK
+
+SelMenu1:
+//	SEL("亂帥堾儊僯儏乕亃|#c2懱偺偙偲傪憡択偡傞|傗傔傞")
+//	check_select(0)
+//	on_jump TALK
+
+SEL("#C1　想要做什么？　|#C2对话|能力值分配|下降等级|取消")
+	check_select(0)
+	on_jump TALK
+	check_select(1)
+	on_jump BONUS
+	check_select(2)
+	on_jump LEVEL
+	jump EXIT
+
+SelMenu2:
+SEL("#C1　想要做什么？　|#C2对话|守护精灵的降灵|能力值分配|下降等级|取消")
+	jump SelMenuCheck
+
+SelMenu3:
+SEL("#C1　想要做什么？　|#C2关于奇岩城的石像|守护精灵的降灵|能力值分配|下降等级|取消")
+	jump SelMenuCheck
+
+SelMenuCheck:
+	check_select(0)
+	on_jump TALK
+	check_select(1)
+	on_jump GURDIAN
+	check_select(2)
+	on_jump BONUS
+	check_select(3)
+	on_jump LEVEL
+
+	jump EXIT
+
+
+// 夛榖
+TALK:
+	call TALK_Liese
+	jump SelMenu
+
+// "僈乕僨傿傾儞偺曄峏"
+GURDIAN:
+	////////////////////////////////////////////////////
+	// 仛05/09/10:僔儑僢僾愢柧僗僋儕僾僩傪擖揦帪偵嵞惗
+	check_game_flag(75)
+	on_jump skip_help1
+	game_flag_on(75)
+	add_shop_script("help1")
+skip_help1:
+	////////////////////////////////////////////////////
+	call change_card
+	jump SelMenu
+
+// "儃乕僫僗"
+BONUS:
+	////////////////////////////////////////////////////
+	// 仛05/09/10:僔儑僢僾愢柧僗僋儕僾僩傪擖揦帪偵嵞惗
+	check_game_flag(76)
+	on_jump skip_help2
+	game_flag_on(76)
+	add_shop_script("help2")
+skip_help2:
+	////////////////////////////////////////////////////
+	call division_bonus
+	jump SelMenu
+
+// "儗儀儖"
+LEVEL:
+	call leveldown
+	jump SelMenu
+
+EXIT:
+	end
+}
+
+RES("INIT")
+{
+	// 儅僢僾偺夞揮妏搙傪嫮惂曄峏乮強梫帪娫 1 僼儗乕儉偱曽岦 6 偵夞揮乯
+	RESET_MAP_ROT_Y(1,1)
+}
+
+
+@LIESE_CARD
+{
+	// 3626	TK 儕乕僛偵弶傔偰僇乕僪傪搉偟偨偲偒偺儊僢僙乕僕
+	check_game_flag(3626)
+	on_jump EXIT
+
+	// 僨儌儞僇僢僣僃
+	CHECK_GAME_FLAG(701)
+	on_jump CARD
+	// 僜乕僒儕傾儞
+	CHECK_GAME_FLAG(731)
+	on_jump CARD
+	// 儀儔僪乕僫
+	CHECK_GAME_FLAG(575)
+	on_jump CARD
+	// 僨儏儔儞僟儖
+	CHECK_GAME_FLAG(595)
+	on_jump CARD
+	// 僼儕儏乕僎儖
+	CHECK_GAME_FLAG(723)
+	on_jump CARD
+	// 償傽僫億儖僩
+	CHECK_GAME_FLAG(598)
+	on_jump CARD
+	// 僣償僃儖僋
+	CHECK_GAME_FLAG(583)
+	on_jump CARD
+	// 僈乕僱僔傾
+	CHECK_GAME_FLAG(822)
+	on_jump CARD
+	// 僌儗僀傾僢僔儏
+	CHECK_GAME_FLAG(918)
+	on_jump CARD
+	// 僙儖儀僗僋
+	CHECK_GAME_FLAG(653)
+	on_jump CARD
+	// 儀儖丒僼儘僀僨丂3639	傾僯僄僗僔僗僥儉丗楈栻傪搉偟偨
+	CHECK_GAME_FLAG(3639)
+	on_jump CARD
+
+	jump EXIT
+
+CARD:
+MSG("骑士大人，这是……")
+MSG("您好像找到|守护精灵的卡片了呢。")
+MSG("这卡片就由我保管吧。")
+MSG("存在这里的守护精灵|随时可以供您差遣。")
+MSG("如果需要更换守护精灵的话，|请告诉我一声。")
+
+SYS_EX("将守护精灵卡片寄放在莉丝那里。"-1,0X00000200)
+
+	// 3626	TK 儕乕僛偵弶傔偰僇乕僪傪搉偟偨偲偒偺儊僢僙乕僕
+	game_flag_on(3626)
+	ret
+
+EXIT:
+	ret
+
+}
+
+
+//////////////////////////////////////////////////////////////////////
+// 僼儘乕儗僢僩夛榖
+
+@TALK_Fleurette
+{
+	// 3800	EV 嵳抎偺壴壟
+	check_game_flag(3800)
+	on_jump TALK3
+
+	// 3804	EV D-0-1 僼儘乕儗僢僩偺夞憐
+	check_game_flag(3804)
+	on_jump TALK2
+
+	jump TALK1
+
+//--------------------------------------------------------------------
+
+TALK3:
+	// 3807	TK 嵳抎偺壴壟屻丄僼儘乕儗僢僩偵榖偟偐偗偨
+	check_game_flag(3807)
+	on_jump TALK3_2
+
+SYS("将导师们的事情告诉了芙罗蕾特。")
+
+MSG("哎，大家都……？")
+MSG("骑士大人，等阿巴塔拉哈回来之后，|我也会马上赶去奇岩城。")
+MSG("马上就是决战了……")
+MSG("骑士大人，请以您的力量帮助我。|这次一定要打倒加尔西斯和黑色新娘……")
+	// 3807	TK 嵳抎偺壴壟屻丄僼儘乕儗僢僩偵榖偟偐偗偨
+	game_flag_on(3807)
+	jump EXIT
+
+//丂丂仚埲崀丄孞傝曉偟
+TALK3_2:
+MSG("骑士大人，等阿巴塔拉哈回来之后，|我也会马上赶去奇岩城。")
+MSG("马上就是决战了……")
+	jump EXIT
+
+TALK2:
+MSG("骑士大人……")
+MSG("我外出的事情，|要对七导师们保密呀。")
+MSG("我不怎么会说谎，|大概马上就会被拆穿的……")
+	jump EXIT
+
+TALK1:
+	check_room_flag(2)
+	on_jump TALK1_2
+
+MSG("虽然黑色新娘的确是我的姐姐，|但是在讨伐她这点上我决不会犹豫。")
+MSG("因为那是应该讨伐的敌人……")
+MSG("骑士大人，我和导师们|也会不遗余力地帮助您的。")
+MSG("把魔王和黑色新娘一起消灭吧。")
+	room_flag_on(2)
+	jump EXIT
+
+//丂丂仸孞傝曉偟
+TALK1_2:
+MSG("虽然黑色新娘的确是我的姐姐，|但是在讨伐她这点上我决不会犹豫。")
+MSG("因为那是应该讨伐的敌人……")
+	jump EXIT
+
+EXIT:
+	ret
+}
+
+//////////////////////////////////////////////////////////////////////
+// 儕乕僛夛榖
+
+@TALK_Liese
+{
+//	//仴忈暻徚柵屻
+//	check_game_flag(3710)
+//	on_jump TALK7
+	//仴婏娾忛弌尰屻
+	check_game_flag(3702)
+	on_jump TALK6
+	//仴僀儞僼僃儖僲愴屻
+	check_game_flag(4)
+	on_jump TALK5
+	//仴僇僯僌儌愴屻
+	check_game_flag(1)
+	on_jump TALK4
+	//仴僩儗儞僩愴屻
+	check_game_flag(3)
+	on_jump TALK3
+	//仴僈乕僨傿傾儞庢摼屻
+	check_game_flag(3532)
+	on_jump TALK2
+	// TK 儕乕僛偐傜僇僊傪傕傜偭偨
+	check_game_flag(3517)
+	on_jump TALK1_8
+
+	jump TALK1
+
+//--------------------------------------------------------------------
+
+//仴婏娾忛弌尰屻
+TALK6:
+	game_flag_on(3622)
+	// 3703	EV C-4 憡帡偺擇恖
+	check_game_flag(3703)
+	on_jump TALK6_1
+
+MSG("骑士大人………|奇岩城的身姿终于展现在我们面前了。")
+MSG("在城中一定有|关于圣剑的线索。")
+MSG("要是有什么|进入城内的方法就好了……")
+	ret
+
+TALK6_1:
+	check_room_flag(2)
+	on_jump TALK6_2
+
+MSG("………………………………")
+MSG("那是…………")
+MSG("不……对我来说什么也……")
+	room_flag_on(2)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK6_2:
+MSG("………………………………")
+	jump EXIT
+
+//仴僀儞僼僃儖僲愴屻
+TALK5:
+MSG("骑士大人，现在的您看起来非常可靠。")
+MSG("看起来您已经完全恢复了。")
+MSG("您一定是被圣剑选中的……")
+MSG("我有这样的感觉。")
+	//3622	EV B-9e 僀儞僼僃儖僲搢偟偨屻丄儕乕僛偲榖偟偨
+	game_flag_on(3622)
+	jump EXIT
+
+//--------------------------------------------------------------------
+
+TALK4:
+MSG("……我有时也会眺望着湖水，|任时光流逝。")
+MSG("我有些在意……")
+MSG("最近一段时间，|奇岩城显露身影的时候变多了。")
+MSG("这是什么预兆吗……")
+	ret
+
+//仴僩儗儞僩愴屻
+TALK3:
+	// 3620	TK B-4b 僩儗儞僩愴屻偺儕乕僛夛榖
+	check_game_flag(3620)
+	on_jump TALK3_1
+
+MSG("骑士大人，那个王冠是……？")
+MSG("…………我从中感觉到了非常强大的力量。")
+MSG("光明而又黑暗……|温暖而又冰冷……")
+MSG("那不可思议的力量犹如光影交错袭来……")
+MSG("或许和奇岩城或者圣剑|有什么关系也说不定。")
+MSG("这个还是由骑士大人您带在身上比较好。")
+	game_flag_on(3620)
+	jump EXIT
+
+TALK3_1:
+	check_room_flag(2)
+	on_jump TALK3_2
+
+MSG("骑士大人……")
+MSG("您也许知道了，|守护精灵会同宿主一同成长。")
+MSG("您注意到遗迹里巫女的圣像了吗？")
+MSG("那个雕像中的人物，|就是以前发明守护精灵降灵术的人。")
+MSG("圣像有帮助寄宿中的|守护精灵成长的作用。")
+MSG("如果在遗迹中找到圣像的话，|试着触摸一下看看吧。")
+MSG("……虽然您的时间非常有限，|但是现在一步一步踏实前进更为重要。")
+	room_flag_on(2)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK3_2:
+MSG("骑士大人，您注意到|遗迹里巫女的圣像了吗？")
+MSG("圣像有帮助寄宿中的守护精灵成长的作用。")
+MSG("如果在遗迹中找到圣像的话，|试着触摸一下看看吧。")
+	jump EXIT
+
+//仴僈乕僨傿傾儞庢摼屻
+TALK2:
+	check_room_flag(2)
+	on_jump TALK2_2
+
+TALK2_1:
+MSG("骑士大人……您的身体怎么样了？")
+MSG("调查已经结束，|您可以出入北边的遗迹了。")
+MSG("非常遗憾，|关于这次的案件一点线索也没得到……")
+MSG("不过从对方武技高强这点来推断，|杀害旅行者的犯人和与您战斗的剑士|有可能是同一个人。")
+MSG("如果您打算探索遗迹的话，|请一定要小心谨慎。")
+	room_flag_on(2)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK2_2:
+MSG("……寄宿在骑士大人您身上的|守护精灵是可以更换的。")
+MSG("如果找到了守护精灵卡片，|请拿到我这里来。")
+MSG("各种各样的精灵都尝试一下吧。")
+	jump EXIT
+
+TALK1:
+	// GF[奨奜傟偺堚愓偺榖傪暦偄偨]
+	CHECK_GAME_FLAG(3512)
+	ON_JUMP TALK1_3
+
+TALK1_1:
+	// TK 儕乕僛偲弶傔偰榖偟偨
+	CHECK_GAME_FLAG(3515)
+	ON_JUMP TALK1_2
+
+	GAME_FLAG_ON(3515)
+MSG("您是……")
+MSG("看起来您是一名骑士，|到这个精灵堂来有什么事吗？")
+MSG("…………奇岩城的线索？")
+MSG("十分抱歉，|在北边的遗迹刚刚发生了案件，|所以在调查结束之前禁止出入。")
+MSG("请您耐心等待一段时间……")
+	ret
+//丂丂仸埲崀丄孞傝曉偟
+
+TALK1_2:
+MSG("十分抱歉，|在北边的遗迹刚刚发生了案件，|所以在调查结束之前禁止出入。")
+MSG("请您耐心等待一段时间……")
+	ret
+
+TALK1_3:
+	// TK 儕乕僛偲弶傔偰榖偟偨
+	CHECK_GAME_FLAG(3515)
+	ON_JUMP TALK1_4
+
+MSG("您是……")
+MSG("我听说有骑士和研究者|来这里调查奇岩城的事情，|大概指的就是您吧。")
+MSG("我是负责管理这间精灵堂的祭司。|叫我莉丝就可以了。")
+MSG("不巧的是，|北边的遗迹刚刚发生了不幸的案件，|所以在调查结束之前禁止进入……")
+	GAME_FLAG_ON(3515)
+
+TALK1_4:
+	CHECK_GAME_FLAG(3516)
+	ON_JUMP TALK1_5
+
+MSG("哎……您想到镇外的遗迹去？|为什么要去那种地方呢……？")
+MSG("………………………………")
+MSG("……是因为史密斯先生啊……|他真是会给人添麻烦……")
+MSG("…………没办法。")
+MSG("进遗迹虽然没什么关系，|不过里面已经被魔物所盘踞。")
+MSG("请做好万全的准备|再进行调查。")
+
+TALK1_5:
+	CHECK_MAX_ITEM(0)
+	ON_JUMP TALK1_6
+
+MSG("那么我这就|把遗迹大门的钥匙给您吧。")
+
+	SE("SE_GETITEM")
+SYS("#C2莉丝拿出『镇外遗迹的钥匙』。")
+	GET_ITEM(200, 1)
+	GAME_FLAG_ON(3517)
+
+	room_flag_on(2)
+	jump TALK1_8
+
+TALK1_6:
+	GAME_FLAG_ON(3516)
+MSG("因为要给您遗迹大门的钥匙，|所以请先整理一下行李。")
+	ret
+
+TALK1_8:
+	check_room_flag(2)
+	on_jump TALK1_9
+
+//仱堚愓偺尞傪庤偵擖傟偨屻&&堦搙壆奜儅僢僾偵弌偨
+MSG("骑士大人，探索遗迹的事情怎么样了？")
+MSG("在最初阶段，|升级的时候尽快将点数|分配给能力值比较好。")
+MSG("升级之后，|请不要忘记到这间精灵堂来。")
+
+	ret
+
+TALK1_9:
+MSG("和骑士大人您一样|来调查奇岩城的人络绎不绝。")
+MSG("其中也有不少人一踏进遗迹，|就再也没有回来。")
+MSG("请务必小心谨慎。")
+
+
+EXIT:
+	ret
+}
+
+//////////////////////////////////////////////////////////////////////
+// 僄儕僢僋
+
+//惛楈摪撪偺幾杺偵側傜側偄応強傊攝抲|
+
+DEF("Erick")
+RES("CLICK")
+{
+	FOCUS_CHR("Erick")
+SET_NAME("ERICK","埃里克")
+	SET_MOTION("Erick","ATTACK1",-1)
+
+	//仴忈暻徚柵屻
+	check_game_flag(3710)
+	on_jump TALK7
+	//仴婏娾忛弌尰屻
+	check_game_flag(3702)
+	on_jump TALK6
+	//仴僀儞僼僃儖僲愴屻
+	check_game_flag(4)
+	on_jump TALK5
+	//仴僇僯僌儌愴屻
+	check_game_flag(1)
+	on_jump TALK4
+	//仴僩儗儞僩愴屻
+	check_game_flag(3)
+	on_jump TALK3
+	//仴僈乕僨傿傾儞庢摼屻
+	check_game_flag(3532)
+	on_jump TALK2
+	// TK 儕乕僛偐傜僇僊傪傕傜偭偨
+	check_game_flag(3517)
+	on_jump TALK1_5
+	//仴僎乕儉奐巒捈屻
+	jump TALK1
+
+//--------------------------------------------------------------------
+
+//仴忈暻徚柵屻
+TALK7:
+MSG("…………………………")
+	jump EXIT
+//仴婏娾忛弌尰屻
+TALK6:
+MSG("已经开始了吗……")
+	jump EXIT
+//仴僀儞僼僃儖僲愴屻
+TALK5:
+MSG("骑士大人…………")
+MSG("…………………………")
+MSG("不管发生什么事情，|我们都会相信莉丝大人并跟着她走下去。")
+	jump EXIT
+//仴僇僯僌儌愴屻
+TALK4:
+	// EV B-11 儕乕僛偺攋杺栴僀儀儞僩
+	check_game_flag(3610)
+	on_jump TALK4_5
+MSG("骑士大人，|莉丝大人刚刚出去了。")
+MSG("我想她肯定就在城里……")
+	jump EXIT
+//仱攋杺栴僀儀儞僩廔椆屻
+TALK4_5:
+MSG("莉丝大人已经回来了。")
+MSG("是我多心了吗……|今天似乎比平时回来的时间要晚……")
+MSG("平常的话，|她会很准时地回来的啊。")
+	jump EXIT
+//仴僩儗儞僩愴屻
+TALK3:
+MSG("骑士大人，您的身体|已经适应守护精灵了吗？")
+MSG("……在身上寄宿守护精灵的风俗|从很早以前就有了。")
+MSG("对，|比这雷兰德建国还要久远……")
+	jump EXIT
+
+//仴僈乕僨傿傾儞庢摼屻
+TALK2:
+MSG("等级上升时如果有剩余点数，|可以留到下次升级再分配。")
+MSG("如果没有必要|急着提高能力值，|将点数留到下次升级也是一种选择。")
+MSG("以后如果出现了需要强化的能力值，|可以用以前剩余的点数来补充。")
+	jump EXIT
+
+//仱堚愓偺尞傪庤偵擖傟偨屻
+TALK1_5:
+	check_room_flag(0)
+	on_jump TALK1_6
+
+MSG("在这个精灵堂可以|将升级时得到的『点数』|分配给『能力值』。")
+MSG("到下次升级之前，|能力值可以随意增减。")
+MSG("如果和敌人战斗时陷入苦战，|最好重新考虑调整能力值。")
+MSG("但是要注意，|一旦升级，|之前的能力值就不能再变更。")
+	room_flag_on(0)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK1_6:
+MSG("在这个精灵堂可以|将升级时得到的『点数』|分配给『能力值』。")
+MSG("到下次升级之前，|能力值可以随意增减。")
+	jump EXIT
+
+//仴僎乕儉奐巒捈屻
+TALK1:
+MSG("这里是可以进行|『洗礼』和『降灵仪式』的精灵堂。")
+MSG("也可以进行|『能力值』的分配和『下降等级』，|有需要时请与祭坛前的莉丝大人谈话。")
+	jump EXIT
+
+EXIT:
+	SET_MOTION("Erick","STAND",-1)
+	END
+}
+
+//////////////////////////////////////////////////////////////////////
+// 傾僀儔
+
+// 惛楈摪撪偺幾杺偵側傜側偄応強傊攝抲|
+DEF("Ira")
+RES("CLICK")
+{
+	FOCUS_CHR("Ira")
+SET_NAME("IRA","爱拉")
+	SET_MOTION("Ira","ATTACK1",-1)
+
+
+	//仴忈暻徚柵屻
+	check_game_flag(3710)
+	on_jump TALK7
+	//仴婏娾忛弌尰屻
+	check_game_flag(3702)
+	on_jump TALK6
+	//仴僀儞僼僃儖僲愴屻
+	check_game_flag(4)
+	on_jump TALK5
+	//仴僇僯僌儌愴屻
+	check_game_flag(1)
+	on_jump TALK4
+	//仴僩儗儞僩愴屻
+	check_game_flag(3)
+	on_jump TALK3
+	//仴僈乕僨傿傾儞庢摼屻
+	check_game_flag(3532)
+	on_jump TALK2
+	// TK 儕乕僛偐傜僇僊傪傕傜偭偨
+	check_game_flag(3517)
+	on_jump TALK1_5
+	//仴僎乕儉奐巒捈屻
+	jump TALK1
+
+//--------------------------------------------------------------------
+
+//仴忈暻徚柵屻
+TALK7:
+MSG("莉丝大人…………")
+	jump EXIT
+//仴婏娾忛弌尰屻
+TALK6:
+MSG("那是奇岩城……")
+MSG("大家都被|吓到了呢……")
+	jump EXIT
+//仴僀儞僼僃儖僲愴屻
+TALK5:
+MSG("如您所知，|莉丝大人是一位非常严厉的人。")
+MSG("但是…………")
+MSG("我想那正是|怀有慈悲之心才产生的严厉。")
+MSG("不仅作为精灵堂的祭司，|作为一名女性来说，|莉丝大人也是非常值得尊敬的。")
+	jump EXIT
+//仴僇僯僌儌愴屻
+TALK4:
+	// EV B-11 儕乕僛偺攋杺栴僀儀儞僩
+	check_game_flag(3610)
+	on_jump TALK4_5
+MSG("我想莉丝大人|应该是去外面散步了。")
+MSG("这个时间|她应该在湖边。")
+	jump EXIT
+//仱攋杺栴僀儀儞僩廔椆屻
+TALK4_5:
+MSG("据说通过在遗迹尽头的魔妆之森，|就可以到达灵峰哈莱克山。")
+MSG("但是听说那座森林常使人迷失，|是很可怕的森林……")
+MSG("愿骑士大人|受到守护精灵的保护……")
+	jump EXIT
+//仴僩儗儞僩愴屻
+TALK3:
+MSG("在岛上的遗迹中，|也许存在着|我们还不知道的守护精灵。")
+MSG("如果能够寄宿在身上，|我想应该能成为值得依靠的搭档……")
+	jump EXIT
+
+//仴僈乕僨傿傾儞庢摼屻
+TALK2:
+MSG("在遗迹中仔细寻找，|应该可以找得到|封印着守护精灵的卡片。")
+MSG("虽然那种卡片|是很久以前制作的东西，|不过一定还可以好好使用。")
+MSG("如果找到了新的卡片，|请交给莉丝大人。")
+	jump EXIT
+
+//仱堚愓偺尞傪庤偵擖傟偨屻
+TALK1_5:
+	check_room_flag(1)
+	on_jump TALK1_6
+
+MSG("所谓『下降等级』正如字面的意思一样，|就是将自己的等级下降。")
+MSG("此时所有的能力值都会回到|上一次升级前的状态。")
+MSG("但是武器熟练度不会变，|而且经验值也会保留升级必要量的50%。")
+MSG("所以可以在|略微有利的条件下重新成长。")
+MSG("等级可以多次下降。")
+MSG("如果之前成长为非常极端的状态，|想重新培养时推荐使用下降等级。")
+	room_flag_on(1)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK1_6:
+MSG("所谓『下降等级』正如字面的意思一样，|就是将自己的等级下降。")
+MSG("此时所有的能力值都会回到|上一次升级前的状态。")
+MSG("但是武器熟练度不会变，|而且经验值也会保留升级必要量的50%。")
+	jump EXIT
+
+//仴僎乕儉奐巒捈屻
+TALK1:
+	check_room_flag(1)
+	on_jump TALK1_2
+
+TALK1_1:
+MSG("在这个地方出生的人，|在精灵堂被赋予『守护精灵』|是一种风俗。")
+MSG("你问守护精灵是什么？|这个嘛……")
+MSG("顾名思义，|就是寄宿在每个人身上守护着他的精灵。")
+MSG("当然，|我和莉丝大人身上也有守护精灵存在。")
+	room_flag_on(1)
+	jump EXIT
+
+//丂丂仛孞傝曉偟
+TALK1_2:
+MSG("守护精灵就是|寄宿在每个人身上守护着他的精灵。")
+MSG("在这个地方出生的人，|在精灵堂被赋予『守护精灵』|是一种风俗。")
+	jump EXIT
+
+EXIT:
+	SET_MOTION("Ira","STAND",-1)
+	END
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// 僼儘乕儗僢僩僀儀儞僩
+
+DEF("Fleurette")
+RES("INIT")
+{
+
+	// EV C-12 惞寱偺涋彈昉
+	CHECK_GAME_FLAG(3711)
+	ON_JUMP EXIT
+
+	// EV C-11 崟偒壴壟
+	CHECK_GAME_FLAG(3710)
+	OFF_JUMP EXIT
+
+//--------------------------------------------------------------------
+
+//丂丂婏娾忛撪偱儕乕僛儘僢僩偲偺僀儀儞僩傪廔偊偰丄惛楈摪偵擖傞偲
+//丂丂僀儀儞僩奐巒丅惛楈摪偺拞偵偼僼儘乕儗僢僩偲榋恖偺摫巘偨偪偑
+//丂丂慡堳峊偊偰偄傞丅埲壓偺傛偆側暲傃弴丅
+//丂丂丂 嵳抎
+//丂丂丂丂仭
+//丂丂丂丂仜僼
+//丂丂傾仜丂仜僥
+//丂丂儀仜丂仜僔儏
+//丂丂僪仜丂仜僈
+
+	CINEMA_ON(0)
+	STOP_PC(0)
+	PC_WEAPON( 0 , 1 )
+	INIT_SWITCH_ON("Door1")
+	SET_DEG("PC", "0")
+
+	BGM(18, 0, -1)
+
+	look_chr("Beatrice","PC")
+	look_chr("Tiowald","PC")
+	look_chr("Sturm","PC")
+	look_chr("Avatarlaha","PC")
+	look_chr("Gandaltua","PC")
+	look_chr("Dvorak","PC")
+
+//弶婜僇儊儔愝掕
+	permit_script_camera(1)
+	set_script_camera(-0.09,0.50,-6.30,  -50,225.0,0.0, 10, 15.0)
+	fade_in(120)
+	wait(120)
+	move_script_look_at(0,0,7.0, 200, 1)
+
+//僪儔僗儗俀杮僎僢僩傪夞旔偡傞偨傔偵嵟弶偵庢傝堷偒
+	PICK_ITEM(187)
+	PICK_ITEM(188)
+	PICK_ITEM(189)
+	PICK_ITEM(190)
+	GET_ITEM(36, 1)
+
+
+	set_skip_label("SKIP")
+	wait(200)
+
+//奺巌嵳戜帉
+	cross_fade(60)
+	set_script_camera(2,-1,0.25,  -50,225.0,0.0, 12.5, 15.0)
+	wait(60)
+
+	look_chr("PC", "Beatrice")
+	SET_MOTION("Beatrice", "ATTACK1",-1)
+MSG_EX("#S3#C0贝亚特里奇「来了啊。」",-1,2)
+
+	look_chr("PC", "Tiowald")
+	SET_MOTION("Tiowald", "ATTACK1",-1)
+MSG_EX("#S3#C0提欧巴特「辛苦您了，#N0大人。」",-1,2)
+
+	look_chr("PC", "Sturm")
+	SET_MOTION("Sturm", "ATTACK1",-1)
+MSG_EX("#S3#C0修特威尔姆「能够打败洛蕾莱……干得漂亮。」",-1,2)
+
+	look_chr("PC", "Avatarlaha")
+	SET_MOTION("Avatarlaha", "ATTACK1",-1)
+MSG_EX("#S3#C0阿巴塔拉哈「请到这边来。」",-1,2)
+
+	LOOK_CHR("PC", "")
+	INIT_WALK_DST("PC")
+	set_walk_dst("PC", 0.00,0.00,-2.19)
+	walk_pos("PC",0,0.03)
+	wait(60)
+
+	look_chr("PC", "Gandaltua")
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「首先先让我表达谢意。|　　　　　竟然能将奇岩城的障壁消除。」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「大家都很感谢你呢。」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「托你的福，|　　　　　某个鲁莽的家伙也保住了性命。」",-1,2)
+
+	look_chr("PC", "Dvorak")
+	SET_MOTION("Dvorak", "ATTACK1",-1)
+MSG_EX("#S3#C0德沃夏克「该怎么说呢……那个……非常感谢。」",-1,2)
+
+	look_chr("PC", "Gandaltua")
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「你似乎在奇岩城中碰到了黑色新娘呢。」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「既然这样我就开门见山吧。|　　　　　有个人想见你。」",-1,2)
+
+	stop_bgm(0, 1000)
+	wait(30)
+
+//僼儘乕儗僢僩曕偄偰偔傞
+	cross_fade(30)
+	set_script_camera(0.0,0.25,6,  -40,200,0,  10, 15.0)
+	wait(30)
+	wait_walk("PC")
+
+	BGM(03, 0, -1)
+
+MSG_EX("#S3#C0白袍女性「初次见面，骑士大人。」",-1,2)
+	INIT_WALK_DST("Fleurette")
+	set_walk_dst("Fleurette", 0, 0.5, 3.23)
+	walk_pos("Fleurette",0,0.022)
+	move_script_look_at(0,0,-0.5, 80, 1)
+	look_chr("PC", "Fleurette")
+
+	SET_DEG_EX("Dvorak", "PC")
+	SET_DEG_EX("Sturm", "PC")
+	SET_DEG_EX("Avatarlaha", "PC")
+	SET_DEG_EX("Gandaltua", "PC")
+	SET_DEG_EX("Beatrice", "PC")
+	SET_DEG_EX("Tiowald", "PC")
+
+	look_chr("Beatrice","-")
+	look_chr("Tiowald","-")
+	look_chr("Sturm","-")
+	look_chr("Avatarlaha","-")
+	look_chr("Gandaltua","-")
+	look_chr("Dvorak","-")
+	wait(80)
+
+	cross_fade(30)
+	set_script_camera(0,1.4,5.3,  0,265,0,  2.5, 15.0)
+	move_script_look_at(0,0.1,-0.3, 190, 1)
+	blur(10)
+	wait(190)
+
+
+//僼儘乕儗僢僩帺屓徯夘
+	cross_fade(30)
+	set_script_camera(0,1.8,3.23,  3,180,0, 3.5, 15.0)
+	SCALE_SCRIPT_CAMERA( 0.9, 1000, 1)
+	set_pos("Fleurette",  0.00,0.50,3.23)
+	look_chr("Fleurette", "PC")
+	blur(0)
+	wait(120)
+	
+MSG_EX("#S3#C0白袍女性「我是仙那度第十四王朝的第二公主……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「名叫芙罗蕾特。|　　　　　这样我们就算认识了。」",-1,2)
+	wait(30)
+	stop_camera(0)
+
+
+//傢偄傢偄偑傗偑傗
+	cross_fade(60)
+	set_script_camera(2,-1,0.25,  -50,225.0,0.0, 12.5, 15.0)
+	wait(60)
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「哈哈，看来你很吃惊吧。」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「是不是觉得在哪里见过呢？」",-1,2)
+	wait(40)
+MSG_EX("#S3#C0芙罗蕾特「对不起，让您受惊了。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「莉丝洛特，不……|　　　　　黑色新娘是我的孪生姐姐。」",-1,2)
+	wait(40)
+MSG_EX("#S3#C0刚达尔奇「还有，你调查过遗迹的话，|　　　　　也许已经知道了……」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「说到芙罗蕾特公主，|　　　　　就是打败魔王加尔西斯的英雄对吧。」",-1,2)
+	wait(40)
+	look_chr("Fleurette", "Gandaltua")
+MSG_EX("#S3#C0芙罗蕾特「打倒加尔西斯？」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「我？」",-1,2)
+
+	look_chr("Gandaltua","Fleurette")
+MSG_EX("#S3#C0刚达尔奇「哈哈，我也很吃惊呢。」",-1,2)
+
+	look_chr("Dvorak","Gandaltua")
+	SET_MOTION("Dvorak", "ATTACK1",-1)
+MSG_EX("#S3#C0德沃夏克「不要开玩笑了，|　　　　　不觉得说这些闲话对芙罗蕾特大人很不礼貌吗。」",-1,2)
+
+	look_chr("Gandaltua","-")
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「哦哦，好可怕啊……」",-1,2)
+	look_chr("Dvorak","-")
+
+//撲柧偐偟丅
+	cross_fade(60)
+	set_script_camera_EX("Fleurette",1,  -20,180.0,0.0, 8, 15.0)
+	look_chr("Fleurette", "PC")
+	wait(90)
+
+MSG_EX("#S3#C0芙罗蕾特「……好像流传下来的历史和事实是不一样的呢。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「的确，我曾和魔王战斗过，|　　　　　但是还没有到能被称为英雄的程度。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「请允许我把事情的经过说明一下。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「……首先，在这里的这些人|　　　　　都是曾经伴随我与魔王和黑色新娘战斗过的人。」",-1,2)
+
+	rotate_script_camera(10,0,0, 800, 1)
+
+	SET_MOTION("Tiowald", "ATTACK1",-1)
+MSG_EX("#S3#C0提欧巴特「我们是在仙那度任职的七导师。」",-1,2)
+MSG_EX("#S3#C0提欧巴特「我们的任务是和芙罗蕾特大人一起|　　　　　将魔王封印在结界中。」",-1,2)
+
+	SET_MOTION("Sturm", "ATTACK1",-1)
+MSG_EX("#S3#C0修特威尔姆「时间要追溯到５００年以前……」",-1,2)
+MSG_EX("#S3#C0修特威尔姆「那是发生在芙罗蕾特公主|　　　　　被选为巫女的那一天的事情。」",-1,2)
+MSG_EX("#S3#C0修特威尔姆「突然，莉丝洛特公主将|　　　　　封印在王城中的魔王解放了出来。」",-1,2)
+MSG_EX("#S3#C0修特威尔姆「然后，竟然宣布要成为魔王的新娘……」",-1,2)
+
+	SET_MOTION("Fleurette", "ATTACK2",-1)
+MSG_EX("#S3#C0芙罗蕾特「七导师中的一人，洛蕾莱……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「体弱多病的姐姐受她的唆使，|　　　　　被魔王的力量所迷惑。」",-1,2)
+
+	SET_MOTION("Beatrice", "ATTACK1",-1)
+MSG_EX("#S3#C0贝亚特里奇「莉丝洛特公主被剥夺了身份，|　　　　　　国王立刻下达了讨伐令。」",-1,2)
+MSG_EX("#S3#C0贝亚特里奇「我们为了讨伐魔王和国贼黑色新娘，|　　　　　　而攻入了奇岩城……」",-1,2)
+
+	SET_MOTION("Avatarlaha", "ATTACK1",-1)
+MSG_EX("#S3#C0阿巴塔拉哈「但是，就在芙罗蕾特公主用圣剑|　　　　　　将魔王加尔西斯逼入绝境的瞬间……」",-1,2)
+MSG_EX("#S3#C0阿巴塔拉哈「我们不小心被黑色新娘钻了空子，|　　　　　　被夺去了『时间』。」",-1,2)
+
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「我们被变成散在各处的石像，|　　　　　就是因为在战斗中被施了法术。」",-1,2)
+MSG_EX("#S3#C0刚达尔奇「唉唉，变成那种样子真是丢脸，|　　　　　不过也是没办法的事情。」",-1,2)
+
+	SET_MOTION("Dvorak", "ATTACK1",-1)
+MSG_EX("#S3#C0德沃夏克「然后，那法术到现在才被解开了。」",-1,2)
+
+	SET_MOTION("Fleurette", "ATTACK2",-1)
+MSG_EX("#S3#C0芙罗蕾特「但是，沉睡中的魔王也会被再度唤醒。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「黑色新娘想在这个国家|　　　　　也召唤来黑暗的时代。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「虽然仙那度已经毁灭了，|　　　　　但是这次一定要消灭黑色新娘和魔王。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「这正是我们在这个时代觉醒的使命。」",-1,2)
+	wait(60)
+	look_chr("Tiowald", "Fleurette")
+MSG_EX("#S3#C0提欧巴特「………………………………」",-1,2)
+	wait(60)
+
+	wait(60)
+	cross_fade(60)
+	set_script_camera(0.00,-0.00,-0.39,  -55,10.0,0.0, 15.0, 15.0)
+	rotate_script_camera(0,-20,0, 1500, 1)
+	wait(60)
+
+MSG_EX("#S3#C0芙罗蕾特「而且，骑士先生……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「看起来，你好象也背负着使命。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「你是在寻找圣剑屠龙剑吧。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「对于掌管封印的巫女来说有两个任务。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「一个是以生命为代价|　　　　　将魔王加尔西斯永久封印的任务…」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「另一个，则是在必要的时候|　　　　　将圣剑交付给有资格的人。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「也就是说掌管封印的巫女|　　　　　也是要选择圣剑继承人的人。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「在五百年前的战斗中继承者并没有出现，|　　　　　所以我自己手持圣剑与魔王战斗。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「但是现在…………」",-1,2)
+
+	wait(60)
+	cross_fade(60)
+	set_script_camera_EX("Fleurette",1,  -20,180.0,0.0, 8, 15.0)
+	rotate_script_camera(10,0,0, 800, 1)
+	wait(60)
+
+	look_chr("Tiowald", "-")
+	wait(60)
+MSG_EX("#S3#C0提欧巴特「不久前，|　　　　　天空中耀眼的三颗希琉加之星合并成了一颗……」",-1,2)
+MSG_EX("#S3#C0提欧巴特「自古以来，|　　　　　那就是圣剑的继承者已经出现的证明。」",-1,2)
+	wait(60)
+MSG_EX("#S3#C0芙罗蕾特「像你这样拥有力量和荣誉的人|　　　　　在这个时刻出现在了我们的面前……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「骑士大人，我…………」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「我选定你成为圣剑的继承人，|　　　　　并将屠龙剑交托于你。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「再没有什么可说的了。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「因为你与黑色新娘有缘，|　　　　　而且有互相对抗的命运。」",-1,2)
+
+	set_deg_EX("Tiowald", "Fleurette")
+MSG_EX("#S3#C0提欧巴特「芙罗蕾特公主，那么……」",-1,2)
+
+	look_chr("Fleurette", "Tiowald")
+	wait(40)
+MSG_EX("#S3#C0芙罗蕾特「嗯……」",-1,2)
+	wait(80)
+//	set_deg_EX("Fleurette", "Dvorak")
+	look_chr("Fleurette", "Dvorak")
+MSG_EX("#S3#C0芙罗蕾特「德沃夏克，|　　　　　将『扎格琉伊勒斯』拿过来。」",-1,2)
+
+	set_deg_EX("Dvorak", "Fleurette")
+MSG_EX("#S3#C0德沃夏克「是。」",-1,2)
+
+	look_chr("Fleurette", "PC")
+MSG_EX("#S3#C0芙罗蕾特「骑士大人，|　　　　　你拿着三个王冠吧？」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「把他们放到这里……」",-1,2)
+
+	fade_out(120)
+	wait(180)
+
+
+//僋儔僂儞仺僪儔僗儗僀儀儞僩丅僄僼僃僋僩偲偐摦偒偲偐彅乆寛傔偆偪偱======================================================
+//嶌偭偰傞偺偱丄廋惓梫朷偁傞帪偼堜忋傑偱================================================================================
+//======================================================================================================================
+
+MSG_EX("#S3#C0芙罗蕾特「雷比克、库奥基、泰胧、|　　　　　还有扎格琉伊勒斯……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「这四个王冠是仙那度的象征，|　　　　　也是解开圣剑封印的钥匙。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「而且，这地方流传着的|　　　　　在身体里寄宿守护精灵的风俗……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「那正是利用了|　　　　　我们巫女对自己所施的法术。」",-1,2)
+
+	//幾杺側偺偱埵抲曄偊
+	set_pos("PC",  0,0.25,-2.5)
+
+	set_pos("Avatarlaha",   2.2,0, 0.75)
+	set_pos("Tiowald",     -2.2,0, 0.75)
+	set_pos("Beatrice",    -2.2,0,-0.70)
+	set_pos("Sturm",       -2.2,0,-2.40)
+	set_pos("Dvorak",       2.2,0,-0.70)
+	set_pos("Gandaltua",    2.2,0,-2.40)
+	SET_DEG_EX("Avatarlaha", "Fleurette")
+	SET_DEG_EX("Tiowald",    "Fleurette")
+	SET_DEG_EX("Beatrice",   "Fleurette")
+	SET_DEG_EX("Sturm",      "Fleurette")
+	SET_DEG_EX("Dvorak",     "Fleurette")
+	SET_DEG_EX("Gandaltua",  "Fleurette")
+
+//僇儊儔
+	set_script_camera(0,1.5,2,  -20,180,0, 10, 15.0)
+	SCALE_SCRIPT_CAMERA( 0.8, 1000, 1)
+	fade_in(120)
+	SET_MOTION("Fleurette", "EMPTY4",0)
+	SET_MOTION("Ds", "EMPTY1",0)
+	SE(SE_EVENT_36)
+MSG_EX("#S3#C0芙罗蕾特「……作为太祖忽必烈可汗的后裔，|　　　　　我芙罗蕾特在此祈愿……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「太古时代狩龙猎人的英灵啊……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「显形吧，成为在希琉加之光|引导下的使者的兵刃……」",-1,2)
+//	MSG_EX("#S3#C0僼儘乕儗僢僩乽乧乧屆偺柨栺偵傛傝丄変丄僼儘乕儗僢僩偲|丂丂丂丂丂丂丂奐慶僋乕僽儔丒僇乕儞偺柤偺傕偲偵婅偄曭傞乧乧乿",-1,2)
+//	MSG_EX("#S3#C0僼儘乕儗僢僩乽擆丄巔惉偟丄僔儕儏乕僈偺|丂丂丂丂丂丂丂岝偵摫偐傟偟巊搆偺姳滣偲側傜傫乧乧乿",-1,2)
+
+//偙偙偱埫揮偟偮偮僋儔僂儞偵岝廂懇丄嬻拞偱崌懱
+	SE(SE_EVENT_37)
+	SET_MOTION("Ds", "EMPTY2",0)
+	wait(120)
+	SET_MOTION("Ds", "EMPTY3",0)
+	wait(60)
+	SET_MOTION("Ds", "EMPTY4",0)
+	wait(110)
+	SE(SE_EVENT_38)
+	wait(60)
+	SET_MOTION("Ds", "EMPTY5",0)
+MSG_EX("#S3#C0芙罗蕾特「出来吧，我的守护精灵……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「……屠龙剑。」",-1,2)
+
+//僋儔僂儞丄僪儔僗儗傊
+	cross_fade(30)
+	set_script_camera(0,2.3,1.5,  -10,182,0, 3.5, 15.0)
+	rotate_script_camera(0,-4,0, 500, 1)
+	DELETE_EFC("Ds")
+	SE(SE_EVENT_40)
+	SET_MOTION("Ds", "EMPTY6",0)
+	SE(SE_EVENT_39)
+	wait(250)
+//	SE(SE_EVENT_39)
+	FADE_OUT_EX( 120, 1,"0xffffffff",0)
+	wait(120)
+	STOP_ENV_SE( "SE_EVENT_36", 2000 )
+	wait(240)
+	SE(SE_EVENT_41)
+
+//俹俠寱傪庢傞丅
+	set_script_camera(0,1.5,-0.25,  -30,180,0, 8, 15.0)
+	SCALE_SCRIPT_CAMERA( 0.8, 1000, 1)
+	SET_MOTION("Fleurette", "STAND",0)
+	SET_MOTION("Ds", "EMPTY7",0)
+	DELETE_EFC("Ds")
+	DELETE_EFC("Fleurette")
+	SET_DEG("Avatarlaha",-90)
+	SET_DEG("Tiowald",  90)
+	SET_DEG("Beatrice", 90)
+	SET_DEG("Sturm",  90)
+	SET_DEG("Dvorak",-90)
+	SET_DEG("Gandaltua", -90)
+	STOP_ENV_SE( "SE_EVENT_39",2000 )
+	FADE_IN_EX( 60, 1,"0xffffffff",0)
+	wait(150)
+
+MSG_EX("#S3#C0芙罗蕾特「这就是唯一一把能够毁灭|　　　　　魔王加尔西斯和黑色新娘的圣剑……」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「骑士先生，请拿着它吧。」",-1,2)
+	wait(100)
+	INIT_WALK_DST("PC")
+	set_walk_dst("PC", 0,0,-0.6)
+	walk_pos("PC",0,0.03)
+	wait(120)
+	SET_MOTION("PC", "EMPTY7",40)
+	wait(30)
+	SE(SE_EVENT_42)
+	FADE_OUT_EX( 20, 1,"0xffffffff",0)
+	SCALE_SCRIPT_CAMERA( 0.3, 20, 1)
+	blur(10)
+	wait(40)
+	blur(0)
+
+	STOP_ENV_SE( "SE_EVENT_41",2000 )
+	FADE_IN_EX( 20, 1,"0xffffffff",0)
+	set_script_camera(0,1.5,-3.4,  2,-10,0,  2.6, 15)
+	rotate_script_camera(-20,30,0, 1000, 0)
+	DELETE_EFC("Ds")
+	set_pos("Ds",  0,0.25,-0.495)
+	set_pos("PC",  0,0.25,-2.85)
+
+	SET_MOTION("Ds", "EMPTY8",0)
+	SET_MOTION("PC", "EMPTY9",0)
+	wait(300)
+	wait(300)
+	fade_out(120)
+	wait(150)
+
+	// 慡晹偺岠壥壒傪巭傔偪傖偆
+	STOP_SE(0)
+
+//=====================================================================================================
+//=====================================================================================================
+//=====================================================================================================
+//=====================================================================================================
+
+
+//僪儔僗儗擖庤屻夛榖
+//	PICK_ITEM(187)
+//	PICK_ITEM(188)
+//	PICK_ITEM(189)
+//	PICK_ITEM(190)
+//	GET_ITEM(36, 1)
+	//偄傠偄傠尦偵栠偡
+	SET_MOTION("Ds", "STAND",0)
+	SET_MOTION("PC", "STAND",0)
+	DELETE_EFC("Ds")
+
+	set_pos("PC",  0,0,-0.5)
+	set_pos("Avatarlaha",   1.35,0.25, 0.75)
+	set_pos("Tiowald",     -1.35,0.25, 0.75)
+	set_pos("Beatrice",    -2.1,0,-0.70)
+	set_pos("Sturm",       -2.2,0,-2.40)
+	set_pos("Dvorak",       2.1,0,-0.70)
+	set_pos("Gandaltua",    2.2,0,-2.40)
+	SET_DEG_EX("Avatarlaha", "PC")
+	SET_DEG_EX("Tiowald",    "PC")
+	SET_DEG_EX("Beatrice",   "PC")
+	SET_DEG_EX("Sturm",      "PC")
+	SET_DEG_EX("Dvorak",     "PC")
+	SET_DEG_EX("Gandaltua",  "PC")
+
+	
+
+	set_script_camera(0.0,0.25,1.5,  -40,180.0,0.0, 13, 15.0)
+	fade_in(120)
+	wait(150)
+
+	SET_MOTION("Dvorak", "ATTACK1",-1)
+MSG_EX("#S3#C0德沃夏克「哦哦……」",-1,2)
+MSG_EX("#S3#C0德沃夏克「似乎得到圣剑的承认了……|　　　　　这样一来也说明你的身体恢复了。」",-1,2)
+
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+MSG_EX("#S3#C0刚达尔奇「现在还不是说恭喜的时候。」",-1,2)
+
+	SET_MOTION("Fleurette", "ATTACK2",-1)
+MSG_EX("#S3#C0芙罗蕾特「黑色新娘为了迎接魔王|　　　　　应该会到奇岩城的里面去。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「骑士大人，最好赶快去追她。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「请放心，这里的仪式|　　　　　今后全都由我芙罗蕾特来进行。」",-1,2)
+MSG_EX("#S3#C0芙罗蕾特「骑士先生……祝武运亨通。」",-1,2)
+
+	BGM(-1, 0, -1)
+
+	cross_fade(80)
+	FOCUS_CHR("PC")
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	game_flag_on(3711)
+	wait(60)
+	END
+
+
+SKIP:
+	//屻張棟
+	blur(0)
+//	PICK_ITEM(187)
+//	PICK_ITEM(188)
+//	PICK_ITEM(189)
+//	PICK_ITEM(190)
+//	GET_ITEM(36, 1)
+	DELETE_EFC("Ds")
+	DELETE_EFC("Fleurette")
+	STOP_WALK("Fleurette")
+	STOP_WALK("PC")
+
+	SET_MOTION("Ds", "STAND",0)
+	SET_MOTION("Fleurette", "STAND",0)
+	SET_MOTION("PC", "STAND",0)
+	SET_MOTION("Avatarlaha", "STAND",0)
+	SET_MOTION("Tiowald", "STAND",0)
+	SET_MOTION("Beatrice", "STAND",0)
+	SET_MOTION("Sturm", "STAND",0)
+	SET_MOTION("Dvorak", "STAND",0)
+	SET_MOTION("Gandaltua", "STAND",0)
+
+	set_pos("Fleurette",  0.00,0.50,3.23)
+	SET_DEG("Fleurette",180)
+	set_pos("PC",  0,0,-0.5)
+	SET_DEG("PC", 0)
+	set_pos("Avatarlaha",   1.35,0.25, 0.75)
+	SET_DEG("Avatarlaha",-90)
+	set_pos("Tiowald",     -1.35,0.25, 0.75)
+	SET_DEG("Tiowald",  90)
+	set_pos("Beatrice",    -2.1,0,-0.70)
+	SET_DEG("Beatrice", 90)
+	set_pos("Sturm",       -2.2,0,-2.40)
+	SET_DEG("Sturm",  90)
+	set_pos("Dvorak",       2.1,0,-0.70)
+	SET_DEG("Dvorak",-90)
+	set_pos("Gandaltua",    2.2,0,-2.40)
+	SET_DEG("Gandaltua", -90)
+
+	look_chr("Fleurette", "PC")
+	look_chr("Avatarlaha", "PC")
+	look_chr("Tiowald", "PC")
+	look_chr("Beatrice", "PC")
+	look_chr("Sturm", "PC")
+	look_chr("Dvorak", "PC")
+	look_chr("Gandaltua", "PC")
+
+	STOP_SE(0)
+	BGM(-1, 0, -1)
+
+	CINEMA_OFF(0)
+	cross_fade(80)
+	permit_script_camera(0)
+	FOCUS_CHR("PC")
+	game_flag_on(3711)
+	fade_in(60)
+	wait(60)
+
+EXIT:
+END
+}
+
+RES("CLICK")
+{
+MSG_EX("#S3#C0芙罗蕾特「如果有什么事情请到正面来。」",-1,2)
+end
+}
+
+
+
+
+DEF("Dvorak")
+RES("CLICK")
+{
+	FOCUS_CHR("Dvorak")
+SET_NAME("DVORAK","德沃夏克")
+	SET_MOTION("Dvorak", "ATTACK1",-1)
+
+	check_room_flag(6)
+	on_jump TALK2
+
+MSG("骑士啊，你成长了不少……")
+MSG("没想到|会发生这样的情况……")
+MSG("也并非完全没有料到……|只不过也来得太早了。")
+MSG("你是为了什么而战斗的呢……")
+MSG("真希望有一天能够|一边和你对饮一边聊天啊。")
+	room_flag_on(6)
+	jump EXIT
+
+//丂丂仸孞傝曉偟
+TALK2:
+MSG("骑士啊，你成长了不少……")
+MSG("没想到|会发生这样的情况……")
+
+EXIT:
+	SET_MOTION("Dvorak","STAND",-1)
+	END
+}
+
+DEF("Gandaltua")
+RES("CLICK")
+{
+	FOCUS_CHR("Gandaltua")
+SET_NAME("GANDALTUA","刚达尔奇")
+	SET_MOTION("Gandaltua", "ATTACK1",-1)
+
+	check_room_flag(7)
+	on_jump TALK2
+
+MSG("马上就要开始决战了啊……")
+MSG("我们也打算|跟在你后面进入奇岩城。")
+MSG("至少能不扯你的后腿，|给你提供一些帮助。")
+	room_flag_on(7)
+	jump EXIT
+
+//丂丂仸孞傝曉偟
+TALK2:
+MSG("我们也打算|跟在你后面进入奇岩城。")
+MSG("至少能不扯你的后腿，|给你提供一些帮助。")
+
+EXIT:
+	SET_MOTION("Gandaltua","STAND",-1)
+	END
+}
+
+DEF("Sturm")
+RES("CLICK")
+{
+	FOCUS_CHR("Sturm")
+SET_NAME("STURM","修特威尔姆")
+	SET_MOTION("Sturm", "ATTACK1",-1)
+MSG("离魔王复活应该没剩多少时间了……")
+MSG("最好快一点行动……")
+
+EXIT:
+	SET_MOTION("Sturm","STAND",-1)
+	END
+}
+
+DEF("Beatrice")
+RES("CLICK")
+{
+	FOCUS_CHR("Beatrice")
+SET_NAME("BEATRICE","贝亚特里奇")
+	SET_MOTION("Beatrice", "ATTACK1",-1)
+MSG("这还是约里顿王时代之后|圣剑勇者首次出现……")
+MSG("说不定可以做到……|这次一定要把加尔西斯和黑色新娘给……")
+
+EXIT:
+	SET_MOTION("Beatrice","STAND",-1)
+	END
+}
+
+DEF("Avatarlaha")
+RES("CLICK")
+{
+	FOCUS_CHR("Avatarlaha")
+SET_NAME("AVATARLAHA","阿巴塔拉哈")
+	SET_MOTION("Avatarlaha", "ATTACK1",-1)
+MSG("骑士大人，魔王加尔西斯的城堡|奇岩城是个相当大的建筑物。")
+MSG("请做好充分准备。")
+
+EXIT:
+	SET_MOTION("Avatarlaha","STAND",-1)
+	END
+}
+
+DEF("Tiowald")
+RES("CLICK")
+{
+	FOCUS_CHR("Tiowald")
+SET_NAME("TIOWALD","提欧巴特")
+	SET_MOTION("Tiowald", "ATTACK1",-1)
+MSG("在奇岩城中有一座巨大的塔。")
+MSG("恐怕魔王加尔西斯|就沉睡在那座塔的顶层。")
+MSG("呵呵，走到这里真不容易啊。")
+
+EXIT:
+	SET_MOTION("Tiowald","STAND",-1)
+	END
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// 弶擖揦帪HELP儊僢僙乕僕乮僈乕僨傿傾儞崀楈曇乯
+@help1
+{
+MSG_EX("#W0　",70,0X00000002)
+SYS_EX("#F0#C2关于【守护精灵的降灵】",-1,0X20000400)
+SYS_EX("#F0#C2可以在精灵堂更换守护精灵。",-1,0X20000400)
+SYS_EX("#F0#C2请在画面左下角的守护精灵一览表中|点击需要降灵的守护精灵。",-1,0X20000400)
+SYS_EX("#F0#C2更换守护精灵的次数不限。",-1,0X20000400)
+}
+
+//////////////////////////////////////////////////////////////////////
+// 弶擖揦帪HELP儊僢僙乕僕乮儃乕僫僗妱傝怳傝曇乯
+@help2
+{
+MSG_EX("#W0　",70,0X00000002)
+SYS_EX("#F0#C2关于【点数的分配】",-1,0X20000400)
+SYS_EX("#F0#C2在精灵堂可以用等级上升时得到的点数|增加各项能力值。",-1,0X20000400)
+SYS_EX("#F0#C2请用＋／－键设定分配的点数，|用ACCEPT键确定。",-1,0X20000400)
+SYS_EX("#F0#C2分配过的点数可以在下次升级之前|重新调整。",-1,0X20000400)
+}
