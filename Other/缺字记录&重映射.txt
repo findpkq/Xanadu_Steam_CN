@@ -60,6 +60,8 @@ U+538B	压	圧	DOWN！
 U+626D	扭	扞	DOWN！
 U+684C	桌	棹	DOWN！
 U+7EB8	纸	紙	DOWN！
+U+5C14	尔	爾	DOWN！
+U+95EA	闪	閃	DOWN！
 U+5899	墙	墻	DOWN！
 U+53E6	另	勗	DOWN！
 U+50BB	傻	僊	DOWN！
@@ -113,3 +115,11 @@ U+00B7	·	●	DOWN！
 U+5BAB	宫	宮	DOWN！
 U+8611	蘑	荿	DOWN！
 U+8346	荆	荊	DOWN！
+U+6323	挣	爭	DOWN！
+U+9A91	骑	騎	DOWN！
+U+5501	唁	呰	DOWN！
+U+7CD9	糙	籵	DOWN！
+U+7838	砸	碆	DOWN！
+U+9576	镶	釟	DOWN！
+U+780D	砍	砠	DOWN！
+U+707E	灾	災	DOWN！
