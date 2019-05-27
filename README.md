@@ -24,12 +24,14 @@
 
 ![Progress](http://progressed.io/bar/0)简单处理脚本的工具编写
 
+![Progress](http://progressed.io/bar/0)主程序内文本的汉化
+
 ![Progress](http://progressed.io/bar/0)文本移植
 
 ![Progress](http://progressed.io/bar/0)图片移植
 
 ![Progress](http://progressed.io/bar/0)测试
 
-![Progress](http://progressed.io/bar/0)主程序内文本的汉化（被保护，任何字节修改均报错，优先度低）
+
 
 -AND MORE

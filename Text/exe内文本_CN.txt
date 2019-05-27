@@ -1,0 +1,380 @@
+Current Guardian level increased by %d!
+Learned the skill [%s]!
+Mystic Card
+
+Log History to TXT
+Reflections
+Anti-aliasing
+Refresh Rate
+Smooth
+Standard
+Rough
+Off
+On
+Low
+Medium
+High
+Max
+Min
+
+Please enter your name.
+Please select your destination.
+Do you wish to access this data? |#c2OK|#c2CANCEL
+This is data from an old version. Convert? |#c2OK|#c2CANCEL
+Do you wish to overwrite this data? |#c2OK|#c2CANCEL
+
+
+
+
+
+
+
+The game was not shut down properly. Do you want to load the last autosave.
+
+Please choose which save data you wish to use
+
+Please select the file you wish to load.
+请选择要读取的存档。
+
+Please choose a save file for this data
+
+Quit Game
+Title Screen
+Settings
+Log History
+#c2Do you want to quit the game? |#c2Yes|#c2No
+
+Return to the title screen? |#c2OK|#c2CANCEL
+System Menu
+Return to Title Screen
+Start from Last Save Point
+Return to Town (Lose 50% Money)
+Thdr
+Ice
+Fire
+Gold
+Unknown Swordsman
+1 [Key] was made.
+2 [Keys] were made!
+You can't hold any more [Keys].
+You don't have a [Bone]
+Make a [Key] by carving a [Bone]? |#c2OK|#c2CANCEL
+Return to town? |#c2OK|#c2CANCEL
+Return to town? (*You cannot return to where you were) |#c2OK|#c2CANCEL
+Unable to carry any more equipment.
+Your bags are full!
+
+
+Level Up
+Set Simulated Level
+Level Down
+Show Growth Log
+Gain 10% EXP
+Gain 10% Prof.
+Max Gold
+Max Keys
+All Skills
+All Guardians
+Guardian LV Up
+Guardian LV Down
+Guardian Release
+Invincible
+Max Power
+Full Recovery
+Half Power
+Poison
+Blunt Hit
+All Negative Status
+
+Cloud
+[To the Inheritors of History]
+[The Chosen Ones]
+[When the Rain Falls]
+[The Unblessed Bride]
+[Where the Star Shines]
+[The Princess Ne'er Returning]
+[Of History and Spirits]
+[The Four Royal Crowns]
+[Sacred Sword and Maiden]
+[The Seven Wise Sages]
+[The Black Bride]
+[The Architect of Disaster]
+
+Herdsman's Moon 23rd, 1210
+Silverwolf's Moon 27th, 1210
+Firehen's Moon 30th, 1211
+Pegasus Moon 11th, 1211
+Unicorn's Moon 7th, 1212
+Wild Rabbit's Moon 10th, 1212
+Filial Crow's Moon 3rd, 1215
+Demigod's Moon 14th, 1216
+Demigod's Moon 15th, 1216
+Demigod's Moon 17th, 1216
+Demigod's Moon 19th, 1216
+Hydra's Moon 16th, 121
+
+Clover Ruins - Entrance
+Eternal Maze - Deepest Depths
+Trechier Woods - Entrance
+Eaglet Mountain - Entrance
+Eaglet Mountain - Central
+Xanadu Labyrinth - Central
+Time Crevice - Deepest Depths
+Castle Strangerock - Central
+
+Strength attribute.Affects physical attack power.
+Intelligence attribute.Affects magic power.
+Reflex attribute.Affects hit accuracy and evasion rate.
+Constitution attribute.Affects physical defense and vitality.
+Mind attribute. Affects magic resistance.
+
+STR
+INT
+REF
+CON
+MND
+Level
+Class
+Experience
+Next-Experience
+Hit Points
+Skill Points
+Strength
+Intelligence
+Reflex
+Constitution
+Mind
+Attack
+Magic
+Defense
+Resistance
+Accuracy
+Evasion
+Guardian Level
+Guardian Exp.
+Guardian Ability
+Weapon Slot
+Shield Slot
+Armor Slot
+Helmet Slot
+Item Slot
+Skill Slot
+Overall strength of the character
+
+Current title. Will change according to your level
+Current experience earned from monsters slain.
+Indicates total amount of experience required to level up.
+This is your vitality.If you run out of HP,your life will be forfeit.
+These are spent to use a selected skill or spell.
+
+Strength attribute.Affects physical attack power.
+Intelligence attribute.Affects magic power.
+Reflex attribute.Affects hit accuracy and evasion rate.
+Constitution attribute.Affects physical defense and vitality.
+Mind attribute. Affects magic resistance.
+
+Physical attack strength.
+Magical attack power.
+Physical attack resistance
+Magical attack resistance.
+Accuracy of physical attacks.
+Ability to evade physical attacks.
+Current level of the Guardian dwelling within.
+Amount of experience shared with the Guardian dwelling within.
+The passive ability of the Guardian dwelling within
+Slot to place your weapon.
+Slot to place your shield.
+Slot to place your armor.
+Slot to place your helmet.
+Slot to place consumable and special items.
+A slot for skills or spells.
+
+Not only can you #c4break#c1 wooden crates, but you can also #c4push#c1 them!
+Be careful when carrying wooden crates!
+Start by pushing from the left or right!
+You can also stand on top of a crate.
+When a crate is broken, you can push another crate on top of it.
+It's a neat trick to get even higher.
+Make use of these two on the left.
+Start by putting the first crate in the center...
+Keep pushing it until it hits an obstacle.
+You can make use of unbreakable boxes.
+You'll need three boxes of the same color to break them.
+They'll remove obstacles whose color matches the boxes.
+Now if we partially destroy the box in the back on the right...
+There is a switch on the left side.
+You'll need three boxes of the same color to break them.
+To use the switch you'll need to place a box of the same color on it.
+To clear the puzzle on the left, place a matching color box on it.
+
+Weapon Shop
+Welcome, welcome!|Lookin' for anythin' in particular?
+Leavin' so soon? | Hope ta see you again!
+We've got weapons, breastplates, shields,|and helmets of all kinds! So what'll it be?
+Got somethin' ta sell me?|I'll be happy ta take a look.
+Ah, good choice. An excellent item!|Sure you can handle it, though?
+This is in pretty good shape.|You sure you wanna sell it?
+Not so fast, there, Sir Knight!|You don't have enough gold!
+I don't think I'll be buyin' that...
+You don't have enough room for this.|You need ta sell or stow somethin'!
+Many thanks, Sir Knight!
+Pleasure doin' business with you!
+Sorry, not in the market for that stuff.|You should take that ta the Curio Shop.
+
+Curio Shop
+Welcome, welcome!|Have a look 'round!
+That all for today?|Well, come back soon!
+We have a variety of medicines, keys, tomes,|and other oddities here. See anything ya like?
+Lookin' ta sell? Sure thing!|Just show me what you've got.
+This what ya were lookin' for?
+I can buy this? You certain?
+I'm really sorry, but it doesn't seem like ya have the funds...
+...I just don't think I can buy somethin' that valuable.
+Seems your bags are full, sir.|Don't believe I can sell ya this.
+Thanks for your patronage!
+Yes, truly....|I am ever so grateful.
+...Dependin' on the amount of bones I have in stock,|the price of keys may fluctuate from time to time.
+Ah, this'll make a fine key, and should|help keep costs low. Many thanks!
+
+Storehouse
+Need me to hold any of your items for you?|I'll keep a close eye on them!
+Is...that all you needed, then?
+Something you need to take with you?
+Something I can hold for you?
+I can hold some of your money, as well.|Just make sure you keep enough with you!
+
+Card Selection
+Brave Sir Knight...|Do you wish to exchange your Guardian?
+Is everything in order, then?
+Please choose a Guardian for the binding.
+★2 normal lines
+Are you satisfied with this infusion?
+May the blessings of this new|Guardian serve you well.
+Lines ④ (Time of purchase
+
+Temple
+I shall commence the ritual of allocation,|through which your powers may be enhanced.
+Is everything in order, then?
+Please distribute your points, and remember that|you may decrease attributes to replenish points.
+Is everything allocated to your liking?
+May your new power grant you|many blessings on your journey.
+
+
+含换行
+Thrust
+A piercing strike that knocks enemies down.
+Bash
+A powerful blow that knocks enemies off balance.
+Sweep Attack
+Knockback
+A flashing strike that mows down foes in front of you.
+Cyclone Attack
+Cyclone
+An intense whirlwind that sends nearby enemies flying.
+Battle Cry
+A powerful shout that raises attack power for a set time.
+Charge
+A rushing move that propels you forward,hitting anything along the way.
+Power Thrust
+A stronger version of the [Thrust] skill. Hits repeatedly.
+Force Blast
+A radiating blast of energy that sends nearby enemies flying.
+Dragonslayer
+A mighty blow that strikes down evil.
+Fire Weapon
+Searing Blade
+Imbues the weapon with flame.
+Cold Weapon
+Chilling Blade
+Imbues the weapon with ice.
+Lightning Weapon
+Jolting Blade
+Imbues the weapon with electricity.
+Concentration
+Focus
+Increases the damage of critical hits.
+Great Strength
+Strong Arm
+Grants a bonus to the [STR] parameter.
+Expansive Spirit
+Clear Mind
+Grants a bonus to the [INT] parameter.
+Hardiness
+Hearty Bones
+Grants a bonus to the [CON] parameter.
+Harmonious Mind
+Serenity
+Grants a bonus to the [MND] parameter.
+Quickness
+Grants a bonus to the [REF] parameter.
+Greed
+Plunder
+Drastically increases the gold obtained from enemies.
+Sneak Attack
+Deals even greater damage when attacking an enemy from behind.
+Interception
+Intercept
+A fixed chance to counter an enemy's attack.
+Shield Mastery
+Increases the chance for an enemy attack to be blocked with a shield.
+One-Hand Wield
+One-Handed
+Allows you to wield two-handed weapons in only one hand.
+Endurance
+Force of Will
+A fixed chance to survive a mortal blow with some HP.
+Berserk
+Increases attack power at the cost of defense.
+Defensive Stance
+Providence
+Increases defense at the cost of attack power.
+Blood Rage
+Blood Fury
+As HP decreases, attack power increases.
+Fast Move
+Veda's Gift
+Increases movement speed.
+Rapid Attack
+Rapidfire
+Increases attack speed.
+Insight
+View enemy stats.
+Magic Rance
+Needle
+Shoots forth a magic blade.
+Titan Blow
+Rock
+Drops a giant rock on an enemy.
+Death
+Summons forth a wave of death, directed as you wish.
+Fire
+Shoots forth a scorching ball of fire.
+Fire Wall
+Blaze
+Creates a blazing wall that spreads like a fan.
+Ignition
+Creates a huge explosion that burns nearby enemies.
+Freezing
+Ice
+Fires a shard of ice.
+Frost Bell
+Frost
+Shoots a massive chunk of ice that shatters into frozen shards on impact.
+Avalanche
+Freezing
+Calls down a chilly rain that freezes nearby enemies.
+Blitz Arrow
+Thunder
+Fires a bolt of thunder.
+Lightning
+Blitz
+Surrounds your body for a set time with an electric barrier.
+Toal Hammer
+Lightning
+Calls forth a storm cloud that strikes nearby enemies.
+Heal
+Recover magic expressly for the Goblin Healer.
+Low Fire Wall
+Blaze
+A modified version of Blaze expressly for the Master Goblin.
+
