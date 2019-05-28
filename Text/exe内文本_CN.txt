@@ -1,68 +1,306 @@
+Time Crevic
+时之狭间
+Netherworld
+死者的异界
+Unknow
+不明
+Talos
+塔罗斯
+Body Slam
+身体相撞
+
+SYS_EX(There`are`many`types`of`stats|you`can`increase`at`the`Spirit`Sanctum.,-1,0x20000200)
+SYS_EX(在精灵堂可以进行属性点的分配|自由强化角色。,-1,0x20000200)
+
+SYS_EX(When`you`level`up_`you`gain`HP`and`also|obtain`#C2Bonus`Points#C0.,-1,0x20000200)
+SYS_EX(等级提升时、最大HP将会增加|同时会取得#C2属性点数#C0。,-1,0x20000200)
+
+SYS_EX([Leveling`Up],-1,0x20000200)
+SYS_EX(有关［等级提升］,-1,0x20000200)
+
+Leveled up by %d!
+等级提升到了 %d !
+Leveled down to %d!
+等级下降到了 %d !
+
 Current Guardian level increased by %d!
+精灵的等级提升为 %d 级!
 Learned the skill [%s]!
+技能［%s］习得!
 Mystic Card
+米斯提卡卡片/神秘卡片
 
 Log History to TXT
 Reflections
+反射
 Anti-aliasing
+抗锯齿
 Refresh Rate
+刷新率
 Smooth
+平滑
 Standard
+标准
 Rough
+粗糙
 Off
+关
 On
+开
 Low
+低
 Medium
+中
 High
+高
 Max
 Min
 
+Contrast
+对比度
+Brightness
+亮度
+SE Volume
+音效音量
+BGM Volume
+BGM音量
+Config
+环境设定
+
+Standing monster
+怪物开始行动
+Unaware monster
+怪物没察觉
+Check head behavior
+点头的检查
+Character details
+显示角色详细
+Display attack range
+显示攻撃有效距离
+Display MAP
+显示MAP
+Display EFC
+显示EFC
+Display CHR
+显示CHR
+Mipmapping
+
+Wireframe
+线框
+Texture Display
+显示贴图
+Texture Resolution
+贴图分辨率
+Test Menu
+DEBUG菜单
+
+Save
+存档
+Screen Test
+评价画面测试
+Change Parameters
+改变属性点
+Change Guardian
+精灵变更
+Bonus Points
+分配属性点数
+Purchase Items
+道具购买
+Flag Settings
+FLAG管理
+Map Movement
+地图移动
+
+Castle Strangerock (Hall/Sanctum/Tower)
+奇岩城（飨宴之馆/本殿/天守阁）
+Xanadu Labyrinth/Time Crevice
+仙那度·魔幻迷宫/时之狭间
+Eaglet Mountain (Mountainside/Lava Caves)
+伊格利特山（山腰/溶岩窟）
+Eternal Maze
+千古迷道
+Clover Ruins/Trechier Woods
+三叶草遗迹/魔妆森林
+Back-Alley Ruins
+镇外的遗迹
+Harlech Village/Lake Orwell
+哈莱克镇／欧威鲁湖底
+
+Please select a memoir to read.
+请选择要读的笔记
+Please select a tabula to read.
+请选择要读的石板
+...I haven't translated that yet.|Please wait a little longer.
+…还无法读取.|请稍等一下.
+Translating...
+解读中…
+Translated
+解读完毕
+
+NEW
+Cancel
+取消
+
+
+
+
+
+
+
 Please enter your name.
+请输入你的姓名
 Please select your destination.
+请选择传送点
 Do you wish to access this data? |#c2OK|#c2CANCEL
+要应用这个记录吗？
 This is data from an old version. Convert? |#c2OK|#c2CANCEL
+是旧版本的数据,要转换吗?
 Do you wish to overwrite this data? |#c2OK|#c2CANCEL
-
-
-
-
-
+要覆盖这个记录吗？
 
 
 The game was not shut down properly. Do you want to load the last autosave.
-
+发现异常结束游戏的迹象,要使用最后的自动存档吗?
 Please choose which save data you wish to use
-
+请选择要使用的存档
 Please select the file you wish to load.
-请选择要读取的存档。
+请选择要读取的存档
 
+请选择要保存的记录
 Please choose a save file for this data
 
+You haven't finished allocating everything. Proceed? |#c2OK|#c2CANCEL
+分配没有确定,这样就可以吗? |#c2OK|#c2CANCEL
+
 Quit Game
+结束游戏
 Title Screen
+返回标题画面
 Settings
+环境设定
 Log History
 #c2Do you want to quit the game? |#c2Yes|#c2No
-
+要结束游戏吗？     |#c2OK|#c2CANCEL
 Return to the title screen? |#c2OK|#c2CANCEL
+要返回标题画面吗？     |#c2OK|#c2CANCEL
+Credits
+履历表
 System Menu
+
 Return to Title Screen
+回到标题画面
 Start from Last Save Point
+从存档处重新开始
 Return to Town (Lose 50% Money)
+在街道重新开始(金钱减半)
 Thdr
 Ice
 Fire
 Gold
 Unknown Swordsman
+谜之剑士
+
+Use an [Elixir]? |#c2YES|#c2NO
+要使用【圣灵药】复活吗? |#c2YES|#c2NO
+
+
+%d gold acquired!
+获得金钱 %d !
+Paid %d gold.
+支付金钱 %d .
+%s obtained!
+取得了 %s !
+%s was discarded.
+扔了 %s .
+%s: %s → %s takes %d damage.
+%s的%s→%s受到了%d点的伤害.
+Attack
+攻击
+Trap! → %s took %d damage.
+命中!→%s受到了%d点的伤害
+was defeated.
+被打倒了.
+has fainted...
+体力耗尽了.
+%s %s → %s dodges!attacks
+%s的%s→%sＭＩＳＳ!
+
+%s split into %d!
+%s分离为%d个!
+%s has summoned %s!
+%s召唤%s
+
+
+通关评价（分割线前涉及特殊字体暂不修改）
+Save Object Count - %5d
+存档回复次数
+Dead Count        - %5d
+死亡次数
+Damage Count      - %5d
+被敌人伤害次数
+Potion Use Count  - %5d
+回复药使用次数
+Skill             - %5d
+技能收集
+Level             - %5d
+人物等级
+Total Time        - %02d:%02d:%02d
+========================================
+Save Object Count(Times Saved)
+Save Object Count(存档回复次数)
+Save Object Count              %3d
+Dead Count(Deaths)
+Dead Count(死亡次数)
+Dead Count                     %3d
+Damage Count(Damage Taken)
+Damage Count(被敌人伤害次数)
+Damage Count                  %4d
+Potion Use Count(Potions Used)
+Potion Use Count(回复药使用次数)
+Potion Use Count              %4d
+Treasure Box(Treasures Recovered)
+Treasure Box(宝箱收集率)
+Treasure Box              %3d(%3d%%)
+Treasure Box                   %3d%%
+Skill(Skills)
+Skill(技能收集)
+Skill                           %2d
+Level(Level)
+Level(人物等级)
+Level                           %2d
+Total Time(Total Time)
+Total Time(Total Time)
+Total Time                %02d:%02d:%02
+
+
+%s lost %d in all...
+%s 失去了 %d 个…
+%d gold was lost...
+失去了金钱 %d …
+Lost all your gold...
+失去了全部金钱…
+There was no effect.
+没有效果。
+The spell [%s] was learned!
+学得魔法%s!
+
+
 1 [Key] was made.
+做出了1把钥匙.
 2 [Keys] were made!
+做出了2把钥匙!
 You can't hold any more [Keys].
+不能再携带更多的钥匙了.
 You don't have a [Bone]
+没有足够的『骨』.
 Make a [Key] by carving a [Bone]? |#c2OK|#c2CANCEL
+要加工『骨』制作钥匙吗? |#c2OK|#c2CANCEL
 Return to town? |#c2OK|#c2CANCEL
+要回街上吗? |#c2OK|#c2CANCEL
 Return to town? (*You cannot return to where you were) |#c2OK|#c2CANCEL
-Unable to carry any more equipment.
-Your bags are full!
+要回街上吗?(用%s无法回到原来的场所) |#c2OK|#c2CANCEL
+Unable to carry any more equipment.Your bags are full!
+道具箱已满，不能再携带更多的装备了.
 
 
 Level Up
@@ -86,7 +324,6 @@ Poison
 Blunt Hit
 All Negative Status
 
-Cloud
 [To the Inheritors of History]
 [The Chosen Ones]
 [When the Rain Falls]
