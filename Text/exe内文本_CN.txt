@@ -142,11 +142,6 @@ Cancel
 取消
 
 
-
-
-
-
-
 Please enter your name.
 请输入你的姓名
 Please select your destination.
@@ -303,67 +298,246 @@ Unable to carry any more equipment.Your bags are full!
 道具箱已满，不能再携带更多的装备了.
 
 
+None 
+无
+PROFIC - %d.%d%%
+熟练度 - %d.%d%%
+SKILL - %s
+技能 - %s
+None
+无
+ATTACK - %d
+攻击力 - %d
+ATTACK - %d + %d
+攻击力 - %d + %d
+ATTACK - ATTACK
+攻击力 - 攻击力
+One-handed weapon
+单手武器
+Two-handed weapon
+双手武器
+EFFECT - %s
+追加效果 - %s
+EFFECT - EFFECT
+追加效果 - 追加效果
+DEFENSE - %d
+防御力 - %d
+DEFENSE - %d + %d
+防御力 - %d + %d
+DEFENSE - DEFENSE
+防御力 - 防御力
+SP %2d/%2d
+Active Skill
+发动系技能
+Passive Skill
+状态系技能
+
+%s|#c1-Retry this map|-Return to Title Screen|-Cancel
+%s|#c1·在这个地图继续|·回到标题画面|·取消
+%s|#c%d-To the previous map
+%s|#c%d·到上个地图
+%s|#c%d-To the next map
+%s|#c%d·到下个地图
+#s3#c2<Hint!> #c1%s#c1#s2
+
+
+puzzle-不翻译
+Enigma Eye
+死亡之眼
+Apocalypse
+僵尸奇美拉
+Crystal Griffin
+狮鹫
+Sphinx
+鸟身女妖
+Golem Sentinel
+泥魔像
+Doom Bat
+吸血蝙蝠
+Specter
+幽灵
+Nosferatu
+尸妖
+Black Death
+骷髅兵
+Black Death Archer
+骷髅射手
+Black Death Warrior
+骷髅武士
+Dark Lizard Mage
+蜥蜴人萨满
+Dark Lizardman
+蜥蜴人
+Dragon
+双足飞龙
+Baby Dragon
+海德拉
+Quantum Ghost
+电鬼火
+Evil Soul
+鬼火
+Ocher Jelly
+黑色史莱姆
+Meat Jelly
+病毒史莱姆
+Arch Lich
+巫妖
+Death Mastermind
+石魔像
+Golem Siege Ram
+黑暗蜥蜴
+Tesla Salamander
+石像鬼
+Invisible Fiend
+守卫者
+Nightgaunt
+
+Black Death Priest
+骷髅祭司
+Ogre Lord
+
+Venom Berserker
+狂暴牛头怪
+
+
+A key was used, and then removed.
+使用钥匙.打开锁.
+
+
+Poison Def.
+毒防御
+Paral. Def.
+麻痹防御
+Lightn. Res.
+耐雷性
+Curse Def.
+诅咒防御
+Ice Resist
+耐冰性
+Fire Resist
+耐火性
+Silence Def.
+沉默防御
+
+
 Level Up
+等级提升
 Set Simulated Level
+假想等级设定
 Level Down
+等级下降
 Show Growth Log
+成长履历LOG表示
 Gain 10% EXP
+经验值增加（＋１０％）
 Gain 10% Prof.
+熟练度增加（＋１０％）
 Max Gold
+最大金钱
 Max Keys
+最大钥匙数
 All Skills
+全部技能习得
 All Guardians
+全部精灵取得
 Guardian LV Up
+精灵等级上升
 Guardian LV Down
+精灵等级下降
 Guardian Release
+精灵解除
 Invincible
+无敌
 Max Power
+最强
 Full Recovery
+生命恢复
 Half Power
+体力减半
 Poison
+中毒
 Blunt Hit
+沉睡
 All Negative Status
+全异常状态
 
 [To the Inheritors of History]
+『继承历史的人啊』
 [The Chosen Ones]
+『被选中的人们』
 [When the Rain Falls]
+『如果骤雨来临』
 [The Unblessed Bride]
+『不被祝福的新娘』
 [Where the Star Shines]
+『星光闪耀的场所』
 [The Princess Ne'er Returning]
+『没有回来的公主』
 [Of History and Spirits]
+『精灵和历史』
 [The Four Royal Crowns]
+『四个王冠』
 [Sacred Sword and Maiden]
+『圣剑和巫女』
 [The Seven Wise Sages]
+『七人导师』
 [The Black Bride]
+『黑衣的新娘』
 [The Architect of Disaster]
+『悲剧的名匠』
 
 Herdsman's Moon 23rd, 1210
+1210年 牛饲之月23日
 Silverwolf's Moon 27th, 1210
+1210年 银狼之月27日
 Firehen's Moon 30th, 1211
+1211年 凤凰之月30日
 Pegasus Moon 11th, 1211
+1211年 天马之月11日
 Unicorn's Moon 7th, 1212
+1212年 独角之月 7日
 Wild Rabbit's Moon 10th, 1212
+1212年 野兔之月10日
 Filial Crow's Moon 3rd, 1215
+1215年 孝鸦之月 3日
 Demigod's Moon 14th, 1216
+1216年 半神之月14日
 Demigod's Moon 15th, 1216
+1216年 半神之月15日
 Demigod's Moon 17th, 1216
+1216年 半神之月17日
 Demigod's Moon 19th, 1216
-Hydra's Moon 16th, 121
+1216年 半神之月19日
+Hydra's Moon 16th, 1217
+1217年 水蛇之月16日
 
 Clover Ruins - Entrance
+三叶草遗迹　入口
 Eternal Maze - Deepest Depths
+千古迷道　最深处
 Trechier Woods - Entrance
+魔妆森林　入口
 Eaglet Mountain - Entrance
+伊格利特山　入口
 Eaglet Mountain - Central
+伊格利特山　中央处
 Xanadu Labyrinth - Central
+仙那度·魔幻迷宫　中央处
 Time Crevice - Deepest Depths
+时之狭间　最深处
 Castle Strangerock - Central
+奇岩城　中央处
 
 Strength attribute.Affects physical attack power.
+表示肌肉力量.主要影响物理攻击力.
 Intelligence attribute.Affects magic power.
+表示知识.主要影响魔法攻击力
 Reflex attribute.Affects hit accuracy and evasion rate.
+表示反射神经.主要影响命中率和回避率.
 Constitution attribute.Affects physical defense and vitality.
+表示耐久力.主要影响物理防御力.
 Mind attribute. Affects magic resistance.
+表示精神力.主要影响魔法防御力.
 
 STR
 INT
@@ -371,7 +545,9 @@ REF
 CON
 MND
 Level
+等级
 Class
+称号
 Experience
 Next-Experience
 Hit Points
@@ -391,227 +567,425 @@ Guardian Level
 Guardian Exp.
 Guardian Ability
 Weapon Slot
+武器栏
 Shield Slot
+盾栏
 Armor Slot
+铠甲栏
 Helmet Slot
+头盔栏
 Item Slot
+道具栏
 Skill Slot
+技能栏
 Overall strength of the character
+角色综合强度
 
 Current title. Will change according to your level
+现在的称号. 会根据等级而改变.
 Current experience earned from monsters slain.
+角色的经验值,会在战斗中累积
 Indicates total amount of experience required to level up.
+升到下个等级所需的经验值.
 This is your vitality.If you run out of HP,your life will be forfeit.
+角色的生命力,减为0时就会GAMEOVER.
 These are spent to use a selected skill or spell.
+选择中技能/魔法的使用次数,各技能上限不同.
 
 Strength attribute.Affects physical attack power.
+表示肌肉力量.主要影响物理攻击力.
 Intelligence attribute.Affects magic power.
+表示知识.主要影响魔法攻击力
 Reflex attribute.Affects hit accuracy and evasion rate.
+表示反射神经.主要影响命中率和回避率
 Constitution attribute.Affects physical defense and vitality.
+表示耐久力.主要影响物理防御力
 Mind attribute. Affects magic resistance.
+表示精神力.主要影响魔法防御力.
 
 Physical attack strength.
+攻击力. 表示综合物理攻击力.
 Magical attack power.
+魔法攻击力.表示魔法的威力.
 Physical attack resistance
+防御力.表示综合物理防御力.
 Magical attack resistance.
+魔法防御力.表示对魔法的抗性
 Accuracy of physical attacks.
+命中率.表示武器攻击的命中机率.
 Ability to evade physical attacks.
+回避率.表示对物理攻击的回避机率.
 Current level of the Guardian dwelling within.
+表示现在附身的精灵的等级.
 Amount of experience shared with the Guardian dwelling within.
+表示现在附身的精灵的经验值.
 The passive ability of the Guardian dwelling within
+表示现在附身的精灵的特殊能力.
 Slot to place your weapon.
+装备武器栏.
 Slot to place your shield.
+装备盾栏.
 Slot to place your armor.
+装备铠甲栏.
 Slot to place your helmet.
+装备头盔栏.
 Slot to place consumable and special items.
+使用消费道具和装备特殊道具栏.
 A slot for skills or spells.
+使用技能魔法栏.
+
 
 Not only can you #c4break#c1 wooden crates, but you can also #c4push#c1 them!
+木箱不但可以毁坏,也可以推动!
 Be careful when carrying wooden crates!
+注意木箱的推动顺序!
 Start by pushing from the left or right!
+先向左右推动!
 You can also stand on top of a crate.
+也可以跳到箱子上.
 When a crate is broken, you can push another crate on top of it.
+可以把木箱推到半坏的木箱上.
 It's a neat trick to get even higher.
+好好利用上面的木箱吧
 Make use of these two on the left.
+2个好像是从左边通来的
 Start by putting the first crate in the center...
+先把左边的箱子推到中央….
 Keep pushing it until it hits an obstacle.
+滑动的箱子在碰到障碍物前都会滑动.
 You can make use of unbreakable boxes.
+好好利用没坏的箱子吧.
 You'll need three boxes of the same color to break them.
+同颜色的3个箱子放在一起就会毁坏哦.
 They'll remove obstacles whose color matches the boxes.
+有颜色的障碍物碰到有颜色的箱子就会消失.
 Now if we partially destroy the box in the back on the right...
+把右边最里面的箱子打到半坏….
 There is a switch on the left side.
+左边有开关哦.
 You'll need three boxes of the same color to break them.
+同颜色的3个箱子放在一起就会毁坏哦.
 To use the switch you'll need to place a box of the same color on it.
+有颜色的开关和同颜色的箱子是对应的.
 To clear the puzzle on the left, place a matching color box on it.
+有颜色的障碍物碰到有颜色的箱子就会消失.
+
 
 Weapon Shop
+武器店
 Welcome, welcome!|Lookin' for anythin' in particular?
+哟,欢迎光临.|来买什么呢?
 Leavin' so soon? | Hope ta see you again!
+要回去了吗? |以后再来啊!
 We've got weapons, breastplates, shields,|and helmets of all kinds! So what'll it be?
+这里有各种武器,铠甲,盾牌和头盔哦!|想买点什么?
 Got somethin' ta sell me?|I'll be happy ta take a look.
-Ah, good choice. An excellent item!|Sure you can handle it, though?
+要卖些什么吗?|非常欢迎!
+Ah, good choice. 
+啊，不错的选择。
+An excellent item!|Sure you can handle it, though?
+那个可以吗?| 好好确认一下自己的能力啊!
 This is in pretty good shape.|You sure you wanna sell it?
+要卖这个好东西吗?|卖之前要想好了哦!
 Not so fast, there, Sir Knight!|You don't have enough gold!
+喂喂,骑士先生……|你的钱不够啊!
 I don't think I'll be buyin' that...
+我不收购那种东西啊…
 You don't have enough room for this.|You need ta sell or stow somethin'!
+已经没办法再带更多了啊!|买还是留着,快点决定吧.
 Many thanks, Sir Knight!
+谢谢啦,骑士先生	
 Pleasure doin' business with you!
-Sorry, not in the market for that stuff.|You should take that ta the Curio Shop.
+好,那我买下了
+Sorry, not in the market for that stuff.|You should take that ta the Curio Shop
+不好意思,那个我不买.|道具店的史密斯也许会对它有兴趣吧.
 
 Curio Shop
+道具店
 Welcome, welcome!|Have a look 'round!
+欢迎欢迎!|请随便挑选吧.
 That all for today?|Well, come back soon!
+要回去了吗?有空再来啊!
 We have a variety of medicines, keys, tomes,|and other oddities here. See anything ya like?
+这里有各种道具,药品,钥匙,咒文书.|请随便看看吧.
 Lookin' ta sell? Sure thing!|Just show me what you've got.
+要买这个吗?|真是多谢惠顾了
 This what ya were lookin' for?
+这个可以吗?
 I can buy this? You certain?
+卖掉这个可以吗？你确定？
 I'm really sorry, but it doesn't seem like ya have the funds...
+不好意思|钱好像不够啊……
 ...I just don't think I can buy somethin' that valuable.
+…那样贵重的物品这里不收购.
 Seems your bags are full, sir.|Don't believe I can sell ya this.
+已经不能再带更多的东西了哦……
 Thanks for your patronage!
+多谢惠顾啦.
 Yes, truly....|I am ever so grateful.
+好的……|谢谢
 ...Dependin' on the amount of bones I have in stock,|the price of keys may fluctuate from time to time.
+……钥匙的制作材料(骨)的价格|会根据交易情况而不断浮动的.
 Ah, this'll make a fine key, and should|help keep costs low. Many thanks!
+啊啊,多谢!|这样钥匙的价格就降下来了.
 
 Storehouse
+仓库
+
 Need me to hold any of your items for you?|I'll keep a close eye on them!
+要整理道具吗?|不用的东西可以先交给我保管.
 Is...that all you needed, then?
+哦,已经好了吗?
 Something you need to take with you?
+有必须要带着的东西吗?
 Something I can hold for you?
+想寄存什么呢?
 I can hold some of your money, as well.|Just make sure you keep enough with you!
+钱也可以寄存哦.|身上的钱够吗?
+
 
 Card Selection
+卡片选择
 Brave Sir Knight...|Do you wish to exchange your Guardian?
+骑士先生……|要进行降灵吗?
 Is everything in order, then?
+要中止降灵吗?
 Please choose a Guardian for the binding.
+请选择新的寄宿精灵.
 ★2 normal lines
+通常台词2
 Are you satisfied with this infusion?
+这个精灵可以吗?
 May the blessings of this new|Guardian serve you well.
-Lines ④ (Time of purchase
+让新的精灵来守护骑士先生……
+Lines 嘋 (Time of purchase)
+台词4(购买时)
 
+Etc 嘆
+其他1
+Etc 嘇
+其他2
 Temple
+寺院
+
 I shall commence the ritual of allocation,|through which your powers may be enhanced.
+那么将要进行属性点的分配.
 Is everything in order, then?
+要中止吗?
 Please distribute your points, and remember that|you may decrease attributes to replenish points.
+请进行分配吧.|也可以将能力点数还原. 
 Is everything allocated to your liking?
+这样分配可以吗?
 May your new power grant you|many blessings on your journey.
+祝福骑士先生你获得新的力量……
+Lines 嘋 (Time of purchase)
+台词4(购买时)
 
 
-含换行
+技能魔法说明 英文含换行
+Thrust（以下均保留第一个英文） 
 Thrust
-A piercing strike that knocks enemies down.
+刺击
+A piercing strike that knocks enemies down. 
+使用尖锐的刺击，可以使敌人倒地
 Bash
+吹飞
 A powerful blow that knocks enemies off balance.
+用力一击将对手吹飞
 Sweep Attack
 Knockback
+横斩
 A flashing strike that mows down foes in front of you.
+使用一闪，对前方的敌人进行横向的斩击
 Cyclone Attack
 Cyclone
+回旋攻击
 An intense whirlwind that sends nearby enemies flying.
+卷起激烈的旋风，将周围的敌人弹飞
 Battle Cry
+战歌
 A powerful shout that raises attack power for a set time.
+发出雄壮的呼喊，在一定时间内提高攻击力
 Charge
+突进
 A rushing move that propels you forward,hitting anything along the way.
+能使用可以连锁攻击的冲撞
 Power Thrust
+强突
 A stronger version of the [Thrust] skill. Hits repeatedly.
+突刺的强化版，连续多段攻击
 Force Blast
+剑气
 A radiating blast of energy that sends nearby enemies flying.
-Dragonslayer
+放射大范围剑气，攻击周围全部敌人
+Dragon slayer
+屠龙斩
 A mighty blow that strikes down evil.
+发出可以斩杀邪龙的强力攻击
 Fire Weapon
 Searing Blade
+火焰之剑
 Imbues the weapon with flame.
+给武器附加火属性
 Cold Weapon
 Chilling Blade
+冷气之剑
 Imbues the weapon with ice.
+给武器附加冰结属性
 Lightning Weapon
 Jolting Blade
+雷击之剑
 Imbues the weapon with electricity.
+给武器附加雷属性
 Concentration
 Focus
+集中
 Increases the damage of critical hits.
+会心一击的威力上升
 Great Strength
 Strong Arm
+豪腕
 Grants a bonus to the [STR] parameter.
+额外增加属性“STR”的点数
 Expansive Spirit
 Clear Mind
+睿智
 Grants a bonus to the [INT] parameter.
+额外增加属性“INT”的点数
 Hardiness
 Hearty Bones
+强健
 Grants a bonus to the [CON] parameter.
+额外增加属性“CON”的点数
 Harmonious Mind
 Serenity
+寂静
 Grants a bonus to the [MND] parameter.
+额外增加属性“MND”的点数
 Quickness
+机敏
 Grants a bonus to the [REF] parameter.
+额外增加属性“REF”的点数
 Greed
 Plunder
+洗劫
 Drastically increases the gold obtained from enemies.
+将敌人身上的金钱一次偷光
 Sneak Attack
+背刺
 Deals even greater damage when attacking an enemy from behind.
+从敌人背后攻击的时候伤害更高
 Interception
 Intercept
+迎击
 A fixed chance to counter an enemy's attack.
+将敌人的物理攻击以一定几率反弹回去
 Shield Mastery
+熟练之盾
 Increases the chance for an enemy attack to be blocked with a shield.
+用盾成功防御敌人攻击的概率上升
 One-Hand Wield
 One-Handed
+单手装备
 Allows you to wield two-handed weapons in only one hand.
+可以单手使用双手专用的武器
 Endurance
 Force of Will
+根性
 A fixed chance to survive a mortal blow with some HP.
+受到致命伤害的时候也会以一定的概率保留某一程度的HP 
 Berserk
+凶暴化
 Increases attack power at the cost of defense.
+以减少防御力为代价提高攻击力
 Defensive Stance
 Providence
+防御之势
 Increases defense at the cost of attack power.
+以降低攻击力为代价提高防御力
 Blood Rage
 Blood Fury
+血之激愤
 As HP decreases, attack power increases.
+HP越低，攻击力越高
 Fast Move
 Veda's Gift
+疾跑
 Increases movement speed.
+移动速度上升
 Rapid Attack
 Rapidfire
+高速攻击
 Increases attack speed.
+攻击速度上升
 Insight
+看破
 View enemy stats.
+可以看见敌人的状态
 Magic Rance
 Needle
+魔针术
 Shoots forth a magic blade.
+向前方放出魔法的针。
 Titan Blow
 Rock
+落石术
 Drops a giant rock on an enemy.
+将巨大的岩石从敌人头上砸下
 Death
+死灵术
 Summons forth a wave of death, directed as you wish.
+召唤并随意操纵死亡的波动。
 Fire
+火球术
 Shoots forth a scorching ball of fire.
+向前方发射火球。
 Fire Wall
 Blaze
+火墙术
 Creates a blazing wall that spreads like a fan.
+产生灼热的墙壁，向前方呈扇形放射。
 Ignition
+炎爆术
 Creates a huge explosion that burns nearby enemies.
+引发大爆炸,将周围的敌人烧成灰烬。
 Freezing
 Ice
+冰箭术
 Fires a shard of ice.
+向前方放出冰的碎片。
 Frost Bell
 Frost
+霜冻术
 Shoots a massive chunk of ice that shatters into frozen shards on impact.
+放出冷气块，在击中点产生冰柱。
 Avalanche
 Freezing
+强冻术
 Calls down a chilly rain that freezes nearby enemies.
+降下冰冻的雨，将周围的敌人冻结。
 Blitz Arrow
 Thunder
+雷箭术
 Fires a bolt of thunder.
+向前方施放电击。
 Lightning
 Blitz
+雷鸣术
 Surrounds your body for a set time with an electric barrier.
+一定时间内用雷电做成防护罩环绕在身体周围。
 Toal Hammer
 Lightning
+闪电术
 Calls forth a storm cloud that strikes nearby enemies.
+召唤闪电，打击周围的敌人。
 Heal
+回复术(敌)
 Recover magic expressly for the Goblin Healer.
+哥布林法师专用的回复魔法。
 Low Fire Wall
 Blaze
+火墙术(敌)
 A modified version of Blaze expressly for the Master Goblin.
+哥布林领袖专用的火墙术,威力经过了调整。
 
