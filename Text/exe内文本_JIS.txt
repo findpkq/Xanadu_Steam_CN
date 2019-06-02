@@ -1,287 +1,287 @@
 Time Crevic
-时之狭间
+帪擵嫹娫
 Netherworld
-死者的异界
+巰幰揑堎奅
 Unknow
-不明
+晄柧
 Talos
-塔罗斯
+搩梾巣
 Body Slam
-身体相撞
+恎懱憡摮
 
 SYS_EX(There`are`many`types`of`stats|you`can`increase`at`the`Spirit`Sanctum.,-1,0x20000200)
-SYS_EX(在精灵堂可以进行属性点的分配|自由强化角色。,-1,0x20000200)
+SYS_EX(嵼惛楈摪壜埲恑峴懏惈揰揑暘攝|帺桼嫮壔妏怓丅,-1,0x20000200)
 
 SYS_EX(When`you`level`up_`you`gain`HP`and`also|obtain`#C2Bonus`Points#C0.,-1,0x20000200)
-SYS_EX(等级提升时、最大HP将会增加|同时会取得#C2属性点数#C0。,-1,0x20000200)
+SYS_EX(摍媺採彙帪丄嵟戝HP彨夛憹壛|摨帪夛庢摼#C2懏惈揰悢#C0丅,-1,0x20000200)
 
 SYS_EX([Leveling`Up],-1,0x20000200)
-SYS_EX(有关［等级提升］,-1,0x20000200)
+SYS_EX(桳娭乵摍媺採彙乶,-1,0x20000200)
 
 Leveled up by %d!
-等级提升到了 %d !
+摍媺採彙摓椆 %d !
 Leveled down to %d!
-等级下降到了 %d !
+摍媺壓崀摓椆 %d !
 
 Current Guardian level increased by %d!
-精灵的等级提升为 %d 级!
+惛楈揑摍媺採彙堊 %d 媺!
 Learned the skill [%s]!
-技能［%s］习得!
+媄擻乵%s乶廗摼!
 Mystic Card
-米斯提卡卡片/神秘卡片
+暷巣採摶摶曅/恄旈摶曅
 
 Log History to TXT
 Reflections
-反射
+斀幩
 Anti-aliasing
-抗锯齿
+峈嫎帟
 Refresh Rate
-刷新率
+嶞怴棪
 Smooth
-平滑
+暯妸
 Standard
-标准
+昗弝
 Rough
-粗糙
+慹忄
 Off
-关
+娭
 On
-开
+奐
 Low
-低
+掅
 Medium
-中
+拞
 High
-高
+崅
 Max
 Min
 
 Contrast
-对比度
+懳斾搙
 Brightness
-亮度
+椇搙
 SE Volume
-音效音量
+壒岠壒検
 BGM Volume
-BGM音量
+BGM壒検
 Config
-环境设定
+娐嫬愝掕
 
 Standing monster
-怪物开始行动
+夦暔奐巒峴摦
 Unaware monster
-怪物没察觉
+夦暔杤嶡妎
 Check head behavior
-点头的检查
+揰摢揑専嵏
 Character details
-显示角色详细
+尠帵妏怓徻嵶
 Display attack range
-显示攻撃有效距离
+尠帵峌寕桳岠嫍棧
 Display MAP
-显示MAP
+尠帵MAP
 Display EFC
-显示EFC
+尠帵EFC
 Display CHR
-显示CHR
+尠帵CHR
 Mipmapping
 
 Wireframe
-线框
+慄瀥
 Texture Display
-显示贴图
+尠帵揬恾
 Texture Resolution
-贴图分辨率
+揬恾暘櫈棪
 Test Menu
-DEBUG菜单
+DEBUG嵷扨
 
 Save
-存档
+懚瀮
 Screen Test
-评价画面测试
+昡壙夋柺應帋
 Change Parameters
-改变属性点
+夵曄懏惈揰
 Change Guardian
-精灵变更
+惛楈曄峏
 Bonus Points
-分配属性点数
+暘攝懏惈揰悢
 Purchase Items
-道具购买
+摴嬶峸攦
 Flag Settings
-FLAG管理
+FLAG娗棟
 Map Movement
-地图移动
+抧恾堏摦
 
 Castle Strangerock (Hall/Sanctum/Tower)
-奇岩城（飨宴之馆/本殿/天守阁）
+婏娾忛乮嬂墐擵娰/杮揳/揤庣妕乯
 Xanadu Labyrinth/Time Crevice
-仙那度·魔幻迷宫/时之狭间
+愬撨搙仠杺尪柪媨/帪擵嫹娫
 Eaglet Mountain (Mountainside/Lava Caves)
-伊格利特山（山腰/溶岩窟）
+埳奿棙摿嶳乮嶳崢/梟娾孉乯
 Eternal Maze
-千古迷道
+愮屆柪摴
 Clover Ruins/Trechier Woods
-三叶草遗迹/魔妆森林
+嶰姁憪堚鐟/杺徬怷椦
 Back-Alley Ruins
-镇外的遗迹
+捔奜揑堚鐟
 Harlech Village/Lake Orwell
-哈莱克镇／欧威鲁湖底
+欫棄崕捔乛墷埿楧屛掙
 
 Please select a memoir to read.
-请选择要读的笔记
+惪慖潰梫撉揑昅婰
 Please select a tabula to read.
-请选择要读的石板
+惪慖潰梫撉揑愇斅
 ...I haven't translated that yet.|Please wait a little longer.
-…还无法读取.|请稍等一下.
+乧娨澷朄撉庢.|惪鈉摍堦壓.
 Translating...
-解读中…
+夝撉拞乧
 Translated
-解读完毕
+夝撉姰昄
 
 NEW
 Cancel
-取消
+庢徚
 
 
 Please enter your name.
-请输入你的姓名
+惪桝擖擨揑惄柤
 Please select your destination.
-请选择传送点
+惪慖潰揱憲揰
 Do you wish to access this data? |#c2OK|#c2CANCEL
-要应用这个记录吗? |#c2确定|#c2取消
+梫墳梡攪槩婰榐欐? |#c2妋掕|#c2庢徚
 This is data from an old version. Convert? |#c2OK|#c2CANCEL
-是旧版本的数据,要转换吗? |#c2确定|#c2取消
+惀媽斉杮揑悢悩,梫揮姺欐? |#c2妋掕|#c2庢徚
 Do you wish to overwrite this data? |#c2OK|#c2CANCEL
-要覆盖这个记录吗? |#c2确定|#c2取消
+梫暍岢攪槩婰榐欐? |#c2妋掕|#c2庢徚
 
 
 The game was not shut down properly. Do you want to load the last autosave.
-发现异常结束游戏的迹象,要使用最后的自动存档吗?
+敪尰堎忢寢懇熰媃揑鐟徾,梫巊梡嵟岪揑帺摦懚瀮欐?
 Please choose which save data you wish to use
-请选择要使用的存档
+惪慖潰梫巊梡揑懚瀮
 Please select the file you wish to load.
-请选择要读取的存档
+惪慖潰梫撉庢揑懚瀮
 
-请选择要保存的记录
+惪慖潰梫曐懚揑婰榐
 Please choose a save file for this data
 
 You haven't finished allocating everything. Proceed? |#c2OK|#c2CANCEL
-分配没有确定,这样就可以吗? |#c2确定|#c2取消
+暘攝杤桳妋掕,攪條廇壜埲欐? |#c2妋掕|#c2庢徚
 
 Quit Game
-结束游戏
+寢懇熰媃
 Title Screen
-返回标题画面
+曉夞昗戣夋柺
 Settings
-环境设定
+娐嫬愝掕
 Log History
 #c2Do you want to quit the game? |#c2Yes|#c2No
-要结束游戏吗？     |#c2是|#c2否
+梫寢懇熰媃欐丠     |#c2惀|#c2斲
 Return to the title screen? |#c2OK|#c2CANCEL
-要返回标题画面吗？     |#c2确定|#c2取消
+梫曉夞昗戣夋柺欐丠     |#c2妋掕|#c2庢徚
 Credits
-履历表
+棜楌昞
 System Menu
 
 
 Ogre
-食人魔
+怘恖杺
 Dvo&b9&a6k
-德沃夏克
+摽梹壞崕
 Galsis (Second Form)
-加尔西斯(第二形态)
+壛帰惣巣(戞擇宍懺)
 Galsis (First Form)
-加尔西斯(第一形态)
+壛帰惣巣(戞堦宍懺)
 Lorelei
-罗蕾莱
+梾錛棄
 Ascomoid
-阿斯克摩德
+垻巣崕杸摽
 Evilwurm
-艾比尔布鲁姆
+鋱斾帰晍楧汫
 Sc&b3lltula
-斯寇尔奇拉
+巣檓帰婏漟
 Berilard
-贝利亚德
+奓棙垷摽
 
 Return to Title Screen
-回到标题画面
+夞摓昗戣夋柺
 Start from Last Save Point
-从存档处重新开始
+樃懚瀮張廳怴奐巒
 Return to Town (Lose 50% Money)
-在街道重新开始(金钱减半)
+嵼奨摴廳怴奐巒(嬥慘尭敿)
 Thdr
 Ice
 Fire
 Gold
 Unknown Swordsman
-谜之剑士
+撲擵寱巑
 
 Use an [Elixir]? |#c2YES|#c2NO
-要使用【圣灵药】复活吗? |#c2是|#c2否
+梫巊梡亂惞楈栻亃暅妶欐? |#c2惀|#c2斲
 
 
 %d gold acquired!
-获得金钱 %d !
+妉摼嬥慘 %d !
 Paid %d gold.
-支付金钱 %d .
+巟晅嬥慘 %d .
 %s obtained!
-取得了 %s !
+庢摼椆 %s !
 %s was discarded.
-扔了 %s .
-%s: %s → %s takes %d damage.
-%s的%s→%s受到了%d点的伤害.
+滿椆 %s .
+%s: %s 仺 %s takes %d damage.
+%s揑%s仺%s庴摓椆%d揰揑彎奞.
 Attack
-攻击
-Trap! → %s took %d damage.
-命中!→%s受到了%d点的伤害
+峌寕
+Trap! 仺 %s took %d damage.
+柦拞!仺%s庴摓椆%d揰揑彎奞
 was defeated.
-被打倒了.
+旐懪搢椆.
 has fainted...
-体力耗尽了.
-%s %s → %s dodges!attacks
-%s的%s→%sＭＩＳＳ!
+懱椡栒恠椆.
+%s %s 仺 %s dodges!attacks
+%s揑%s仺%s俵俬俽俽!
 
 %s split into %d!
-%s分离为%d个!
+%s暘棧堊%d槩!
 %s has summoned %s!
-%s召唤%s
+%s彚姭%s
 
 
-通关评价（分割线前涉及特殊字体暂不修改）
+捠娭昡壙乮暘妱慄慜徛媦摿庩帤懱巄晄廋夵乯
 Save Object Count - %5d
-存档回复次数
+懚瀮夞暅師悢
 Dead Count        - %5d
-死亡次数
+巰朣師悢
 Damage Count      - %5d
-被敌人伤害次数
+旐揋恖彎奞師悢
 Potion Use Count  - %5d
-回复药使用次数
+夞暅栻巊梡師悢
 Skill             - %5d
-技能收集
+媄擻廂廤
 Level             - %5d
-人物等级
+恖暔摍媺
 Total Time        - %02d:%02d:%02d
 ========================================
 Save Object Count(Times Saved)
-Save Object Count(存档回复次数)
+Save Object Count(懚瀮夞暅師悢)
 Save Object Count              %3d
 Dead Count(Deaths)
-Dead Count(死亡次数)
+Dead Count(巰朣師悢)
 Dead Count                     %3d
 Damage Count(Damage Taken)
-Damage Count(被敌人伤害次数)
+Damage Count(旐揋恖彎奞師悢)
 Damage Count                  %4d
 Potion Use Count(Potions Used)
-Potion Use Count(回复药使用次数)
+Potion Use Count(夞暅栻巊梡師悢)
 Potion Use Count              %4d
 Treasure Box(Treasures Recovered)
-Treasure Box(宝箱收集率)
+Treasure Box(曮敔廂廤棪)
 Treasure Box              %3d(%3d%%)
 Treasure Box                   %3d%%
 Skill(Skills)
-Skill(技能收集)
+Skill(媄擻廂廤)
 Skill                           %2d
 Level(Level)
-Level(人物等级)
+Level(恖暔摍媺)
 Level                           %2d
 Total Time(Total Time)
 Total Time(Total Time)
@@ -289,275 +289,275 @@ Total Time                %02d:%02d:%02
 
 
 %s lost %d in all...
-%s 失去了 %d 个…
+%s 幐嫀椆 %d 槩乧
 %d gold was lost...
-失去了金钱 %d …
+幐嫀椆嬥慘 %d 乧
 Lost all your gold...
-失去了全部金钱…
+幐嫀椆慡晹嬥慘乧
 There was no effect.
-没有效果。
+杤桳岠壥丅
 The spell [%s] was learned!
-学得魔法%s!
+妛摼杺朄%s!
 
 
 1 [Key] was made.
-做出了1把钥匙.
+橍弌椆1攃鑟嶛.
 2 [Keys] were made!
-做出了2把钥匙!
+橍弌椆2攃鑟嶛!
 You can't hold any more [Keys].
-不能再携带更多的钥匙了.
+晄擻嵞実懷峏懡揑鑟嶛椆.
 You don't have a [Bone]
-没有足够的『骨』.
+杤桳懌嬳揑亀崪亁.
 Make a [Key] by carving a [Bone]? |#c2OK|#c2CANCEL
-要加工『骨』制作钥匙吗? |#c2确定|#c2取消
+梫壛岺亀崪亁惂嶌鑟嶛欐? |#c2妋掕|#c2庢徚
 Return to town? |#c2OK|#c2CANCEL
-要回街上吗? |#c2确定|#c2取消
+梫夞奨忋欐? |#c2妋掕|#c2庢徚
 Return to town? (*You cannot return to where you were) |#c2OK|#c2CANCEL
-要回街上吗?(用%s无法回到原来的场所) |#c2确定|#c2取消
+梫夞奨忋欐?(梡%s澷朄夞摓尨棃揑応強) |#c2妋掕|#c2庢徚
 Unable to carry any more equipment.Your bags are full!
-道具箱已满，不能再携带更多的装备了.
+摴嬶敔涍枮丆晄擻嵞実懷峏懡揑憰旛椆.
 
 
 None 
-无
+澷
 PROFIC - %d.%d%%
-熟练度 - %d.%d%%
+弉楙搙 - %d.%d%%
 SKILL - %s
-技能 - %s
+媄擻 - %s
 None
-无
+澷
 ATTACK - %d
-攻击力 - %d
+峌寕椡 - %d
 ATTACK - %d + %d
-攻击力 - %d + %d
+峌寕椡 - %d + %d
 ATTACK - ATTACK
-攻击力 - 攻击力
+峌寕椡 - 峌寕椡
 One-handed weapon
-单手武器
+扨庤晲婍
 Two-handed weapon
-双手武器
+憃庤晲婍
 EFFECT - %s
-追加效果 - %s
+捛壛岠壥 - %s
 EFFECT - EFFECT
-追加效果 - 追加效果
+捛壛岠壥 - 捛壛岠壥
 DEFENSE - %d
-防御力 - %d
+杊屼椡 - %d
 DEFENSE - %d + %d
-防御力 - %d + %d
+杊屼椡 - %d + %d
 DEFENSE - DEFENSE
-防御力 - 防御力
+杊屼椡 - 杊屼椡
 SP %2d/%2d
 Active Skill
-发动系技能
+敪摦宯媄擻
 Passive Skill
-状态系技能
+忬懺宯媄擻
 
 %s|#c1-Retry this map|-Return to Title Screen|-Cancel
-%s|#c1·在这个地图继续|·回到标题画面|·取消
+%s|#c1仠嵼攪槩抧恾宲懕|仠夞摓昗戣夋柺|仠庢徚
 %s|#c%d-To the previous map
-%s|#c%d·到上个地图
+%s|#c%d仠摓忋槩抧恾
 %s|#c%d-To the next map
-%s|#c%d·到下个地图
+%s|#c%d仠摓壓槩抧恾
 #s3#c2<Hint!> #c1%s#c1#s2
 
 
-puzzle-不翻译
+puzzle-晄東栿
 Enigma Eye
-死亡之眼
+巰朣擵娽
 Apocalypse
-僵尸奇美拉
+橩洐婏旤漟
 Crystal Griffin
-狮鹫
+巶榟
 Sphinx
-鸟身女妖
+捁恎彈梔
 Golem Sentinel
-泥魔像
+揇杺憸
 Doom Bat
-吸血蝙蝠
+媧寣鍨鍟
 Specter
-幽灵
+桯楈
 Nosferatu
-尸妖
+洐梔
 Black Death
-骷髅兵
+閷閻暫
 Black Death Archer
-骷髅射手
+閷閻幩庤
 Black Death Warrior
-骷髅武士
+閷閻晲巑
 Dark Lizard Mage
-蜥蜴人萨满
+鍜鍘恖嶧枮
 Dark Lizardman
-蜥蜴人
+鍜鍘恖
 Dragon
-双足飞龙
+憃懌旘棾
 Baby Dragon
-海德拉
+奀摽漟
 Quantum Ghost
-电鬼火
+揹婼壩
 Evil Soul
-鬼火
+婼壩
 Ocher Jelly
-黑色史莱姆
+崟怓巎棄汫
 Meat Jelly
-病毒史莱姆
+昦撆巎棄汫
 Arch Lich
-巫妖
+涋梔
 Death Mastermind
-石魔像
+愇杺憸
 Golem Siege Ram
-黑暗蜥蜴
+崟埫鍜鍘
 Tesla Salamander
-石像鬼
+愇憸婼
 Invisible Fiend
-守卫者
+庣塹幰
 Nightgaunt
 
 Black Death Priest
-骷髅祭司
+閷閻嵳巌
 Ogre Lord
-食人魔
+怘恖杺
 Venom Berserker
-狂暴牛头怪
+嫸朶媿摢夦
 
 
 A key was used, and then removed.
-使用钥匙.打开锁.
+巊梡鑟嶛.懪奐嵔.
 
 
 Poison Def.
-毒防御
+撆杊屼
 Paral. Def.
-麻痹防御
+杻醿杊屼
 Lightn. Res.
-耐雷性
+懴棆惈
 Curse Def.
-诅咒防御
+鎓庺杊屼
 Ice Resist
-耐冰性
+懴昘惈
 Fire Resist
-耐火性
+懴壩惈
 Silence Def.
-沉默防御
+焿栙杊屼
 
 
 Level Up
-等级提升
+摍媺採彙
 Set Simulated Level
-假想等级设定
+壖憐摍媺愝掕
 Level Down
-等级下降
+摍媺壓崀
 Show Growth Log
-成长履历LOG表示
+惉挿棜楌LOG昞帵
 Gain 10% EXP
-经验值增加（＋１０％）
+宱尡抣憹壛乮亄侾侽亾乯
 Gain 10% Prof.
-熟练度增加（＋１０％）
+弉楙搙憹壛乮亄侾侽亾乯
 Max Gold
-最大金钱
+嵟戝嬥慘
 Max Keys
-最大钥匙数
+嵟戝鑟嶛悢
 All Skills
-全部技能习得
+慡晹媄擻廗摼
 All Guardians
-全部精灵取得
+慡晹惛楈庢摼
 Guardian LV Up
-精灵等级上升
+惛楈摍媺忋彙
 Guardian LV Down
-精灵等级下降
+惛楈摍媺壓崀
 Guardian Release
-精灵解除
+惛楈夝彍
 Invincible
-无敌
+澷揋
 Max Power
-最强
+嵟嫮
 Full Recovery
-生命恢复
+惗柦夬暅
 Half Power
-体力减半
+懱椡尭敿
 Poison
-中毒
+拞撆
 Blunt Hit
-沉睡
+焿悋
 All Negative Status
-全异常状态
+慡堎忢忬懺
 
 [To the Inheritors of History]
-『继承历史的人啊』
+亀宲彸楌巎揑恖垿亁
 [The Chosen Ones]
-『被选中的人们』
+亀旐慖拞揑恖橃亁
 [When the Rain Falls]
-『如果骤雨来临』
+亀擛壥閰塉棃椪亁
 [The Unblessed Bride]
-『不被祝福的新娘』
+亀晄旐廽暉揑怴柡亁
 [Where the Star Shines]
-『星光闪耀的场所』
+亀惎岝慚梥揑応強亁
 [The Princess Ne'er Returning]
-『没有回来的公主』
+亀杤桳夞棃揑岞庡亁
 [Of History and Spirits]
-『精灵和历史』
+亀惛楈榓楌巎亁
 [The Four Royal Crowns]
-『四个王冠』
+亀巐槩墹姤亁
 [Sacred Sword and Maiden]
-『圣剑和巫女』
+亀惞寱榓涋彈亁
 [The Seven Wise Sages]
-『七人导师』
+亀幍恖摫巘亁
 [The Black Bride]
-『黑衣的新娘』
+亀崟堖揑怴柡亁
 [The Architect of Disaster]
-『悲剧的名匠』
+亀斶寑揑柤彔亁
 
 Herdsman's Moon 23rd, 1210
-1210年 牛饲之月23日
+1210擭 媿帞擵寧23擔
 Silverwolf's Moon 27th, 1210
-1210年 银狼之月27日
+1210擭 嬧楾擵寧27擔
 Firehen's Moon 30th, 1211
-1211年 凤凰之月30日
+1211擭 朠檧擵寧30擔
 Pegasus Moon 11th, 1211
-1211年 天马之月11日
+1211擭 揤攏擵寧11擔
 Unicorn's Moon 7th, 1212
-1212年 独角之月 7日
+1212擭 撈妏擵寧 7擔
 Wild Rabbit's Moon 10th, 1212
-1212年 野兔之月10日
+1212擭 栰揺擵寧10擔
 Filial Crow's Moon 3rd, 1215
-1215年 孝鸦之月 3日
+1215擭 岶殡擵寧 3擔
 Demigod's Moon 14th, 1216
-1216年 半神之月14日
+1216擭 敿恄擵寧14擔
 Demigod's Moon 15th, 1216
-1216年 半神之月15日
+1216擭 敿恄擵寧15擔
 Demigod's Moon 17th, 1216
-1216年 半神之月17日
+1216擭 敿恄擵寧17擔
 Demigod's Moon 19th, 1216
-1216年 半神之月19日
+1216擭 敿恄擵寧19擔
 Hydra's Moon 16th, 1217
-1217年 水蛇之月16日
+1217擭 悈幹擵寧16擔
 
 Clover Ruins - Entrance
-三叶草遗迹　入口
+嶰姁憪堚鐟丂擖岥
 Eternal Maze - Deepest Depths
-千古迷道　最深处
+愮屆柪摴丂嵟怺張
 Trechier Woods - Entrance
-魔妆森林　入口
+杺徬怷椦丂擖岥
 Eaglet Mountain - Entrance
-伊格利特山　入口
+埳奿棙摿嶳丂擖岥
 Eaglet Mountain - Central
-伊格利特山　中央处
+埳奿棙摿嶳丂拞墰張
 Xanadu Labyrinth - Central
-仙那度·魔幻迷宫　中央处
+愬撨搙仠杺尪柪媨丂拞墰張
 Time Crevice - Deepest Depths
-时之狭间　最深处
+帪擵嫹娫丂嵟怺張
 Castle Strangerock - Central
-奇岩城　中央处
+婏娾忛丂拞墰張
 
 Strength attribute.Affects physical attack power.
-表示肌肉力量.主要影响物理攻击力.
+昞帵敡幊椡検.庡梫塭嬁暔棟峌寕椡.
 Intelligence attribute.Affects magic power.
-表示知识.主要影响魔法攻击力
+昞帵抦幆.庡梫塭嬁杺朄峌寕椡
 Reflex attribute.Affects hit accuracy and evasion rate.
-表示反射神经.主要影响命中率和回避率.
+昞帵斀幩恄宱.庡梫塭嬁柦拞棪榓夞旔棪.
 Constitution attribute.Affects physical defense and vitality.
-表示耐久力.主要影响物理防御力.
+昞帵懴媣椡.庡梫塭嬁暔棟杊屼椡.
 Mind attribute. Affects magic resistance.
-表示精神力.主要影响魔法防御力.
+昞帵惛恄椡.庡梫塭嬁杺朄杊屼椡.
 
 STR
 INT
@@ -565,9 +565,9 @@ REF
 CON
 MND
 Level
-等级
+摍媺
 Class
-称号
+徧崋
 Experience
 Next-Experience
 Hit Points
@@ -587,425 +587,425 @@ Guardian Level
 Guardian Exp.
 Guardian Ability
 Weapon Slot
-武器栏
+晲婍棑
 Shield Slot
-盾栏
+弬棑
 Armor Slot
-铠甲栏
+奪峛棑
 Helmet Slot
-头盔栏
+摢妧棑
 Item Slot
-道具栏
+摴嬶棑
 Skill Slot
-技能栏
+媄擻棑
 Overall strength of the character
-角色综合强度
+妏怓憥崌嫮搙
 
 Current title. Will change according to your level
-现在的称号. 会根据等级而改变.
+尰嵼揑徧崋. 夛崻悩摍媺帶夵曄.
 Current experience earned from monsters slain.
-角色的经验值,会在战斗中累积
+妏怓揑宱尡抣,夛嵼愴搇拞椵愊
 Indicates total amount of experience required to level up.
-升到下个等级所需的经验值.
+彙摓壓槩摍媺強廀揑宱尡抣.
 This is your vitality.If you run out of HP,your life will be forfeit.
-角色的生命力,减为0时就会GAMEOVER.
+妏怓揑惗柦椡,尭堊0帪廇夛GAMEOVER.
 These are spent to use a selected skill or spell.
-选择中技能/魔法的使用次数,各技能上限不同.
+慖潰拞媄擻/杺朄揑巊梡師悢,奺媄擻忋尷晄摨.
 
 Strength attribute.Affects physical attack power.
-表示肌肉力量.主要影响物理攻击力.
+昞帵敡幊椡検.庡梫塭嬁暔棟峌寕椡.
 Intelligence attribute.Affects magic power.
-表示知识.主要影响魔法攻击力
+昞帵抦幆.庡梫塭嬁杺朄峌寕椡
 Reflex attribute.Affects hit accuracy and evasion rate.
-表示反射神经.主要影响命中率和回避率
+昞帵斀幩恄宱.庡梫塭嬁柦拞棪榓夞旔棪
 Constitution attribute.Affects physical defense and vitality.
-表示耐久力.主要影响物理防御力
+昞帵懴媣椡.庡梫塭嬁暔棟杊屼椡
 Mind attribute. Affects magic resistance.
-表示精神力.主要影响魔法防御力.
+昞帵惛恄椡.庡梫塭嬁杺朄杊屼椡.
 
 Physical attack strength.
-攻击力. 表示综合物理攻击力.
+峌寕椡. 昞帵憥崌暔棟峌寕椡.
 Magical attack power.
-魔法攻击力.表示魔法的威力.
+杺朄峌寕椡.昞帵杺朄揑埿椡.
 Physical attack resistance
-防御力.表示综合物理防御力.
+杊屼椡.昞帵憥崌暔棟杊屼椡.
 Magical attack resistance.
-魔法防御力.表示对魔法的抗性
+杺朄杊屼椡.昞帵懳杺朄揑峈惈
 Accuracy of physical attacks.
-命中率.表示武器攻击的命中机率.
+柦拞棪.昞帵晲婍峌寕揑柦拞婘棪.
 Ability to evade physical attacks.
-回避率.表示对物理攻击的回避机率.
+夞旔棪.昞帵懳暔棟峌寕揑夞旔婘棪.
 Current level of the Guardian dwelling within.
-表示现在附身的精灵的等级.
+昞帵尰嵼晬恎揑惛楈揑摍媺.
 Amount of experience shared with the Guardian dwelling within.
-表示现在附身的精灵的经验值.
+昞帵尰嵼晬恎揑惛楈揑宱尡抣.
 The passive ability of the Guardian dwelling within
-表示现在附身的精灵的特殊能力.
+昞帵尰嵼晬恎揑惛楈揑摿庩擻椡.
 Slot to place your weapon.
-装备武器栏.
+憰旛晲婍棑.
 Slot to place your shield.
-装备盾栏.
+憰旛弬棑.
 Slot to place your armor.
-装备铠甲栏.
+憰旛奪峛棑.
 Slot to place your helmet.
-装备头盔栏.
+憰旛摢妧棑.
 Slot to place consumable and special items.
-使用消费道具和装备特殊道具栏.
+巊梡徚旓摴嬶榓憰旛摿庩摴嬶棑.
 A slot for skills or spells.
-使用技能魔法栏.
+巊梡媄擻杺朄棑.
 
 
 Not only can you #c4break#c1 wooden crates, but you can also #c4push#c1 them!
-木箱不但可以毁坏,也可以推动!
+栘敔晄扐壜埲毷毉,栫壜埲悇摦!
 Be careful when carrying wooden crates!
-注意木箱的推动顺序!
+拲堄栘敔揑悇摦弴彉!
 Start by pushing from the left or right!
-先向左右推动!
+愭岦嵍塃悇摦!
 You can also stand on top of a crate.
-也可以跳到箱子上.
+栫壜埲挼摓敔巕忋.
 When a crate is broken, you can push another crate on top of it.
-可以把木箱推到半坏的木箱上.
+壜埲攃栘敔悇摓敿毉揑栘敔忋.
 It's a neat trick to get even higher.
-好好利用上面的木箱吧
+岲岲棙梡忋柺揑栘敔欅
 Make use of these two on the left.
-2个好像是从左边通来的
+2槩岲憸惀樃嵍绮捠棃揑
 Start by putting the first crate in the center...
-先把左边的箱子推到中央….
+愭攃嵍绮揑敔巕悇摓拞墰乧.
 Keep pushing it until it hits an obstacle.
-滑动的箱子在碰到障碍物前都会滑动.
+妸摦揑敔巕嵼徙摓忈奦暔慜搒夛妸摦.
 You can make use of unbreakable boxes.
-好好利用没坏的箱子吧.
+岲岲棙梡杤毉揑敔巕欅.
 You'll need three boxes of the same color to break them.
-同颜色的3个箱子放在一起就会毁坏哦.
+摨婄怓揑3槩敔巕曻嵼堦婲廇夛毷毉欸.
 They'll remove obstacles whose color matches the boxes.
-有颜色的障碍物碰到有颜色的箱子就会消失.
+桳婄怓揑忈奦暔徙摓桳婄怓揑敔巕廇夛徚幐.
 Now if we partially destroy the box in the back on the right...
-把右边最里面的箱子打到半坏….
+攃塃绮嵟棦柺揑敔巕懪摓敿毉乧.
 There is a switch on the left side.
-左边有开关哦.
+嵍绮桳奐娭欸.
 You'll need three boxes of the same color to break them.
-同颜色的3个箱子放在一起就会毁坏哦.
+摨婄怓揑3槩敔巕曻嵼堦婲廇夛毷毉欸.
 To use the switch you'll need to place a box of the same color on it.
-有颜色的开关和同颜色的箱子是对应的.
+桳婄怓揑奐娭榓摨婄怓揑敔巕惀懳墳揑.
 To clear the puzzle on the left, place a matching color box on it.
-有颜色的障碍物碰到有颜色的箱子就会消失.
+桳婄怓揑忈奦暔徙摓桳婄怓揑敔巕廇夛徚幐.
 
 
 Weapon Shop
-武器店
+晲婍揦
 Welcome, welcome!|Lookin' for anythin' in particular?
-哟,欢迎光临.|来买什么呢?
+歊,娊寎岝椪.|棃攦廦涻欳?
 Leavin' so soon? | Hope ta see you again!
-要回去了吗? |以后再来啊!
+梫夞嫀椆欐? |埲岪嵞棃垿!
 We've got weapons, breastplates, shields,|and helmets of all kinds! So what'll it be?
-这里有各种武器,铠甲,盾牌和头盔哦!|想买点什么?
+攪棦桳奺庬晲婍,奪峛,弬攙榓摢妧欸!|憐攦揰廦涻?
 Got somethin' ta sell me?|I'll be happy ta take a look.
-要卖些什么吗?|非常欢迎!
+梫攧嵄廦涻欐?|旕忢娊寎!
 Ah, good choice. 
-啊，不错的选择。
+垿丆晄嶖揑慖潰丅
 An excellent item!|Sure you can handle it, though?
-那个可以吗?| 好好确认一下自己的能力啊!
+撨槩壜埲欐?| 岲岲妋擣堦壓帺屓揑擻椡垿!
 This is in pretty good shape.|You sure you wanna sell it?
-要卖这个好东西吗?|卖之前要想好了哦!
+梫攧攪槩岲搶惣欐?|攧擵慜梫憐岲椆欸!
 Not so fast, there, Sir Knight!|You don't have enough gold!
-喂喂,骑士先生……|你的钱不够啊!
+歘歘,婻巑愭惗乧乧|擨揑慘晄嬳垿!
 I don't think I'll be buyin' that...
-我不收购那种东西啊…
+変晄廂峸撨庬搶惣垿乧
 You don't have enough room for this.|You need ta sell or stow somethin'!
-已经没办法再带更多了啊!|买还是留着,快点决定吧.
+涍宱杤洢朄嵞懷峏懡椆垿!|攦娨惀棷拝,夣揰檙掕欅.
 Many thanks, Sir Knight!
-谢谢啦,骑士先生	
+幱幱歅,婻巑愭惗	
 Pleasure doin' business with you!
-好,那我买下了
+岲,撨変攦壓椆
 Sorry, not in the market for that stuff.|You should take that ta the Curio Shop
-不好意思,那个我不买.|道具店的史密斯也许会对它有兴趣吧.
+晄岲堄巚,撨槩変晄攦.|摴嬶揦揑巎枾巣栫嫋夛懳泙桳嫽庯欅.
 
 Curio Shop
-道具店
+摴嬶揦
 Welcome, welcome!|Have a look 'round!
-欢迎欢迎!|请随便挑选吧.
+娊寎娊寎!|惪悘曋挧慖欅.
 That all for today?|Well, come back soon!
-要回去了吗?有空再来啊!
+梫夞嫀椆欐?桳嬻嵞棃垿!
 We have a variety of medicines, keys, tomes,|and other oddities here. See anything ya like?
-这里有各种道具,药品,钥匙,咒文书.|请随便看看吧.
+攪棦桳奺庬摴嬶,栻昳,鑟嶛,庺暥彂.|惪悘曋娕娕欅.
 Lookin' ta sell? Sure thing!|Just show me what you've got.
-要买这个吗?|真是多谢惠顾了
+梫攦攪槩欐?|恀惀懡幱宐屭椆
 This what ya were lookin' for?
-这个可以吗?
+攪槩壜埲欐?
 I can buy this? You certain?
-卖掉这个可以吗？你确定？
+攧漿攪槩壜埲欐丠擨妋掕丠
 I'm really sorry, but it doesn't seem like ya have the funds...
-不好意思|钱好像不够啊……
+晄岲堄巚|慘岲憸晄嬳垿乧乧
 ...I just don't think I can buy somethin' that valuable.
-…那样贵重的物品这里不收购.
+乧撨條婱廳揑暔昳攪棦晄廂峸.
 Seems your bags are full, sir.|Don't believe I can sell ya this.
-已经不能再带更多的东西了哦……
+涍宱晄擻嵞懷峏懡揑搶惣椆欸乧乧
 Thanks for your patronage!
-多谢惠顾啦.
+懡幱宐屭歅.
 Yes, truly....|I am ever so grateful.
-好的……|谢谢
+岲揑乧乧|幱幱
 ...Dependin' on the amount of bones I have in stock,|the price of keys may fluctuate from time to time.
-……钥匙的制作材料(骨)的价格|会根据交易情况而不断浮动的.
+乧乧鑟嶛揑惂嶌嵽椏(崪)揑壙奿|夛崻悩岎堈忣檝帶晄抐晜摦揑.
 Ah, this'll make a fine key, and should|help keep costs low. Many thanks!
-啊啊,多谢!|这样钥匙的价格就降下来了.
+垿垿,懡幱!|攪條鑟嶛揑壙奿廇崀壓棃椆.
 
 Storehouse
-仓库
+憅屔
 
 Need me to hold any of your items for you?|I'll keep a close eye on them!
-要整理道具吗?|不用的东西可以先交给我保管.
+梫惍棟摴嬶欐?|晄梡揑搶惣壜埲愭岎媼変曐娗.
 Is...that all you needed, then?
-哦,已经好了吗?
+欸,涍宱岲椆欐?
 Something you need to take with you?
-有必须要带着的东西吗?
+桳昁恵梫懷拝揑搶惣欐?
 Something I can hold for you?
-想寄存什么呢?
+憐婑懚廦涻欳?
 I can hold some of your money, as well.|Just make sure you keep enough with you!
-钱也可以寄存哦.|身上的钱够吗?
+慘栫壜埲婑懚欸.|恎忋揑慘嬳欐?
 
 
 Card Selection
-卡片选择
+摶曅慖潰
 Brave Sir Knight...|Do you wish to exchange your Guardian?
-骑士先生……|要进行降灵吗?
+婻巑愭惗乧乧|梫恑峴崀楈欐?
 Is everything in order, then?
-要中止降灵吗?
+梫拞巭崀楈欐?
 Please choose a Guardian for the binding.
-请选择新的寄宿精灵.
-★2 normal lines
-通常台词2
+惪慖潰怴揑婑廻惛楈.
+仛2 normal lines
+捠忢戜帉2
 Are you satisfied with this infusion?
-这个精灵可以吗?
+攪槩惛楈壜埲欐?
 May the blessings of this new|Guardian serve you well.
-让新的精灵来守护骑士先生……
-Lines ④ (Time of purchase)
-台词4(购买时)
+妯怴揑惛楈棃庣岇婻巑愭惗乧乧
+Lines 嘋 (Time of purchase)
+戜帉4(峸攦帪)
 
 Etc 嘆
-其他1
+懘懠1
 Etc 嘇
-其他2
+懘懠2
 Temple
-寺院
+帥堾
 
 I shall commence the ritual of allocation,|through which your powers may be enhanced.
-那么将要进行属性点的分配.
+撨涻彨梫恑峴懏惈揰揑暘攝.
 Is everything in order, then?
-要中止吗?
+梫拞巭欐?
 Please distribute your points, and remember that|you may decrease attributes to replenish points.
-请进行分配吧.|也可以将能力点数还原. 
+惪恑峴暘攝欅.|栫壜埲彨擻椡揰悢娨尨. 
 Is everything allocated to your liking?
-这样分配可以吗?
+攪條暘攝壜埲欐?
 May your new power grant you|many blessings on your journey.
-祝福骑士先生你获得新的力量……
-Lines ④ (Time of purchase)
-台词4(购买时)
+廽暉婻巑愭惗擨妉摼怴揑椡検乧乧
+Lines 嘋 (Time of purchase)
+戜帉4(峸攦帪)
 
 
-技能魔法说明 英文含换行
-Thrust（以下均保留第一个英文） 
+媄擻杺朄愢柧 塸暥娷姺峴
+Thrust乮埲壓嬒曐棷戞堦槩塸暥乯 
 Thrust
-刺击
+巋寕
 A piercing strike that knocks enemies down. 
-使用尖锐的刺击，可以使敌人倒地
+巊梡愲塻揑巋寕丆壜埲巊揋恖搢抧
 Bash
-吹飞
+悂旘
 A powerful blow that knocks enemies off balance.
-用力一击将对手吹飞
+梡椡堦寕彨懳庤悂旘
 Sweep Attack
 Knockback
-横斩
+墶巃
 A flashing strike that mows down foes in front of you.
-使用一闪，对前方的敌人进行横向的斩击
+巊梡堦慚丆懳慜曽揑揋恖恑峴墶岦揑巃寕
 Cyclone Attack
 Cyclone
-回旋攻击
+夞慁峌寕
 An intense whirlwind that sends nearby enemies flying.
-卷起激烈的旋风，将周围的敌人弹飞
+姫婲寖楏揑慁晽丆彨廃埻揑揋恖抏旘
 Battle Cry
-战歌
+愴壧
 A powerful shout that raises attack power for a set time.
-发出雄壮的呼喊，在一定时间内提高攻击力
+敪弌梇憇揑屇歗丆嵼堦掕帪娫撪採崅峌寕椡
 Charge
-突进
+撍恑
 A rushing move that propels you forward,hitting anything along the way.
-能使用可以连锁攻击的冲撞
+擻巊梡壜埲楢嵔峌寕揑檛摮
 Power Thrust
-强突
+嫮撍
 A stronger version of the [Thrust] skill. Hits repeatedly.
-突刺的强化版，连续多段攻击
+撍巋揑嫮壔斉丆楢懕懡抜峌寕
 Force Blast
-剑气
+寱焹
 A radiating blast of energy that sends nearby enemies flying.
-放射大范围剑气，攻击周围全部敌人
+曻幩戝錀埻寱焹丆峌寕廃埻慡晹揋恖
 Dragon slayer
-屠龙斩
+搄棾巃
 A mighty blow that strikes down evil.
-发出可以斩杀邪龙的强力攻击
+敪弌壜埲巃嶦幾棾揑嫮椡峌寕
 Fire Weapon
 Searing Blade
-火焰之剑
+壩墜擵寱
 Imbues the weapon with flame.
-给武器附加火属性
+媼晲婍晬壛壩懏惈
 Cold Weapon
 Chilling Blade
-冷气之剑
+椻焹擵寱
 Imbues the weapon with ice.
-给武器附加冰结属性
+媼晲婍晬壛昘寢懏惈
 Lightning Weapon
 Jolting Blade
-雷击之剑
+棆寕擵寱
 Imbues the weapon with electricity.
-给武器附加雷属性
+媼晲婍晬壛棆懏惈
 Concentration
 Focus
-集中
+廤拞
 Increases the damage of critical hits.
-会心一击的威力上升
+夛怱堦寕揑埿椡忋彙
 Great Strength
 Strong Arm
-豪腕
+崑榬
 Grants a bonus to the [STR] parameter.
-额外增加属性“STR”的点数
+妟奜憹壛懏惈乬STR乭揑揰悢
 Expansive Spirit
 Clear Mind
-睿智
+嵬抭
 Grants a bonus to the [INT] parameter.
-额外增加属性“INT”的点数
+妟奜憹壛懏惈乬INT乭揑揰悢
 Hardiness
 Hearty Bones
-强健
+嫮寬
 Grants a bonus to the [CON] parameter.
-额外增加属性“CON”的点数
+妟奜憹壛懏惈乬CON乭揑揰悢
 Harmonious Mind
 Serenity
-寂静
+庘惷
 Grants a bonus to the [MND] parameter.
-额外增加属性“MND”的点数
+妟奜憹壛懏惈乬MND乭揑揰悢
 Quickness
-机敏
+婘晀
 Grants a bonus to the [REF] parameter.
-额外增加属性“REF”的点数
+妟奜憹壛懏惈乬REF乭揑揰悢
 Greed
 Plunder
-洗劫
+愻崊
 Drastically increases the gold obtained from enemies.
-将敌人身上的金钱一次偷光
+彨揋恖恎忋揑嬥慘堦師橑岝
 Sneak Attack
-背刺
+攚巋
 Deals even greater damage when attacking an enemy from behind.
-从敌人背后攻击的时候伤害更高
+樃揋恖攚岪峌寕揑帪岓彎奞峏崅
 Interception
 Intercept
-迎击
+寎寕
 A fixed chance to counter an enemy's attack.
-将敌人的物理攻击以一定几率反弹回去
+彨揋恖揑暔棟峌寕埲堦掕檣棪斀抏夞嫀
 Shield Mastery
-熟练之盾
+弉楙擵弬
 Increases the chance for an enemy attack to be blocked with a shield.
-用盾成功防御敌人攻击的概率上升
+梡弬惉岟杊屼揋恖峌寕揑奣棪忋彙
 One-Hand Wield
 One-Handed
-单手装备
+扨庤憰旛
 Allows you to wield two-handed weapons in only one hand.
-可以单手使用双手专用的武器
+壜埲扨庤巊梡憃庤愱梡揑晲婍
 Endurance
 Force of Will
-根性
+崻惈
 A fixed chance to survive a mortal blow with some HP.
-受到致命伤害的时候也会以一定的概率保留某一程度的HP 
+庴摓抳柦彎奞揑帪岓栫夛埲堦掕揑奣棪曐棷朸堦掱搙揑HP 
 Berserk
-凶暴化
+嫢朶壔
 Increases attack power at the cost of defense.
-以减少防御力为代价提高攻击力
+埲尭彮杊屼椡堊戙壙採崅峌寕椡
 Defensive Stance
 Providence
-防御之势
+杊屼擵惃
 Increases defense at the cost of attack power.
-以降低攻击力为代价提高防御力
+埲崀掅峌寕椡堊戙壙採崅杊屼椡
 Blood Rage
 Blood Fury
-血之激愤
+寣擵寖暜
 As HP decreases, attack power increases.
-HP越低，攻击力越高
+HP墇掅丆峌寕椡墇崅
 Fast Move
 Veda's Gift
-疾跑
+幘珈
 Increases movement speed.
-移动速度上升
+堏摦懍搙忋彙
 Rapid Attack
 Rapidfire
-高速攻击
+崅懍峌寕
 Increases attack speed.
-攻击速度上升
+峌寕懍搙忋彙
 Insight
-看破
+娕攋
 View enemy stats.
-可以看见敌人的状态
+壜埲娕尒揋恖揑忬懺
 Magic Rance
 Needle
-魔针术
+杺恓弍
 Shoots forth a magic blade.
-向前方放出魔法的针。
+岦慜曽曻弌杺朄揑恓丅
 Titan Blow
 Rock
-落石术
+棊愇弍
 Drops a giant rock on an enemy.
-将巨大的岩石从敌人头上砸下
+彨嫄戝揑娾愇樃揋恖摢忋犰壓
 Death
-死灵术
+巰楈弍
 Summons forth a wave of death, directed as you wish.
-召唤并随意操纵死亡的波动。
+彚姭涹悘堄憖廲巰朣揑攇摦丅
 Fire
-火球术
+壩媴弍
 Shoots forth a scorching ball of fire.
-向前方发射火球。
+岦慜曽敪幩壩媴丅
 Fire Wall
 Blaze
-火墙术
+壩氃弍
 Creates a blazing wall that spreads like a fan.
-产生灼热的墙壁，向前方呈扇形放射。
+嶻惗庈擬揑氃暻丆岦慜曽掓愵宍曻幩丅
 Ignition
-炎爆术
+墛敋弍
 Creates a huge explosion that burns nearby enemies.
-引发大爆炸,将周围的敌人烧成灰烬。
+堷敪戝敋鄖,彨廃埻揑揋恖從惉奃酁丅
 Freezing
 Ice
-冰箭术
+昘慃弍
 Fires a shard of ice.
-向前方放出冰的碎片。
+岦慜曽曻弌昘揑嵱曅丅
 Frost Bell
 Frost
-霜冻术
+憵搥弍
 Shoots a massive chunk of ice that shatters into frozen shards on impact.
-放出冷气块，在击中点产生冰柱。
+曻弌椻焹夠丆嵼寕拞揰嶻惗昘拰丅
 Avalanche
 Freezing
-强冻术
+嫮搥弍
 Calls down a chilly rain that freezes nearby enemies.
-降下冰冻的雨，将周围的敌人冻结。
+崀壓昘搥揑塉丆彨廃埻揑揋恖搥寢丅
 Blitz Arrow
 Thunder
-雷箭术
+棆慃弍
 Fires a bolt of thunder.
-向前方施放电击。
+岦慜曽巤曻揹寕丅
 Lightning
 Blitz
-雷鸣术
+棆柭弍
 Surrounds your body for a set time with an electric barrier.
-一定时间内用雷电做成防护罩环绕在身体周围。
+堦掕帪娫撪梡棆揹橍惉杊岇惬娐銋嵼恎懱廃埻丅
 Toal Hammer
 Lightning
-闪电术
+慚揹弍
 Calls forth a storm cloud that strikes nearby enemies.
-召唤闪电，打击周围的敌人。
+彚姭慚揹丆懪寕廃埻揑揋恖丅
 Heal
-回复术(敌)
+夞暅弍(揋)
 Recover magic expressly for the Goblin Healer.
-哥布林法师专用的回复魔法。
+欶晍椦朄巘愱梡揑夞暅杺朄丅
 Low Fire Wall
 Blaze
-火墙术(敌)
+壩氃弍(揋)
 A modified version of Blaze expressly for the Master Goblin.
-哥布林领袖专用的火墙术,威力经过了调整。
+欶晍椦椞懗愱梡揑壩氃弍,埿椡宱夁椆挷惍丅
 
