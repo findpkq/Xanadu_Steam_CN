@@ -1,4 +1,4 @@
-Time Crevic
+Time Crevice
 时之狭间
 Netherworld
 死者的异界
@@ -147,7 +147,7 @@ Please enter your name.
 Please select your destination.
 请选择传送点
 Do you wish to access this data? |#c2OK|#c2CANCEL
-要应用这个记录吗? |#c2确定|#c2取消
+要读取这个记录吗? |#c2确定|#c2取消
 This is data from an old version. Convert? |#c2OK|#c2CANCEL
 是旧版本的数据,要转换吗? |#c2确定|#c2取消
 Do you wish to overwrite this data? |#c2OK|#c2CANCEL
@@ -155,7 +155,7 @@ Do you wish to overwrite this data? |#c2OK|#c2CANCEL
 
 
 The game was not shut down properly. Do you want to load the last autosave.
-发现异常结束游戏的迹象,要使用最后的自动存档吗?
+发现异常结束游戏的迹象,要使用最后的自动存档吗? |#c2确定|#c2取消
 Please choose which save data you wish to use
 请选择要使用的存档
 Please select the file you wish to load.
@@ -165,7 +165,7 @@ Please select the file you wish to load.
 Please choose a save file for this data
 
 You haven't finished allocating everything. Proceed? |#c2OK|#c2CANCEL
-分配没有确定,这样就可以吗? |#c2确定|#c2取消
+点数还没有全部分配,这样就可以吗? |#c2确定|#c2取消
 
 Quit Game
 结束游戏
@@ -174,6 +174,7 @@ Title Screen
 Settings
 环境设定
 Log History
+历史记录
 #c2Do you want to quit the game? |#c2Yes|#c2No
 要结束游戏吗？     |#c2是|#c2否
 Return to the title screen? |#c2OK|#c2CANCEL
@@ -181,6 +182,7 @@ Return to the title screen? |#c2OK|#c2CANCEL
 Credits
 履历表
 System Menu
+系统菜单
 
 
 Ogre
@@ -197,6 +199,7 @@ Ascomoid
 阿斯克摩德
 Evilwurm
 艾比尔布鲁姆
+艾维乌姆
 Sc&b3lltula
 斯寇尔奇拉
 Berilard

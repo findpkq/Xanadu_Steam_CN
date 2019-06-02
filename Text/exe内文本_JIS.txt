@@ -1,4 +1,4 @@
-Time Crevic
+Time Crevice
 時之狭間
 Netherworld
 死者的異界
@@ -17,6 +17,7 @@ SYS_EX(等級提升時、最大HP将会増加|同時会取得#C2属性点数#C0。,-1,0x20000200)
 
 SYS_EX([Leveling`Up],-1,0x20000200)
 SYS_EX(有関［等級提升］,-1,0x20000200)
+SYS_EX(有関 等級提升,-1,0x20000200)
 
 Leveled up by %d!
 等級提升到了 %d !
@@ -31,6 +32,7 @@ Mystic Card
 米斯提峠峠片/神秘峠片
 
 Log History to TXT
+保存歴史記録到TXT
 Reflections
 反射
 Anti-aliasing
@@ -97,7 +99,7 @@ DEBUG菜単
 Save
 存档
 Screen Test
-評価画面測試
+評価測試
 Change Parameters
 改変属性点
 Change Guardian
@@ -147,7 +149,7 @@ Please enter your name.
 Please select your destination.
 請選擇伝送点
 Do you wish to access this data? |#c2OK|#c2CANCEL
-要応用這个記録呎? |#c2確定|#c2取消
+要読取這个記録呎? |#c2確定|#c2取消
 This is data from an old version. Convert? |#c2OK|#c2CANCEL
 是旧版本的数据,要転換呎? |#c2確定|#c2取消
 Do you wish to overwrite this data? |#c2OK|#c2CANCEL
@@ -155,7 +157,7 @@ Do you wish to overwrite this data? |#c2OK|#c2CANCEL
 
 
 The game was not shut down properly. Do you want to load the last autosave.
-発現異常結束游戯的迹象,要使用最后的自動存档呎?
+発現異常結束游戯的迹象,要使用最后的自動存档呎?|#c2確定|#c2取消
 Please choose which save data you wish to use
 請選擇要使用的存档
 Please select the file you wish to load.
@@ -165,7 +167,7 @@ Please select the file you wish to load.
 Please choose a save file for this data
 
 You haven't finished allocating everything. Proceed? |#c2OK|#c2CANCEL
-分配没有確定,這様就可以呎? |#c2確定|#c2取消
+点数還没有全部分配,這様就可以呎? |#c2確定|#c2取消
 
 Quit Game
 結束游戯
@@ -174,6 +176,7 @@ Title Screen
 Settings
 環境設定
 Log History
+歴史記録
 #c2Do you want to quit the game? |#c2Yes|#c2No
 要結束游戯呎？     |#c2是|#c2否
 Return to the title screen? |#c2OK|#c2CANCEL
@@ -181,6 +184,7 @@ Return to the title screen? |#c2OK|#c2CANCEL
 Credits
 履歴表
 System Menu
+系統菜単
 
 
 Ogre
@@ -197,6 +201,7 @@ Ascomoid
 阿斯克摩徳
 Evilwurm
 艾比爾布魯姆
+艾維烏姆
 Sc&b3lltula
 斯冦爾奇拉
 Berilard
@@ -216,7 +221,7 @@ Unknown Swordsman
 謎之剣士
 
 Use an [Elixir]? |#c2YES|#c2NO
-要使用【聖霊薬】復活呎? |#c2是|#c2否
+使用[聖霊薬]復活呎?|#c2是|#c2否
 
 
 %d gold acquired!
@@ -269,9 +274,11 @@ Dead Count(死亡次数)
 Dead Count                     %3d
 Damage Count(Damage Taken)
 Damage Count(被敵人傷害次数)
+Damage Count(受傷次数)
 Damage Count                  %4d
 Potion Use Count(Potions Used)
 Potion Use Count(回復薬使用次数)
+Potion Use Count(用回復薬次数)
 Potion Use Count              %4d
 Treasure Box(Treasures Recovered)
 Treasure Box(宝箱収集率)
@@ -282,6 +289,7 @@ Skill(技能収集)
 Skill                           %2d
 Level(Level)
 Level(人物等級)
+Level(等級)
 Level                           %2d
 Total Time(Total Time)
 Total Time(Total Time)
@@ -297,7 +305,7 @@ Lost all your gold...
 There was no effect.
 没有効果。
 The spell [%s] was learned!
-学得魔法%s!
+学得魔法[%s!]
 
 
 1 [Key] was made.
@@ -338,8 +346,10 @@ Two-handed weapon
 双手武器
 EFFECT - %s
 追加効果 - %s
+効果 - %s
 EFFECT - EFFECT
 追加効果 - 追加効果
+効果 - 効果
 DEFENSE - %d
 防御力 - %d
 DEFENSE - %d + %d
@@ -370,6 +380,7 @@ Crystal Griffin
 獅鷲
 Sphinx
 鳥身女妖
+斯芬克斯
 Golem Sentinel
 泥魔像
 Doom Bat
@@ -421,7 +432,7 @@ Venom Berserker
 
 
 A key was used, and then removed.
-使用鑰匙.打開鎖.
+使用了鑰匙.鎖打開了.
 
 
 Poison Def.
@@ -551,7 +562,7 @@ Castle Strangerock - Central
 Strength attribute.Affects physical attack power.
 表示肌宍力量.主要影響物理攻撃力.
 Intelligence attribute.Affects magic power.
-表示知識.主要影響魔法攻撃力
+表示知識.主要影響魔法攻撃力.
 Reflex attribute.Affects hit accuracy and evasion rate.
 表示反射神経.主要影響命中率和回避率.
 Constitution attribute.Affects physical defense and vitality.
@@ -604,7 +615,7 @@ Overall strength of the character
 Current title. Will change according to your level
 現在的称号. 会根据等級而改変.
 Current experience earned from monsters slain.
-角色的経験値,会在戦斗中累積
+角色的経験値,会在戦斗中累積.
 Indicates total amount of experience required to level up.
 升到下个等級所需的経験値.
 This is your vitality.If you run out of HP,your life will be forfeit.
@@ -615,11 +626,11 @@ These are spent to use a selected skill or spell.
 Strength attribute.Affects physical attack power.
 表示肌宍力量.主要影響物理攻撃力.
 Intelligence attribute.Affects magic power.
-表示知識.主要影響魔法攻撃力
+表示知識.主要影響魔法攻撃力.
 Reflex attribute.Affects hit accuracy and evasion rate.
-表示反射神経.主要影響命中率和回避率
+表示反射神経.主要影響命中率和回避率.
 Constitution attribute.Affects physical defense and vitality.
-表示耐久力.主要影響物理防御力
+表示耐久力.主要影響物理防御力.
 Mind attribute. Affects magic resistance.
 表示精神力.主要影響魔法防御力.
 
@@ -656,7 +667,7 @@ A slot for skills or spells.
 
 
 Not only can you #c4break#c1 wooden crates, but you can also #c4push#c1 them!
-木箱不但可以毀坏,也可以推動!
+木箱不但可以#c4毀坏#c1,也可以#c4推動#c1!
 Be careful when carrying wooden crates!
 注意木箱的推動順序!
 Start by pushing from the left or right!
@@ -666,9 +677,9 @@ You can also stand on top of a crate.
 When a crate is broken, you can push another crate on top of it.
 可以把木箱推到半坏的木箱上.
 It's a neat trick to get even higher.
-好好利用上面的木箱叺
+好好利用上面的木箱叺.
 Make use of these two on the left.
-2个好像是从左邊通来的
+2个好像是从左邊通来的.
 Start by putting the first crate in the center...
 先把左邊的箱子推到中央….
 Keep pushing it until it hits an obstacle.
@@ -680,7 +691,7 @@ You'll need three boxes of the same color to break them.
 They'll remove obstacles whose color matches the boxes.
 有顔色的障碍物矼到有顔色的箱子就会消失.
 Now if we partially destroy the box in the back on the right...
-把右邊最里面的箱子打到半坏….
+把右邊最里面的箱子打到半坏…
 There is a switch on the left side.
 左邊有開関哦.
 You'll need three boxes of the same color to break them.
@@ -714,9 +725,9 @@ I don't think I'll be buyin' that...
 You don't have enough room for this.|You need ta sell or stow somethin'!
 已経没屶法再帯更多了姶!|買還是留着,快点决定叺.
 Many thanks, Sir Knight!
-謝謝啀,騎士先生	
+謝謝啀,騎士先生。
 Pleasure doin' business with you!
-好,那我買下了
+好,那我買下了.
 Sorry, not in the market for that stuff.|You should take that ta the Curio Shop
 不好意思,那个我不買.|道具店的史密斯也許会対它有興趣叺.
 
@@ -729,11 +740,11 @@ That all for today?|Well, come back soon!
 We have a variety of medicines, keys, tomes,|and other oddities here. See anything ya like?
 這里有各種道具,薬品,鑰匙,呪文書.|請随便看看叺.
 Lookin' ta sell? Sure thing!|Just show me what you've got.
-要買這个呎?|真是多謝恵顧了
+要売這个呎?|真是多謝恵顧了.
 This what ya were lookin' for?
 這个可以呎?
 I can buy this? You certain?
-売掉這个可以呎？祢確定？
+売掉這个可以呎?祢確定?
 I'm really sorry, but it doesn't seem like ya have the funds...
 不好意思|銭好像不駈姶……
 ...I just don't think I can buy somethin' that valuable.
@@ -743,7 +754,7 @@ Seems your bags are full, sir.|Don't believe I can sell ya this.
 Thanks for your patronage!
 多謝恵顧啀.
 Yes, truly....|I am ever so grateful.
-好的……|謝謝
+好的……|非常感謝.
 ...Dependin' on the amount of bones I have in stock,|the price of keys may fluctuate from time to time.
 ……鑰匙的制作材料(骨)的価格|会根据交易情况而不断浮動的.
 Ah, this'll make a fine key, and should|help keep costs low. Many thanks!
@@ -777,7 +788,7 @@ Please choose a Guardian for the binding.
 Are you satisfied with this infusion?
 這个精霊可以呎?
 May the blessings of this new|Guardian serve you well.
-讓新的精霊来守護騎士先生……
+愿新的精霊能守護好騎士先生……
 Lines ④ (Time of purchase)
 台詞4(購買時)
 
