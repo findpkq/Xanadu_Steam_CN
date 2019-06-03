@@ -816,153 +816,153 @@ Lines ④ (Time of purchase)
 技能魔法説明 英文含換行
 Thrust（以下均保留第一个英文） 
 Thrust
-刺撃
+刺撃.
 A piercing strike that knocks enemies down. 
-使用尖鋭的刺撃，可以使敵人倒地
+使用尖鋭的刺撃，可以使敵人倒地。
 Bash
 吹飛
 A powerful blow that knocks enemies off balance.
-用力一撃将対手吹飛
+用力一撃将対手吹飛。
 Sweep Attack
 Knockback
 横斬
 A flashing strike that mows down foes in front of you.
-使用一閃，対前方的敵人進行横向的斬撃
+使用一閃，対前方的敵人進行横向的斬撃。
 Cyclone Attack
 Cyclone
 回旋攻撃
 An intense whirlwind that sends nearby enemies flying.
-巻起激烈的旋風，将周囲的敵人弾飛
+巻起激烈的旋風，将周囲的敵人弾飛。
 Battle Cry
 戦歌
 A powerful shout that raises attack power for a set time.
-発出雄壮的呼喊，在一定時間内提高攻撃力
+発出雄壮的呼喊，在一定時間内提高攻撃力。
 Charge
 突進
 A rushing move that propels you forward,hitting anything along the way.
-能使用可以連鎖攻撃的冲撞
+能使用可以連鎖攻撃的冲撞。
 Power Thrust
 強突
 A stronger version of the [Thrust] skill. Hits repeatedly.
-突刺的強化版，連続多段攻撃
+突刺的強化版，連続多段攻撃。
 Force Blast
 剣气
 A radiating blast of energy that sends nearby enemies flying.
-放射大范囲剣气，攻撃周囲全部敵人
+放射大范囲剣气，攻撃周囲全部敵人。
 Dragon slayer
 屠竜斬
 A mighty blow that strikes down evil.
-発出可以斬殺邪竜的強力攻撃
+発出可以斬殺邪竜的強力攻撃。
 Fire Weapon
 Searing Blade
 火焔之剣
 Imbues the weapon with flame.
-給武器附加火属性
+給武器附加火属性。
 Cold Weapon
 Chilling Blade
 冷气之剣
 Imbues the weapon with ice.
-給武器附加氷結属性
+給武器附加氷結属性。
 Lightning Weapon
 Jolting Blade
 雷撃之剣
 Imbues the weapon with electricity.
-給武器附加雷属性
+給武器附加雷属性。
 Concentration
 Focus
 集中
 Increases the damage of critical hits.
-会心一撃的威力上升
+会心一撃的威力上升。
 Great Strength
 Strong Arm
 豪腕
 Grants a bonus to the [STR] parameter.
-額外増加属性“STR”的点数
+額外増加属性“STR”的点数。
 Expansive Spirit
 Clear Mind
 睿智
 Grants a bonus to the [INT] parameter.
-額外増加属性“INT”的点数
+額外増加属性“INT”的点数。
 Hardiness
 Hearty Bones
 強健
 Grants a bonus to the [CON] parameter.
-額外増加属性“CON”的点数
+額外増加属性“CON”的点数。
 Harmonious Mind
 Serenity
 寂静
 Grants a bonus to the [MND] parameter.
-額外増加属性“MND”的点数
+額外増加属性“MND”的点数。
 Quickness
 机敏
 Grants a bonus to the [REF] parameter.
-額外増加属性“REF”的点数
+額外増加属性“REF”的点数。
 Greed
 Plunder
 洗劫
 Drastically increases the gold obtained from enemies.
-将敵人身上的金銭一次偸光
+将敵人身上的金銭一次偸光。
 Sneak Attack
 背刺
 Deals even greater damage when attacking an enemy from behind.
-从敵人背后攻撃的時候傷害更高
+从敵人背后攻撃的時候傷害更高。
 Interception
 Intercept
 迎撃
 A fixed chance to counter an enemy's attack.
-将敵人的物理攻撃以一定几率反弾回去
+将敵人的物理攻撃以一定几率反弾回去。
 Shield Mastery
 熟練之盾
 Increases the chance for an enemy attack to be blocked with a shield.
-用盾成功防御敵人攻撃的概率上升
+用盾成功防御敵人攻撃的概率上升。
 One-Hand Wield
 One-Handed
 単手装備
 Allows you to wield two-handed weapons in only one hand.
-可以単手使用双手専用的武器
+可以単手使用双手専用的武器。
 Endurance
 Force of Will
 根性
 A fixed chance to survive a mortal blow with some HP.
-受到致命傷害的時候也会以一定的概率保留某一程度的HP 
+受到致命傷害的時候也会以一定的概率保留某一程度的HP。
 Berserk
 凶暴化
 Increases attack power at the cost of defense.
-以減少防御力為代価提高攻撃力
+以減少防御力為代価提高攻撃力。
 Defensive Stance
 Providence
 防御之勢
 Increases defense at the cost of attack power.
-以降低攻撃力為代価提高防御力
+以降低攻撃力為代価提高防御力。
 Blood Rage
 Blood Fury
 血之激憤
 As HP decreases, attack power increases.
-HP越低，攻撃力越高
+HP越低，攻撃力越高。
 Fast Move
 Veda's Gift
 疾銕
 Increases movement speed.
-移動速度上升
+移動速度上升。
 Rapid Attack
 Rapidfire
 高速攻撃
 Increases attack speed.
-攻撃速度上升
+攻撃速度上升。
 Insight
 看破
 View enemy stats.
-可以看見敵人的状態
+可以看見敵人的状態。
 Magic Rance
 Needle
 魔針術
-Shoots forth a magic blade.
+Shoots forth a magic blade。
 向前方放出魔法的針。
 Titan Blow
 Rock
 落石術
 Drops a giant rock on an enemy.
-将巨大的岩石从敵人頭上碆下
+将巨大的岩石从敵人頭上碆下。
 Death
 死霊術
 Summons forth a wave of death, directed as you wish.
