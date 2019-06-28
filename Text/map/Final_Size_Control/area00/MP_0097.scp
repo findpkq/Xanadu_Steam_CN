@@ -16,21 +16,10 @@
 //  9 ƒlƒbƒh‰ï˜b
 // 10 ƒW[ƒ“‰ï˜b
 // 11 ƒVƒƒƒ‹‰ï˜b
-//
 
 
 DEF("MAP")
 
-// ƒ}ƒbƒvo‚é‚Æ‚«‚ÉŒÄ‚Î‚ê‚é ---------------------------------------------------
-//RES("EXIT")
-//{
-//	// "’n–¼•\Ž¦"‚ªI‚í‚Á‚Ä‚¢‚È‚¢‰Â”\«‚ª‚ ‚é‚Ì‚Å‹­§Á‹Ž
-//	IMG_OFF(0)
-//	IMG_OFF(1)
-//	IMG_OFF(2)
-//	IMG_OFF(3)
-//	CINEMA_OFF(0)
-//}
 
 // ƒ}ƒbƒv“ü‚é‚Æ‚«‚ÉŒÄ‚Î‚ê‚é ---------------------------------------------------
 RES("INIT")
@@ -2605,9 +2594,6 @@ SKIP:
 	set_skip_label("SKIP")
 
 	wait(700)
-//	move_script_look_at(-14,-2,0, 600, 1)
-//	rotate_script_camera(10,-40,0, 600, 1)
-//	wait(600)
 	cross_fade(120)
 	set_script_camera(-9.6,-1.0,-16.0,  -11.0,160.0,0.0, 12, 15.0)
 
@@ -2640,7 +2626,7 @@ SKIP:
 	set_deg_ex("Char","Boatman")
 	set_motion("Char","ATTACK1",-1)
 	MSG_EX("#S3#C0‰Ä™Xu“j—³Œ•Hv",-1,2)
-	MSG_EX("#S3#C0‰Ä™Xu¥ŽE—³“IˆÓŽv™Ûcc|@@@™ß‹N—ˆœkŽŠQˆ¦Bv",-1,2)
+	MSG_EX("#S3#C0‰Ä™Xu¥ŽE—³“IˆÓŽv™Ûcc|@@@™ß‹N—ˆœkúŽŠQˆ¦Bv",-1,2)
 
 	MSG_EX("#S3#C0‘D•vu¬ˆ·˜A”‡˜¢–ç•s’m“¹ˆ¦Bv",-1,2)
 	MSG_EX("#S3#C0‘D•vu“j—³Œ•¥“`à’†|@@@Ÿ‰‡ÝŠïŠâé—¢“I•óŒ•“I–¼ŽšBv",-1,2)
@@ -2664,7 +2650,7 @@ SKIP:
 	scale_script_camera(0.8, 1, 1)
 	wait(140)
 
-	MSG_EX("#S3#C0‰Ä™Xuš_C#N0B|@@@‰ä˜ì°‰õQ˜¢’n•ûZ‰º™ÛHv",-1,2)
+	MSG_EX("#S3#C0‰Ä™Xuš_C#N0B|@@@‰ä˜ìî”‰õQ˜¢’n•ûZ‰º™ÛHv",-1,2)
 
 //@@‚¤‚È‚¸‚­ŽålŒö
 	look_chr("PC", "Char")
