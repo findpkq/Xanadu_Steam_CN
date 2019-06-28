@@ -1,0 +1,406 @@
+// ==========================================================================
+// プロローグ用湖面
+// ==========================================================================
+
+// ----------------------------------------------------------------------------
+// マップ                                                                    
+// ----------------------------------------------------------------------------
+
+DEF("MAP")
+
+RES("INIT")
+{
+	// 仮マップ
+	LOAD_MAP("MP_00a1")
+
+	// 05/05/29:「霧」：画像読み込み＆表示開始
+	SET_FILTER_INFO("fog",0,0x3fffffff,0.001f,0.000f)
+	FILTER(1)
+
+	// ボート初期座標
+	set_pos("boat", -15.0, 2.0, -22.0)
+	set_deg("boat", 80.0)
+
+	// ボートに乗せる
+	set_pos("front", -11.5, 4, -22.0)
+	set_pos("PC", -13.7, 2.0, -21.13)
+	set_deg("PC", 170.0)
+	set_pos("Char", -15.5, 2.6, -22.0)
+	set_deg("Char", 140.0)
+	set_pos("Boatman", -16.8, 2.8, -22.6)
+	set_deg("Boatman", 170.0)
+	SET_MOTION("PC","EMPTY21",0)
+	look_chr("PC","-")
+
+
+	fade_out(0)
+	stop_bgm(1,0)
+}
+
+//---------------------------------------------------------------------
+
+DEF("boat")
+
+RES("INIT")
+{
+	// 05/05/29:暗転中にPCが水に落ちるのを防ぐため。
+	stop_pc(0)
+
+	// 05/06/07:PCが溺死しちゃうので先にセリフの前に座標を決めちゃいます（ひ）
+	// ボート初期座標
+	set_pos("boat", -15.0, 2.0, -22.0)
+	set_deg("boat", 80.0)
+	ATTACH_EFC("EFC_0211","boat","POS")
+
+	// ボートに乗せる
+	set_pos("front", -11.5, 4, -22.0)
+	set_pos("PC", -13.7, 2.0, -21.13)
+	set_deg("PC", 170.0)
+	set_pos("Char", -15.5, 2.6, -22.0)
+	set_deg("Char", 140.0)
+	set_pos("Boatman", -16.8, 2.8, -22.6)
+	set_deg("Boatman", 170.0)
+	SET_MOTION("PC","EMPTY21",0)
+	look_chr("PC","-")
+
+	CINEMA_ON(0)
+	fade_out(0)
+
+	wait(30)
+
+	// スキップ設定
+	set_skip_label("SKIP1")
+
+	WAIT(120)
+	ENTRY_IMG(0,"mono\MONO05_01",0)
+	ENTRY_IMG(1,"mono\MONO05_02",0)
+	ENTRY_IMG(2,"mono\MONO05_03",0)
+	ENTRY_IMG(3,"mono\MONO05_04",0)
+	ENTRY_IMG(4,"mono\MONO05_05",0)
+	ENTRY_IMG(5,"mono\MONO05_06",0)
+	SET_IMG( 0, 000,000, 0,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	SET_IMG( 1, 256,000, 1,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	SET_IMG( 2, 512,000, 2,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	SET_IMG( 3, 000,256, 3,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	SET_IMG( 4, 256,256, 4,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	SET_IMG( 5, 512,256, 5,  0,  0,256,256, 0, 0xffffffff, 0xff000000, 1,1, 0, 1,1)
+	IMG_ON(0)
+	IMG_ON(1)
+	IMG_ON(2)
+	IMG_ON(3)
+	IMG_ON(4)
+	IMG_ON(5)
+	FADE_IN(180)
+	WAIT(240)
+
+		SET_MSG_TIME(5,40,90,90)
+	MSG_EX("毎当煩躁的時候，|我更清楚地認識到自己是多麼没用。",-1,0X00000094)
+	MSG_EX("但是几年后，他這様対我説。",-1,0X00000094)
+	MSG_EX("「除此之外我没有其他的生存意義，所以我走上了這条道路。」───",-1,0X00000094)
+	MSG_EX("現在回想起来，実在是件非常慚愧的事情。",-1,0X00000094)
+	MSG_EX("我対那个人完全不了解。",-1,0X00000094)
+		SET_MSG_TIME(5,40,90,300)
+	MSG_EX("選自夏洛特●Ｌ●維爾斯着|「最后的騎士」　第二章　黒色新娘",-1,0X00000094)
+		SET_MSG_TIME(-1,-1,-1,-1)
+
+	FADE_OUT(180)
+	WAIT(180)
+	IMG_OFF(0)
+	IMG_OFF(1)
+	IMG_OFF(2)
+	IMG_OFF(3)
+	IMG_OFF(4)
+	IMG_OFF(5)
+
+//	SET_MSG_TIME(5,40,50, 30)
+////	SET_MSG_TIME(-1,-1,-1,-1)
+//	MSG_EX("何と不器用な人だろうと|私は苛立ちすら覚えたものです。|しかし後年、彼は私にこう語りました。|　|「この道より我を活かす道は無し、故に我は往く」と───|　|今にして思えば、とても恥ずかしい話です。|私はあの人のことを何も分かっていなかったのですから。|　|　　　　　　　　　　　　　シャーロット・Ｌ・ウェルズ著|　　　　　　　　　「最後の騎士」　第二章　黒き花嫁より",-1,0x00000090)
+//	SET_MSG_TIME(-1,-1,-1,-1)
+
+	// ボート初期座標
+//	set_pos("boat", -15.0, 2.0, -22.0)
+//	set_deg("boat", 80.0)
+//	ATTACH_EFC("EFC_0211","boat","POS")
+	// ボートに乗せる
+//	set_pos("PC", -13.5, 2.6, -22.0)
+//	set_deg("PC", 80.0)
+//	set_pos("Char", -15.2, 2.6, -22.0)
+//	set_deg("Char", 140.0)
+//	set_pos("Boatman", -16.5, 2.6, -22)
+//	set_deg("Boatman", 170.0)
+
+	SE("SE_LAKE")
+	SE("SE_EVENT_51")
+	wait(60)
+	permit_script_camera(1)
+	fade_in(120)
+
+	move_vec("boat", 26.0, 0.0, 8.0, 1200)
+
+	// ボートを中央に持ってくる
+	set_script_camera(20.0,0.0,-16.0,  -35.5,135.0,0.0, 30, 15.0)
+	move_script_look_at(-20,0,0, 800, 1)
+	rotate_script_camera(0,50,0, 800, 1)
+	wait(400)
+	scale_script_camera(0.8, 400, 1)
+	wait(400)
+	move_script_look_at( 20,-2,10, 400, 1)
+	rotate_script_camera(20,50,0, 400, 1)
+	wait(400)
+
+	cross_fade(100)
+
+	// 仮マップ
+	LOAD_MAP("MP_00a2")
+
+	// ボート座標
+	set_pos("boat", 10.0, 2.0, -55.0)
+	set_deg("boat", 80.0)
+	// ボートに乗せる
+	set_pos("front", 14, 3.5, -54.5)
+	set_pos("PC", 11.2, 2.0, -54.13)
+	set_deg("PC", 180.0)
+	set_pos("Char", 9.4, 2.6, -54.7)
+	set_deg("Char", 140.0)
+	set_pos("Boatman", 8.1, 2.8, -55.7)
+	set_deg("Boatman", 170.0)
+	SET_MOTION("PC","EMPTY21",0)
+	look_chr("PC","front")
+	set_script_camera_EX("Char",1,-20.5,205.0,0.0, 10, 15.0)
+	rotate_script_camera(0,-5,0, 1000, 1)
+	scale_script_camera(1.5, 1000, 1)
+
+//	// 05/05/29:「霧」：濃度を上げる。
+	SET_FILTER_COLOR(120,1,0xafffffff)
+
+	//シャルがあたりを見回す。
+	look_chr("Char","front")
+	wait(60)
+	look_chr("Char","Boatman")
+	wait(60)
+	set_motion("Char","ATTACK1",-1)
+	wait(60)
+
+	MSG_EX("#S3#C0夏儿「起霧了哦……」",-1,2)
+
+//　　シャル、主人公の方を向いて
+	wait(20)
+	look_chr("Char","front")
+	wait(60)
+
+	MSG_EX("#S3#C0夏儿「喟喟，#N0。|　　　　从欧斯頓漁村出発已経很久了叺。」",-1,2)
+	wait(30)
+
+//　　主人公、軽くシャルにうなずく。
+//　　シャル、船頭のほうへ向く。
+	look_chr("PC","-")
+	WAIT(120)
+	look_chr("PC","front")
+	WAIT(60)
+
+	set_deg("Char", 190.0)
+	look_chr("Char","Boatman")
+	wait(60)
+
+	MSG_EX("#S3#C0夏儿「船夫先生，到那个島大概還需要多久？」",-1,2)
+	wait(30)
+
+	MSG_EX("#S3#C0船夫「唔，大概不到半个小時叺。」",-1,2)
+	wait(20)
+	look_chr("Char","-")
+
+	MSG_EX("#S3#C0夏儿「姶，還需要那麼久姶……」",-1,2)
+	MSG_EX("#S3#C0夏儿「欧威魯湖可真大姶。」",-1,2)
+
+	MSG_EX("#S3#C0船夫「哈哈，還好叺。|　　　説起来，我真是感到吃驚姶。」",-1,2)
+
+	CROSS_FADE(30)
+	set_script_camera_EX("Char",2,   -10.5,150,0,   4, 15)
+	scale_script_camera(0.8, 1000, 1)
+
+	MSG_EX("#S3#C0船夫「没想到像小姐祢這様的孩子|　　　居然是王立研究院的研究生。」",-1,2)
+	wait(30)
+
+	set_deg("Char", 210.0)
+	look_chr("Char","Boatman")
+	MSG_EX("#S3#C0夏儿「呵呵。」",-1,2)
+	WAIT(30)
+	MSG_EX("#S3#C0船夫「哈莱克島雖然不大，|　　　但却是个遍布遺迹的島嶼。」",-1,2)
+	MSG_EX("#S3#C0船夫「対考古研究来説，|　　　的確是个非常理想的地方。」",-1,2)
+	MSG_EX("#S3#C0船夫「那邊那位小哥是小姐的護衛呎？」",-1,2)
+	wait(20)
+
+//　　船頭、主人公のほうを見やって
+
+	CROSS_FADE(60)
+	set_script_camera_EX("Char",1,-20.5,205.0,0.0, 12, 15.0)
+	move_script_look_at(1.5,0,0, 1000, 1)
+	rotate_script_camera(0,-60,0, 1000, 1)
+	scale_script_camera(0.8, 1000, 1)
+
+	look_chr("Boatman","front")
+	wait(60)
+
+	MSG_EX("#S3#C0船夫「那个打扮……|　　　現今這个時代，騎士可是很少見的咾。」",-1,2)
+
+//　　シャルも主人公を見やる
+	wait(20)
+	set_deg("Char", 165.0)
+	look_chr("Char","front")
+	wait(60)
+
+
+	MSG_EX("#S3#C0夏儿「他曾経在北海騎士団任職的哦。|　　　　和我是同一个孤儿院出身的。」",-1,2)
+
+	MSG_EX("#S3#C0船夫「嚔，祢説的北海騎士団|　　　是那个很有名的北海騎士団呎？」",-1,2)
+	MSG_EX("#S3#C0船夫「為了加入騎士団，|　　　要在考試中打敗一頭獅子対叺。」",-1,2)
+
+	MSG_EX("#S3#C0夏儿「哘，他的剣術很高明哦。」",-1,2)
+
+	wait(20)
+	set_deg("Char", 190.0)
+	look_chr("Char","-")
+	wait(60)
+
+	MSG_EX("#S3#C0夏儿「但是…………」",-1,2)
+	MSG_EX("#S3#C0夏儿「却因為那場戦争完全失去了斗志……」",-1,2)
+
+	wait(20)
+	look_chr("Boatman","-")
+	wait(40)
+
+	MSG_EX("#S3#C0船夫「是『騎士戦争』姶，這也是没有屶法的事……」",-1,2)
+	MSG_EX("#S3#C0船夫「為了王国奮勇作戦的騎士們|　　　全都被清除了。」",-1,2)
+	MSG_EX("#S3#C0船夫「現在，騎士団完全被解散，|　　　軍隊里都是些雇傭兵咾。」",-1,2)
+	MSG_EX("#S3#C0船夫「佐廸亜斯大人到底在想什麼姶。」",-1,2)
+
+//　　船頭、何かに気づいたように辺りを見回す。
+	wait(20)
+
+	CROSS_FADE(60)
+	set_script_camera_EX("Char",1,-15,175.0,0.0, 12, 15.0)
+	SCALE_SCRIPT_CAMERA( 1.3, 1000, 1)
+	wait(120)
+
+	// 05/05/29:「霧」：さらに濃度を上げる。
+	SET_FILTER_COLOR(200,1,0xffffffff)
+
+	look_chr("Char","Boatman")
+	WAIT(60)
+	look_chr("Char","front")
+	WAIT(60)
+	look_chr("Char","Boatman")
+	WAIT(60)
+	look_chr("Boatman","Char")
+	wait(60)
+	look_chr("Boatman","-")
+	wait(40)
+
+	WAIT(30)
+	look_chr("Char","-")
+	wait(60)
+
+	MSG_EX("#S3#C0夏儿「嚔呀，霧……」",-1,2)
+	MSG_EX("#S3#C0船夫「……霧変濃了。」",-1,2)
+	MSG_EX("#S3#C0船夫「這様的話，那个也許会出現。」",-1,2)
+
+	wait(10)
+	set_deg("Char", 220.0)
+	look_chr("Char","Boatman")
+	MSG_EX("#S3#C0夏儿「那个？　難道是……」",-1,2)
+
+	wait(10)
+	look_chr("Boatman","Char")
+	MSG_EX("#S3#C0船夫「祢知道？」",-1,2)
+
+	set_motion("Char","ATTACK1",-1)
+	MSG_EX("#S3#C0夏儿「哘！　因為那就是我的目的。」",-1,2)
+	MSG_EX("#S3#C0船夫「原来是這様姶。|　　　真是个非常有趣的小姑娘姶。」",-1,2
+
+//　　船頭が遠方の湖面を見やる。シャルと主人公もそちらへ向く。
+	wait(100)
+	look_chr("Boatman", "-")
+	WAIT(30)
+	STOP_ENV_SE( SE_EVENT_51 )
+	set_motion("Boatman","ATTACK1",-1)
+	MSG_EX("#S3#C0船夫「出現了……就在那里。」",-1,2)
+
+
+//　　船頭が遠方の湖面を見やる。シャルと主人公もそちらへ向く。
+
+//	move_script_look_at(10,0,-5, 400, 1)
+//	rotate_script_camera(10, -10,0, 200, 1)
+//	scale_script_camera(1.8, 440, 1)
+	wait(60)
+	set_deg("Char", 180)
+	look_chr("Char", "-")
+	wait(40)
+	look_chr("PC", "-")
+	wait(40)
+
+	MSG_EX("#S3#C0船夫「那个就是……」",-1,2)
+	scale_script_camera(1.5, 180, 0)
+	BLUR(20)
+
+//　　鐘の音が鳴り響きながら、画面速やかにブラックアウト(カメ
+//　　ラ回転もしません)して船頭のセリフ表示。
+//　　「あれが……」⇒「オーウェルの奇岩城だ。」この流れに隙
+//　　間を空けないくらい速くでいいです。
+//　　⇒画面、フェードアウトしてオープニング開始
+	WAIT(60)
+	fade_out(120)
+	wait(180)
+
+	MSG_EX("#S3#C0船夫「欧威魯的奇岩城。」",-1,2)
+
+SKIP1:
+	// スキップ設定
+	set_skip_label("SKIP2")
+
+	stop_env_se("SE_LAKE",2000)
+	stop_env_se("SE_EVENT_51",2000)
+	wait(100)
+
+	IMG_OFF(0)
+	IMG_OFF(1)
+	IMG_OFF(2)
+	IMG_OFF(3)
+	IMG_OFF(4)
+	IMG_OFF(5)
+
+	stop_se(0)
+	BLUR(0)
+	fade_out(0)
+	wait(2)
+
+	play_movie("movie\opening.avi", 0)
+
+	// EV プロローグのイベントを見た
+	game_flag_on(3500)
+	ENTRY_MAP("game_start")
+
+	permit_script_camera(0)
+	CINEMA_OFF(0)
+	END
+
+
+SKIP2:
+	IMG_OFF(0)
+	IMG_OFF(1)
+	IMG_OFF(2)
+	IMG_OFF(3)
+	IMG_OFF(4)
+	IMG_OFF(5)
+
+	stop_se(0)
+	BLUR(0)
+	fade_out(0)
+	wait(2)
+
+	// EV プロローグのイベントを見た
+	game_flag_on(3500)
+	ENTRY_MAP("game_start")
+	END
+}
+
+

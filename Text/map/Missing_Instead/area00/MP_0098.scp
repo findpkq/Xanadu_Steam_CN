@@ -1,0 +1,7 @@
+
+DEF("mato")
+
+RES("HIT")
+{
+	MSG("—L—¹")
+}
