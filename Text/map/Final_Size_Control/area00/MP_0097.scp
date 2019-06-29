@@ -978,7 +978,7 @@ TALK7:
 	jump EXIT
 //¥ŠïŠâéoŒ»Œã
 TALK6:
-	MSG("^ŽŠQcc“ßA¥ŠïŠâéH")
+	MSG("^íqŠQcc“ßA¥ŠïŠâéH")
 	MSG("“ß—¢^“I—L|”íÌˆ×w“j—³Œ•x“I¹Œ•™æH")
 	MSG("DC‰äˆê’è—v‹Ž”c›€Qo—ˆI")
 	jump EXIT
@@ -988,7 +988,7 @@ TALK5:
 	on_jump TALK5_2
 
 TALK5_1:
-	MSG("—…“¿“òšFšF|•ß‹›˜a’Þ‹›“sœkŽŠQšGB")
+	MSG("—…“¿“òšFšF|•ß‹›˜a’Þ‹›“sœkíqŠQšGB")
 	MSG("AŽZŽüˆÍ“Il“sS•s“žC|šFšF–ç‘”\S“ž‘å‹›B")
 	MSG("ˆê‹N’Þ‹›“IŽžŒóC|‰äœƒ›õ–ç’Þ•sã—ˆC|—…“¿“òšFšF‹pˆê•ú‰º’Þü‹›AãŠbB")
 	room_flag_on(3)
@@ -2626,7 +2626,7 @@ SKIP:
 	set_deg_ex("Char","Boatman")
 	set_motion("Char","ATTACK1",-1)
 	MSG_EX("#S3#C0‰Ä™Xu“j—³Œ•Hv",-1,2)
-	MSG_EX("#S3#C0‰Ä™Xu¥ŽE—³“IˆÓŽv™Ûcc|@@@™ß‹N—ˆœkúŽŠQˆ¦Bv",-1,2)
+	MSG_EX("#S3#C0‰Ä™Xu¥ŽE—³“IˆÓŽv™Ûcc|@@@™ß‹N—ˆœkíqŠQˆ¦Bv",-1,2)
 
 	MSG_EX("#S3#C0‘D•vu¬ˆ·˜A”‡˜¢–ç•s’m“¹ˆ¦Bv",-1,2)
 	MSG_EX("#S3#C0‘D•vu“j—³Œ•¥“`à’†|@@@Ÿ‰‡ÝŠïŠâé—¢“I•óŒ•“I–¼ŽšBv",-1,2)
@@ -2877,9 +2877,9 @@ EXIT:
 
 
 
-//====================================================================
+//=====================================
 // ò‚ð‰ó‚µ‚Ä“ü‚Á‚Ä‚«‚½‚Æ‚«
-//====================================================================
+//=====================================
 
 DEF("EV_Gate")
 
