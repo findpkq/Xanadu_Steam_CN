@@ -653,7 +653,7 @@ TALK3:
 	SYS("«“±Žt˜ì“IŽ–î‘i—¹•‡—…åQ“ÁB")
 
 	MSG("š‰C‘å‰Æ“sccH")
-	MSG("‹RŽm‘ålC“™ˆ¢”b“ƒf™û‰ñ—ˆ”V@C|‰ä–ç‰ï”nã°‹ŽŠïŠâéB")
+	MSG("‹RŽm‘ålC“™ˆ¢”b“ƒf™û‰ñ—ˆ”V@C|‰ä–ç‰ï”nãî”‹ŽŠïŠâéB")
 	MSG("”nãA¥™rí—¹cc")
 	MSG("‹RŽm‘ålC¿ˆÈš†“I—Í—Ê›ñ•‰äB|”‡ŽŸˆê’è—v‘Å“|‰ÁŽ¢¼Žz˜a•FV–ºcc")
 	// 3807	TK Õ’d‚Ì‰Ô‰ÅŒãAƒtƒ[ƒŒƒbƒg‚É˜b‚µ‚©‚¯‚½
@@ -662,7 +662,7 @@ TALK3:
 
 //@@™ˆÈ~AŒJ‚è•Ô‚µ
 TALK3_2:
-	MSG("‹RŽm‘ålC“™ˆ¢”b“ƒf™û‰ñ—ˆ”V@C|‰ä–ç‰ï”nã°‹ŽŠïŠâéB")
+	MSG("‹RŽm‘ålC“™ˆ¢”b“ƒf™û‰ñ—ˆ”V@C|‰ä–ç‰ï”nãî”‹ŽŠïŠâéB")
 	MSG("”nãA¥™rí—¹cc")
 	jump EXIT
 
@@ -1071,9 +1071,9 @@ TALK6:
 	jump EXIT
 //¥ƒCƒ“ƒtƒFƒ‹ƒmíŒã
 TALK5:
-	MSG("”@š†Š’mC|ä»ãN‘ål¥ˆêˆÊ”ñíŒµŽ“IlB")
+	MSG("”@š†Š’mC|ä»ãN‘ål¥ˆêˆÊ”ñíŒµíq“IlB")
 	MSG("’A¥cccc")
-	MSG("‰ä‘z“ß³¥|‰ù—LŽœ”ß”VSËŽY¶“IŒµŽB")
+	MSG("‰ä‘z“ß³¥|‰ù—LŽœ”ß”VSËŽY¶“IŒµíqB")
 	MSG("•s‹Íìˆ×¸—ì“°“IÕŽiC|ìˆ×ˆê–¼—«—ˆàC|ä»ãN‘ål–ç¥”ñí’l“¾‘¸Œh“IB")
 	jump EXIT
 //¥ƒJƒjƒOƒ‚íŒã
@@ -1619,7 +1619,7 @@ RES("INIT")
 
 	SET_MOTION("Fleurette", "ATTACK2",-1)
 	MSG_EX("#S3#C0•‡—…åQ“Áu•FV–ºˆ×—¹Œ}Ú–‚‰¤|@@@@@‰žŠY‰ï“žŠïŠâé“I—¢–Ê‹ŽBv",-1,2)
-	MSG_EX("#S3#C0•‡—…åQ“Áu‹RŽm‘ålCÅD°‰õ‹Ž’ÇítBv",-1,2)
+	MSG_EX("#S3#C0•‡—…åQ“Áu‹RŽm‘ålCÅDî”‰õ‹Ž’ÇítBv",-1,2)
 	MSG_EX("#S3#C0•‡—…åQ“Áu¿•úSC”‡—¢“I‹VŽ®|@@@@@¡@‘S“s—R‰ä•‡—…åQ“Á—ˆisBv",-1,2)
 	MSG_EX("#S3#C0•‡—…åQ“Áu‹RŽmæ¶ccj•‰^‹œ’ÊBv",-1,2)
 

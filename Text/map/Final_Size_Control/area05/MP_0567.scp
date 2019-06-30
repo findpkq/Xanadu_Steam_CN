@@ -69,7 +69,7 @@ GOLD:
 	END
 
 ITEM:
-//Î”ÂC@‹ŠI‚ÌÎ”Â
+//Î”Â‡C@‹ŠI‚ÌÎ”Â
 	SWITCH_ON("box")
 	POP_ITEM_ICON("box", 273, 8,0,4.5, 1,80,0)
 	WAIT(140)

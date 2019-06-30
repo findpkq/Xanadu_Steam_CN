@@ -51,8 +51,8 @@ def myExchage():
                 # 复制一份英文脚本到目标文件夹
                 mycopy1(filename, path_EN + '/' +foldname.group()+ '/' +filename, foldname.group())
                 FileB = path_target + '/' + foldname.group() + '/' + filename
-                F1file = open(FileA, 'r', encoding='shift_jis', errors= 'ignore')
-                F2file = open(FileB, 'r+', encoding='shift_jis', errors= 'ignore')
+                F1file = open(FileA, 'r', encoding='ms932', errors= 'ignore')
+                F2file = open(FileB, 'r+', encoding='ms932', errors= 'ignore')
                 f1 =  F1file.readlines()
                 f2 =  F2file.readlines()
                 countA = len(f1)

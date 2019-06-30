@@ -309,7 +309,7 @@ RES("HIT")
 {
 	HIDE_CHR("atari")
 	SHOW_CHR("atari2")
-	// 装置壊れアニメ@（外郭破壊）
+	// 装置壊れアニメ①（外郭破壊）
 	STOP_PC(0)
 
 	SE(SE_EVENT_31)
@@ -326,7 +326,7 @@ RES("HIT")
 DEF("atari2")
 RES("HIT")
 {
-	// 装置壊れアニメA（内部破壊）
+	// 装置壊れアニメ②（内部破壊）
 	shake(0,32)
 
 	STOP_PC(0)

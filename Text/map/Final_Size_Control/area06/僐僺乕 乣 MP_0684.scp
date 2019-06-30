@@ -134,7 +134,7 @@ RES("INIT")
 
 	MSG_EX("#S3#C0δ»γN—“Αu™θ™θC•s—v²o“ίν•\ξBv",-1,2)
 	MSG_EX("#S3#C0δ»γN—“Αu”I‰Β¥—“—Ή|@@@@@‰δδ•v‘¦«Δ“x~—Υ“I’n•ϋ¦Bv",-1,2)
-	MSG_EX("#S3#C0δ»γN—“Αu”‡‰ΒΘμΧ—s“I‘–{GBv",-1,2)
+	MSG_EX("#S3#C0δ»γN—“Αu”‡‰ΒΘμΧνσ—s“I‘–{GBv",-1,2)
 
 	wait_camera(0)
 

@@ -274,7 +274,7 @@ GOLD:
 	END
 
 ITEM:
-//Î”ÂB@‘oŽ™‚ÌÎ”Â
+//Î”Â‡B@‘oŽ™‚ÌÎ”Â
 	SWITCH_ON("tbox")
 	POP_ITEM_ICON("tbox", 272, 8,0,-1, 1,80,0)
 	WAIT(140)

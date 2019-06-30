@@ -166,7 +166,7 @@ spot(1)
 	ACTIV_CHR_("death")
 	MSG_EX("#S3#C0ccŒÄˆ¦ˆ¦cc”I¥’Nˆ¦H",90,2)
 	WAIT(30)
-	MSG_EX("#S3#C0‰ä¢—¹B°‰õ‹‹‰äÁŽ¸B",150,2)
+	MSG_EX("#S3#C0‰ä¢—¹Bî”‰õ‹‹‰äÁŽ¸B",150,2)
 	SET_MOTION("death","EMPTY3",30)
 	GAME_FLAG_ON(722)
 

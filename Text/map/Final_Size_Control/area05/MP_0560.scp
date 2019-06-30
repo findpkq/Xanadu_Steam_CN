@@ -158,16 +158,16 @@ menu_start:
 	// 選んだ石版に応じた文面の表示
 	check_sel_text(0)
 	off_jump sel1
-	MSG_EX("石板@的内容",-1,0X00000010)
+	MSG_EX("石板①的内容",-1,0X00000010)
 	jump novel_end
 sel1:
 	check_sel_text(1)
 	off_jump sel2
-	MSG_EX("石板A的内容",-1,0X00000010)
+	MSG_EX("石板②的内容",-1,0X00000010)
 	jump novel_end
 sel2:
 
-	// 以下、石版Kまで続く…
+	// 以下、石版⑫まで続く…
 
 
 novel_end:

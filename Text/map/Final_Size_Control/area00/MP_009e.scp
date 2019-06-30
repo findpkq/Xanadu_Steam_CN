@@ -1217,7 +1217,7 @@ Stone2:
 Stone3:
 	MSG_EX("#S3#C0wé…‰J“Ë‘RP—ˆx",-1,0X00000014)
 	MSG_EX("#S3#C0Ù˜_ÝY›õŽž‘ã|–²–Õ“s¥“Ë‘RŽ§—ˆ“IB",-1,0X00000014)
-	MSG_EX("#S3#C0Ý¹Œ•—EŽÒ—^–‚‰¤‰ÁŽ¢¼Žz“I|ŽêŽ€í“l“I™{”N”V@„Ÿ„Ÿ„Ÿ|@|–^˜¢[–éC—L–¼ŽgŽÒ‹}™°™°”—”q–K|³ÝŽ©ŒÈ‰çŽº’†—IŠÕ‹x‘§“I–ñ—¢“Ú‰¤B",-1,0X00000014)
+	MSG_EX("#S3#C0Ý¹Œ•—EŽÒ—^–‚‰¤‰ÁŽ¢¼Žz“I|ŽêŽ€í“l“I™{”N”V@„Ÿ„Ÿ„Ÿ|@|–^˜¢[–éC—L–¼ŽgŽÒ‹}™°™°î”—ˆ”q–K|³ÝŽ©ŒÈ‰çŽº’†—IŠÕ‹x‘§“I–ñ—¢“Ú‰¤B",-1,0X00000014)
 	MSG_EX("#S3#C0•s’mˆ×‰½CˆÀ’uÝ–À‹{”V’†“I|‰ÁŽ¢¼Žz“Ig‘ÌŠJŽn•œ‘hC|ãõ“Ä“xŠJŽn’µ“®B",-1,0X00000014)
 	MSG_EX("#S3#C0Š´“žŽ–‘ÔŒµd“I–ñ—¢“Ú‰¤|«‘\ŒoŒP—û‰ß¹Œ•—EŽm“I|Žµ“±Žt¢W“ž‰¤éB|@|‘åŠT¥ˆ×—¹¤‹c‘Î•t|ŠJŽn‘hÁ“I‰ÁŽ¢¼Žz“I‘Îô™ÛB",-1,0X00000014)
 	MSG_EX("#S3#C0˜à‘¼˜ì“I“¢˜_•s•ª’‹–é|˜A‘±is—¹®®Žµ“VB|@|Ý“±Žt˜ì—ˆ“ž‰¤é”V@“I‘æ”ª“V‘ãC|I˜°“¾o—¹ˆê˜¢Œ‹˜_B",-1,0X00000014)
@@ -1329,7 +1329,7 @@ Stone11:
 
 Stone12:
 	MSG_EX("#S3#C0w”ßŒ€“I–¼ x",-1,0X00000014)
-	MSG_EX("#S3#C0Ýå“ß“x‰¤‘“I’n‰º|‘\Œo—Lˆê˜¢_¹“I“´ŒŠB|@|Ý“´ŒŠ’†ˆÈˆŸ•§‰Íˆ×’†S|’“ü—¹™{ð´“IŒk—¬C|Ý“ß—¢Œ`¬—¹ˆê˜¢‘åàe•zB",-1,0X00000014)
+	MSG_EX("#S3#C0Ýå“ß“x‰¤‘“I’n‰º|‘\Œo—Lˆê˜¢_¹“I“´ŒŠB|@|Ý“´ŒŠ’†ˆÈˆŸ•§‰Íˆ×’†S|’“ü—¹™{ð´íì“IŒk—¬C|Ý“ß—¢Œ`¬—¹ˆê˜¢‘åàe•zB",-1,0X00000014)
 	MSG_EX("#S3#C0˜à‘¾‘cš•K—ó‰ÂŠ¾–çŸà—ð‰ß|“ß‹K–ÍG‘å“I…’rB|@|Ý“–Žž“I‘’†‘\—L”‡—l“I‹LÚ„Ÿ„Ÿ„Ÿ|w”@^³“I“Œ¹‹½ˆê—l“IŒiŠÏxB",-1,0X00000014)
 	MSG_EX("#S3#C0’A¥CÝ–ñ—¢“Ú‰¤“IŽž‘ãC|–‚‰¤‰ÁŽ¢¼Žz—ˆ“žå“ß“x”V@C|_¹“´ŒŠ“Iî™vAŠ®‘S‰ü•Ï—¹B",-1,0X00000014)
 	MSG_EX("#S3#C0‘åŠT¥ˆöˆ×–‚–@“I‰e‹¿C|‰Í…Š±Ÿ¿A•sË“IŠâÎ‘p¶C|•s‹vA•Ï¬—¹–‚•¨²‘§“I‘ƒŒŠB|@|“Ž¡å“ß“x“I‰ÁŽ¢¼Žz|‘Î”‡˜¢“´ŒŠ–ç\•ªŠÖ’B",-1,0X00000014)
@@ -1408,14 +1408,14 @@ Note2:
 	MSG_EX("#S3#C0ˆ·ˆ·Šù‰·_–”—LŸƒŽ¿C|˜a‰ä”ä‹N—ˆ¬n‘½—¹B|@|•ƒ‰¤˜¸‰ä˜ìœk¬“IŽžŒóŠJŽnA\‰ä˜aˆ·ˆ·˜ô”äŠrC|ŠˆÈ—LŽžŒó‰äœk•s‚‹»B|@|—Lˆê˜¢—L”\—Í“Iˆ·ˆ·C|–ç¥Œ—Ýl“IŽ–šCB",-1,2)
 	MSG_EX("#S3#C0’A¥C”‡˜¢—DG“Iˆ·ˆ·|•Î•Î˜¸¬A‘ÌŽã‘½•aB",-1,2)
 	MSG_EX("#S3#C0¡“Vˆ·ˆ·g‘Ì•sDC|ŠˆÈ–v—LŽQ‰ÁŒ•p—ûKB|‰ä—L±’SScc|@|‰ä‘zˆê‰ï™X‹Žˆ·ˆ·“I–[ŠÔ|ŠÅŠÅít“Iî™vB",-1,2)
-	MSG_EX("#S3#C0AŽZ”‡—lC”@‰Ê‰ä˜aˆ·ˆ·”äæÎ“I˜bC|ítŠÒ¥”ä‰äqŠQB|•sŠo“¾—L±•s‡“¹—™æH",-1,2)
+	MSG_EX("#S3#C0AŽZ”‡—lC”@‰Ê‰ä˜aˆ·ˆ·”äæÎ“I˜bC|ítŠÒ¥”ä‰äíqŠQB|•sŠo“¾—L±•s‡“¹—™æH",-1,2)
 	jump NOTE_END
 
 Note3:
 	MSG_EX("#S3#C0ˆê“ñˆêˆê”N@–P™€”VŒŽŽO\“ú",-1,2)
 	MSG_EX("#S3#C0¡“V“¦‰Û‹Ž’ÁãŠßB|@|ŠˆàCsCA¥ˆê“V“ž”Ó“IŠwKC|“s‰õ—v’‚‘§—¹B",-1,2)
 	MSG_EX("#S3#C0å«‘R’ÁãŠ—L“I’n•û‰ä“sŠìŠ½C|’A‰äÅŠìŠ½“IŠÒ—v”Žsê—¹B|@|˜¸—ˆ–v—LŒ©‰ß“IŠí•¨A“®•¨AH•iC|‘”V–vŒ©‰ß“I“Œ¼ˆê‘å‘ÍB|@|AŽZˆê®“V“s•ðÝ“ß—¢|–ç•s‰ïŠo“¾‰}”ÏB",-1,2)
-	MSG_EX("#S3#C0AÝ‰ä‘åŒû‹h’…”ƒ—ˆ“I“_S“IŽžŒóC|”í‰q•º”­Œ»‘Ñ—¹‰ñ—ˆB|@|˜VŽt˜ì”ñíŒµq’nËÓ—¹‰äC|à–¾“V“IŒP—û‰ï”ñíŒµŠiB|@|„Ë‰ä”c”‡±‘i—¹ˆ·ˆ·C|ŠÒ”íˆ·ˆ·Î˜b—¹B",-1,2)
+	MSG_EX("#S3#C0AÝ‰ä‘åŒû‹h’…”ƒ—ˆ“I“_S“IŽžŒóC|”í‰q•º”­Œ»‘Ñ—¹‰ñ—ˆB|@|˜VŽt˜ì”ñíŒµíq’nËÓ—¹‰äC|à–¾“V“IŒP—û‰ï”ñíŒµŠiB|@|„Ë‰ä”c”‡±‘i—¹ˆ·ˆ·C|ŠÒ”íˆ·ˆ·Î˜b—¹B",-1,2)
 	MSG_EX("#S3#C0’A¥C‰äˆê“_“s•s@‰÷B|”\‹íŒ©Ž¯“ž“ß›õ‘½“Œ¼|Ë¥d—v“IŽ–îB|@|‘üâ|Ý–[ŠÔ—¢ŠwK‘¾˜Q”ï—¹B|”‡A¥‰ä“I¶‘¶”V“¹B",-1,2)
 	jump NOTE_END
 

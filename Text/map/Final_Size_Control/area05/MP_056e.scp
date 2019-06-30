@@ -531,7 +531,7 @@ GOLD:
 	END
 
 ITEM:
-//石板F　天秤の石板
+//石板⑦　天秤の石板
 	SWITCH_ON("tbox2")
 	POP_ITEM_ICON("tbox2", 276, -8.7,0,-0.85, 1,80,0)
 	WAIT(140)

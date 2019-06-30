@@ -109,7 +109,7 @@ TALK5:
 	on_jump TALK5_2
 
 TALK5_1:
-	MSG("”c‹RŽm°sŽEâ“IÉ‘Š|Ž—ŒÁ”í“–¬—¹ˆ«l‘Î‘Òcc")
+	MSG("”c‹RŽmî”sŽEâ“IÉ‘Š|Ž—ŒÁ”í“–¬—¹ˆ«l‘Î‘Òcc")
 	MSG("•s‰ß‹RŽm–ç•s“s¥|‘œ–@“ò”bŽ¢ŒòŽÝ“ß—l“IDlB")
 	MSG("—i—L‹ŠzàŽY˜a‹­‘åŒ —˜C|æ¨‘‰Æ­Ž¡•…”s“I‹RŽm–ç—Lœk‘½B")
 	MSG("É‘Š–{—ˆ‘zšÊ–Å“I|A¥”‡±‰Æšì™ÛB")

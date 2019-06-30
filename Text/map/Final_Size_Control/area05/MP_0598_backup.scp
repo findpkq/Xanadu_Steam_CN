@@ -437,7 +437,7 @@ boss:
 	show_chr("kani_core")
 	set_motion("kani_body","EMPTY1",0)
 
-	// •Ç”j‰ó@
+	// •Ç”j‰ó‡@
 	wait(60)
 	SHAKE(25,25)
 	se("SE_WALL_HIT")
@@ -499,7 +499,7 @@ boss:
 	slow(1)
 	blur(50)
 
-	// •Ç”j‰óA
+	// •Ç”j‰ó‡A
 	set_motion("kabe2","DOWN",0)
 
 	shake(25,25)

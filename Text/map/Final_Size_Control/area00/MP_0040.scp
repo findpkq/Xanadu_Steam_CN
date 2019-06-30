@@ -239,7 +239,7 @@ RES("CLICK")
 @skill_up_event
 {
 	
-	MSG_EX("‘¾ŽŠQ—¹I|—ì°“I—Í—Ê”\‹íˆ×ŒÈŠ—pšCB",-1,4)
+	MSG_EX("‘¾íqŠQ—¹I|—ì°“I—Í—Ê”\‹íˆ×ŒÈŠ—pšCB",-1,4)
 	MSG_EX("–¾”’—¹Cæ¨‰ä—ˆˆ×”IŠJŒ[V“I“¹˜H™Ûcc",-1,4)
 	
 	FADE_OUT_EX(30, 0,"0xff000000", 0)

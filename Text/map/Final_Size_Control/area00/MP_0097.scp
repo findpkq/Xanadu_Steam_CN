@@ -16,10 +16,21 @@
 //  9 ƒlƒbƒh‰ï˜b
 // 10 ƒW[ƒ“‰ï˜b
 // 11 ƒVƒƒƒ‹‰ï˜b
+//
 
 
 DEF("MAP")
 
+// ƒ}ƒbƒvo‚é‚Æ‚«‚ÉŒÄ‚Î‚ê‚é ---------------------------------------------------
+//RES("EXIT")
+//{
+//	// "’n–¼•\Ž¦"‚ªI‚í‚Á‚Ä‚¢‚È‚¢‰Â”\«‚ª‚ ‚é‚Ì‚Å‹­§Á‹Ž
+//	IMG_OFF(0)
+//	IMG_OFF(1)
+//	IMG_OFF(2)
+//	IMG_OFF(3)
+//	CINEMA_OFF(0)
+//}
 
 // ƒ}ƒbƒv“ü‚é‚Æ‚«‚ÉŒÄ‚Î‚ê‚é ---------------------------------------------------
 RES("INIT")
@@ -1048,7 +1059,7 @@ DEF("Paty")
 RES("CLICK")
 {
 	FOCUS_CHR("Paty")
-	SET_NAME("PATY","ŠäÚ")
+	SET_NAME("PATY","îmäÚ")
 	SET_MOTION("Paty", "ATTACK1",-1)
 
 	//¥á•ÇÁ–ÅŒã
@@ -1381,7 +1392,7 @@ TALK2_2:
 TALK1:
 	MSG("Ý‰¢ˆÐ˜DŒÎãoŒ»ŠïŠâé|‘åŠT¥‚P‚O”N‘O“IŽ–îB")
 	MSG("“ßŽžŒó‘ü”\Ý–¶’†‰B–ñŠÅ“žˆê±‰eŽqC|ŠˆÈŠÒ‘\”í”Fˆ×¥—H—ì‘DŽ§ˆø‹Nœk‘å‘›“®B")
-	MSG("”\‹íŠÅ“žéšÆ´Ù“I—lŽqC|˜Aàº“s”\´‘^’n™ß“žC|¥”‡—¼ŽO”NËŠJŽn“IŽ–îB")
+	MSG("”\‹íŠÅ“žéšÆ´í½“I—lŽqC|˜Aàº“s”\´‘^’n™ß“žC|¥”‡—¼ŽO”NËŠJŽn“IŽ–îB")
 	jump EXIT
 
 EXIT:
@@ -1761,7 +1772,7 @@ TALK6:
 //¥ƒCƒ“ƒtƒFƒ‹ƒmíŒã
 TALK5:
 	MSG("‹RŽmæ¶íí“žˆ—·s™æH")
-	MSG("‰ä˜¸—ˆ–v—L—£ŠJ‰ß”‡˜¢“‡C|ŠˆÈœk‘•ç{U+4F60}ˆ¦B")
+	MSG("‰ä˜¸—ˆ–v—L—£ŠJ‰ß”‡˜¢“‡C|ŠˆÈœkît•ç”Iˆ¦B")
 	jump EXIT
 //¥ƒJƒjƒOƒ‚íŒã
 TALK4:
@@ -2041,7 +2052,7 @@ TALK1:
 
 	MSG("#N0I")
 	MSG("‰ä“sŠÅ“ž—¹CI˜°¬Œ÷—¹ˆ¦II")
-	MSG("°‰õ‹ŽŠïŠâé™ÛH")
+	MSG("î”‰õ‹ŽŠïŠâé™ÛH")
 	MSG("…”í’ŠŠ±—¹C|Ž—ŒÁ˜¸ŒÎç²A‰ÂˆÈi“üéšÆB")
 	room_flag_on(11)
 	// 3729	TK ƒVƒƒƒ‹‚Æé‚ªŒ»‚ê‚Ä‚©‚ç‰‚ß‚Ä‰ï˜b‚µ‚½
@@ -2050,7 +2061,7 @@ TALK1:
 
 //@@¦ˆÈ~AŒJ‚è•Ô‚µ—p
 TALK1_2:
-	MSG("°‰õ‹ŽŠïŠâé™ÛH")
+	MSG("î”‰õ‹ŽŠïŠâé™ÛH")
 	MSG("…”í’ŠŠ±—¹C|Ž—ŒÁ˜¸¬’Á“I“ì–ÊA‰ÂˆÈi“üéšÆB")
 	jump EXIT
 
@@ -2594,6 +2605,9 @@ SKIP:
 	set_skip_label("SKIP")
 
 	wait(700)
+//	move_script_look_at(-14,-2,0, 600, 1)
+//	rotate_script_camera(10,-40,0, 600, 1)
+//	wait(600)
 	cross_fade(120)
 	set_script_camera(-9.6,-1.0,-16.0,  -11.0,160.0,0.0, 12, 15.0)
 
@@ -2877,9 +2891,9 @@ EXIT:
 
 
 
-//=====================================
+//====================================================================
 // ò‚ð‰ó‚µ‚Ä“ü‚Á‚Ä‚«‚½‚Æ‚«
-//=====================================
+//====================================================================
 
 DEF("EV_Gate")
 

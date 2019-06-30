@@ -90,7 +90,7 @@ GOLD:
 	END
 
 ITEM:
-// 石板K　双魚の石板　『悲劇の名工』
+// 石板⑫　双魚の石板　『悲劇の名工』
 	SWITCH_ON("tbox")
 	POP_ITEM_ICON("tbox", 281, 17,-4,0.5, 1,80,0)
 	WAIT(140)
@@ -127,7 +127,7 @@ EXIT:
 //	CHECK_GAME_FLAG(503)
 //	ON_JUMP next
 //
-//	// 石板K　双魚の石板　『悲劇の名工』
+//	// 石板⑫　双魚の石板　『悲劇の名工』
 //	SET_TREASURE("tbox",1,281,"ITEM")
 //	END
 //

@@ -38,6 +38,7 @@ def myKanji_Instead(file_path):
             k = a.split()
             mydict[k[0]] = k[2]
     # print(mydict)
+    # os.system('pause') 
     # FileA = 'F:/copy/Exchage_target/area00/MP_009d.scp'  
                 
     for root, dirs, files in os.walk(file_path):
@@ -55,7 +56,7 @@ def myKanji_Instead(file_path):
                 FileB = instead_target_path + '/' + foldname.group() + '/' + filename
                 print(filename)
                 # 执行替换
-                with open(FileB,'r+',encoding = "cp932", errors= 'ignore') as pt:
+                with open(FileB,'r+',encoding = "ms932", errors= 'ignore') as pt:
                     p = pt.read()
                     for key,value in mydict.items(): 
                         # print(value)

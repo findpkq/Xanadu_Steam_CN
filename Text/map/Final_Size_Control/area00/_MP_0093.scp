@@ -516,7 +516,7 @@ DEF("card1")
 RES("CATCH")
 {
 	stop_pc(0)
-	SYS("“¾“ž#C2_”é“»•Ð#C*I|°‰õæ¨ä»ãNŠÓ’èˆê‰º™ÛII")
+	SYS("“¾“ž#C2_”é“»•Ð#C*I|î”‰õæ¨ä»ãNŠÓ’èˆê‰º™ÛII")
 }
 
 

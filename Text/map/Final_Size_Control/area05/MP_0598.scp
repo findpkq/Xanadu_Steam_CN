@@ -533,7 +533,7 @@ boss:
 // šNEWƒXƒLƒbƒvˆ—(05/01/14)
 set_skip_label("SKIP")
 
-	// •Ç”j‰ó@
+	// •Ç”j‰ó‡@
 	wait(60)
 	SHAKE(25,25)
 	se("SE_B2_63000")
@@ -603,7 +603,7 @@ set_skip_label("SKIP")
 	slow(1)
 	blur(50)
 
-	// •Ç”j‰óA
+	// •Ç”j‰ó‡A
 	set_motion("kabe2","DOWN",0)
 	SE("SE_B3_66004")
 	CALL NAME
