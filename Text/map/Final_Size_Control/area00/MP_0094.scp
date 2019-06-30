@@ -130,9 +130,9 @@ RES("INIT")
 RES("CLICK")
 {
 	FOCUS_CHR("Spence")
-	SET_NAME("SPENCE","摴嬶揦榁斅巎枾巣")
+SET_NAME("SPENCE","道具店老板史密斯")
 	SET_MOTION("Spence","ATTACK1",-1)
-	MSG("懳晄婲丆|梫攦搶惣揑榖惪摓烠戜慜丅")
+MSG("对不起，|要买东西的话请到柜台前。")
 	SET_MOTION("Spence","STAND",-1)
 	END
 }
@@ -150,7 +150,7 @@ RES("CLICK")
 	SET_DEG_EX("Spence","")
 	ACTIVE_CHR("Spence")
 	FOCUS_CHR("Spence")
-	SET_NAME("SPENCE","摴嬶揦榁斅巎枾巣")
+SET_NAME("SPENCE","道具店老板史密斯")
 	SET_MOTION("Spence","ATTACK1",-1)
 
 	// 晄巰捁偺塇偁傞丠
@@ -161,12 +161,12 @@ RES("CLICK")
 	on_jump NEXT2
 
 	game_flag_on(3805)
-	MSG("殙欈丆惀婻巑愭惗垿丅|撨塇栄擄摴惀乧乧")
-	MSG("垿垿丆壥慠丅|攪晄廇惀亀晄巰捁揑塇栄亁欐丅")
-	MSG("変橃壠戙戙憡揱拝|曪帯昐昦揑楈栻揑惂嶌曽朄丅")
-	MSG("惂憿攪庬楈栻昁旛揑嵽椏|廇惀晄巰捁揑塇栄丅")
-	MSG("恀妯恖媓嬃垿丆|尰嵼桧慠娨懚嵼拝乧乧")
-	MSG("渻涻條丠|廀梫揑榖尰嵼廇壜埲涶殕挷栻欸丅")
+MSG("哎呀，是骑士先生啊。|那羽毛难道是……")
+MSG("啊啊，果然。|这不就是『不死鸟的羽毛』吗。")
+MSG("我们家代代相传着|包治百病的灵药的制作方法。")
+MSG("制造这种灵药必备的材料|就是不死鸟的羽毛。")
+MSG("真让人吃惊啊，|现在竟然还存在着……")
+MSG("怎么样？|需要的话现在就可以帮您调药哦。")
 
 	call MAKE_POTION
 	jump EXIT
@@ -181,7 +181,7 @@ MENU:
 	check_item(193)
 	on_jump MENU2
 
-	SEL("#C1丂娊寎岝椪両丂|#C2懳榖|攦搶惣|庢徚")
+SEL("#C1　欢迎光临！　|#C2对话|买东西|取消")
 	check_select(0)
 	on_jump TALK
 	check_select(1)
@@ -190,7 +190,7 @@ MENU:
 
 MENU2:
 	// 晄巰捁偺塇偑偁傞応崌
-	SEL("#C1丂娊寎岝椪両丂|#C2懳榖|惂嶌栻暔|攦搶惣|庢徚")
+SEL("#C1　欢迎光临！　|#C2对话|制作药物|买东西|取消")
 	check_select(0)
 	on_jump TALK
 	check_select(1)
@@ -267,13 +267,13 @@ EXIT:
 
 @MAKE_POTION
 {
-	SEL("丂惂嶌楈栻欐丠丂|#C2惀|斲")
+SEL("　制作灵药吗？　|#C2是|否")
 	check_select(0)
 	on_jump YES
 
 //丂丂佀乽偄偄偊乿偺応崌
 
-	MSG("惀攪條垿丆|廀梫揑榖悘帪搒壜埲棃漄変丅")
+MSG("是这样啊，|需要的话随时都可以来找我。")
 	ret
 
 //丂丂仺憖嶌僼儕乕
@@ -282,9 +282,9 @@ EXIT:
 
 //丂丂佀乽偼偄乿偺応崌
 YES:
-	MSG("撨涻丆惪鈉摍堦壓丅")
-	MSG("変栫惀戞堦師惂嶌攪庬栻丆|強埲晄嵏嵏彂揑榖乧乧欒欒乧乧")
-	MSG("殙欈乣変涍宱桇桇梸帋椆丅")
+MSG("那么，请稍等一下。")
+MSG("我也是第一次制作这种药，|所以不查查书的话……呵呵……")
+MSG("哎呀～我已经跃跃欲试了。")
 
 //丂丂夋柺僽儔僢僋傾僂僩仌僼僃乕僪僀儞
 	fade_out(60)
@@ -292,18 +292,18 @@ YES:
 	fade_in(60)
 	wait(60)
 
-	MSG("乧乧妯殕媣摍椆丆涍宱挷岲椆欸丅")
+MSG("……让您久等了，已经调好了哦。")
 
 	SE("SE_GETITEM")
-	SYS_EX("摼摓亂晄巰捁擵楈栻亃丅",-1,0X00000200)
+SYS_EX("得到【不死鸟之灵药】。",-1,0X00000200)
 	PICK_ITEM(193)
 	GET_ITEM(194, 1)
 	// 3806	TK 僗儁儞僗丄晄巰捁偺楈栻傪嶌偭偨
 	game_flag_on(3806)
 
-	MSG("攪廇惀樃愬撨搙帪戙奐巒棳揱揑丆|楢晄帯擵徢搒壜埲帯岲揑楈栻丅")
-	MSG("擛壥桳朁桭惗昦椆揑榖丆|惪堦掕梫妯懠妳壓攪槩丅")
-	MSG("曐徹桳椕岠欸丅")
+MSG("这就是从仙那度时代开始流传的，|连不治之症都可以治好的灵药。")
+MSG("如果有朋友生病了的话，|请一定要让他喝下这个。")
+MSG("保证有疗效哦。")
 
 	ret
 }
@@ -341,18 +341,18 @@ YES:
 
 //仴忈暻徚柵屻
 TALK7:
-	MSG("乧乧浠鉔彫埛憱椆垿丅")
-	MSG("婻巑愭惗乧乧幚嵺忋|嵼攪棦嫃廧揑恖拞桳堦晹暘惀愬撨搙揑枛遽丅")
-	MSG("変橃揑擟柋惀亀妋擣亁乧乧")
-	MSG("恀惀鋮嬯揑擟柋垿乧乧")
+MSG("……莉丝小姐走了啊。")
+MSG("骑士先生……实际上|在这里居住的人中有一部分是仙那度的末裔。")
+MSG("我们的任务是『确认』……")
+MSG("真是艰苦的任务啊……")
 	jump EXIT
 
 //仴婏娾忛弌尰屻
 TALK6:
-	MSG("婻巑愭惗乧乧|婏娾忛廔槹弌尰椆垿丅")
-	MSG("擨懳樃尰嵼婲夛敪惗揑帠忣乧乧")
-	MSG("晄乧乧杤廦涻乧乧")
-	MSG("廇嶼変愢弌棃丆|栫晄惀廦涻岲帠忣垿乧乧")
+MSG("骑士先生……|奇岩城终于出现了啊。")
+MSG("你对从现在起会发生的事情……")
+MSG("不……没什么……")
+MSG("就算我说出来，|也不是什么好事情啊……")
 	jump EXIT
 
 //仴僀儞僼僃儖僲愴屻
@@ -361,24 +361,24 @@ TALK5:
 	check_game_flag(3720)
 	off_jump TALK5_1
 
-	MSG("殙欈丆瀚慠宱忢|庴摓垻擈鋱鉔彫埛殕揑徠屭乧乧")
-	MSG("晄夁変昄桧惀橍惗堄揑丆|攪槩愢廦涻栫晄擻妯曕垿丅")
+MSG("哎呀，虽然经常|受到阿尼艾丝小姐您的照顾……")
+MSG("不过我毕竟是做生意的，|这个说什么也不能让步啊。")
 	jump EXIT
 
 TALK5_1:
 	check_room_flag(0)
 	on_jump TALK5_2
 
-	MSG("変橃揑慶愭樃渒憗埲慜|廇嵼攪堦懷嫃廧丅")
-	MSG("惀垿乧乧|変憐攪惀嵼欫棄崕捔寶惉擵慜揑帠忣椆丅")
-	MSG("晄抦摴惀廦涻尨場丆|廃埻揑恖橃帡屃搒渒摙墋変橃乧乧")
+MSG("我们的祖先从很早以前|就在这一带居住。")
+MSG("是啊……|我想这是在哈莱克镇建成之前的事情了。")
+MSG("不知道是什么原因，|周围的人们似乎都很讨厌我们……")
 	room_flag_on(0)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK5_2:
-	MSG("変橃揑慶愭樃渒憗埲慜|廇嵼攪堦懷嫃廧丅")
-	MSG("晄抦摴惀廦涻尨場丆|廃埻揑恖橃帡屃搒渒摙墋変橃乧乧")
+MSG("我们的祖先从很早以前|就在这一带居住。")
+MSG("不知道是什么原因，|周围的人们似乎都很讨厌我们……")
 	jump EXIT
 //仴僇僯僌儌愴屻
 TALK4:
@@ -386,18 +386,18 @@ TALK4:
 	on_jump TALK4_2
 
 TALK4_1:
-	MSG("惪欉変愢丆婻巑愭惗丅")
-	MSG("橍攦攧娨惀榓錦壜恊斾妑岲丅|攪條攦攧嵥擻橍摼弴棙丅")
-	MSG("変扅夛梡晄掆愢榖揑曽朄彽澁屭媞乧乧")
-	MSG("乧乧憤擵変憐愢揑惀丆|帡屃桳壜埲妯恖妛夛橍惗堄揑庣岇惛楈懚嵼欸丅")
-	MSG("梫惀恀桳撨條揑庣岇惛楈懚嵼揑榖丆|恀憐妯帺屓扙戀姺崪垿丅")
+MSG("请听我说，骑士先生。")
+MSG("做买卖还是和蔼可亲比较好。|这样买卖才能做得顺利。")
+MSG("我只会用不停说话的方法招揽顾客……")
+MSG("……总之我想说的是，|似乎有可以让人学会做生意的守护精灵存在哦。")
+MSG("要是真有那样的守护精灵存在的话，|真想让自己脱胎换骨啊。")
 	room_flag_on(0)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK4_2:
-	MSG("帡屃桳壜埲妯恖|妛夛橍惗堄揑庣岇惛楈懚嵼欸丅")
-	MSG("梫惀恀桳撨條揑庣岇惛楈懚嵼揑榖丆|恀憐妯帺屓扙戀姺崪垿丅")
+MSG("似乎有可以让人|学会做生意的守护精灵存在哦。")
+MSG("要是真有那样的守护精灵存在的话，|真想让自己脱胎换骨啊。")
 	jump EXIT
 //仴僩儗儞僩愴屻
 TALK3:
@@ -405,17 +405,17 @@ TALK3:
 	on_jump TALK3_2
 
 TALK3_1:
-	MSG("婻巑愭惗丆変欉愢椆欸丅")
-	MSG("嵟嬤擨帡屃|榓垻擈鋱鉔彫埛堦婲摓堚鐟扵嶕嫀椆欅丅")
-	MSG("擛壥敪孈摓廦涻搶惣|帶枖晄廀梫揑榖丆|惪攧媼変橃彫揦丅")
-	MSG("変橃搒夛旝徫拝晅尰嬥揑丅")
+MSG("骑士先生，我听说了哦。")
+MSG("最近你似乎|和阿尼艾丝小姐一起到遗迹探索去了吧。")
+MSG("如果发掘到什么东西|而又不需要的话，|请卖给我们小店。")
+MSG("我们都会微笑着付现金的。")
 	room_flag_on(0)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK3_2:
-	MSG("嵟嬤擨帡屃|榓垻擈鋱鉔彫埛堦婲摓堚鐟扵嶕嫀椆欅丅")
-	MSG("擛壥敪孈摓廦涻搶惣|帶枖晄廀梫揑榖丆|惪攧媼変橃彫揦丅")
+MSG("最近你似乎|和阿尼艾丝小姐一起到遗迹探索去了吧。")
+MSG("如果发掘到什么东西|而又不需要的话，|请卖给我们小店。")
 	jump EXIT
 
 //仴僈乕僨傿傾儞庢摼屻
@@ -424,18 +424,18 @@ TALK2:
 	on_jump TALK2_2
 
 TALK2_1:
-	MSG("扅攦庺暥彂揑榖丆|惀晄擻巊梡亀杺朄亁揑欸丅")
-	MSG("昁恵巊梡庺暥彂丆|彨杺朄妛夛嵥壜埲丅")
-	MSG("妛摓揑杺朄摨媄擻堦條丆|愝抲岲埲岪廇壜埲巊梡椆丅")
-	MSG("娭槹攪槩揑徻嵶忣檝丆|嫀栤晲婍揦棦揑屬梑暫欅丅")
+MSG("只买咒文书的话，|是不能使用『魔法』的哦。")
+MSG("必须使用咒文书，|将魔法学会才可以。")
+MSG("学到的魔法同技能一样，|设置好以后就可以使用了。")
+MSG("关于这个的详细情况，|去问武器店里的雇佣兵吧。")
 	room_flag_on(0)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK2_2:
-	MSG("扅攦庺暥彂揑榖丆|惀晄擻巊梡亀杺朄亁揑欸丅")
-	MSG("昁恵巊梡庺暥彂丆|彨杺朄妛夛嵥壜埲丅")
-	MSG("妛摓揑杺朄摨媄擻堦條丆|愝抲岲埲岪廇壜埲巊梡椆丅")
+MSG("只买咒文书的话，|是不能使用『魔法』的哦。")
+MSG("必须使用咒文书，|将魔法学会才可以。")
+MSG("学到的魔法同技能一样，|设置好以后就可以使用了。")
 	jump EXIT
 
 //仱堚愓偺尞傪庤偵擖傟偨屻
@@ -443,21 +443,21 @@ TALK1_5:
 	check_room_flag(1)
 	on_jump TALK1_6
 
-	MSG("懳椆懳椆丆|変憐堚鐟棦柺夛桳渒懡懪晄奐揑亀栧亁丅")
-	MSG("堊椆懪奐栧丆|杮揦攧揑亀鑟嶛亁惀昁旛暔昳欸丅")
-	MSG("擛壥嫀挷嵏堚鐟揑榖丆|嵟岲攦堦嵄旛梡丅")
-	MSG("乧乧攪涻愢揑榖丆変岲憸惀|堊椆攧鑟嶛嵥攃堚鐟揑抧揰崘慽擨揑歷丅")
-	MSG("欫欫丆懘幚揑妋壜埲攪涻愢丅")
-	MSG("弴曋崘慽擨丆|場堊鑟嶛搒惀庤岺惂嶌揑丆|強埲擛壥屔懚尭彮揑榖廇夛燐壙丅")
-	MSG("擛壥擨擻媼変嶌堊嵽椏揑杺廱擵亀崪亁揑榖丆|鑟嶛廇壜埲曋媂攧媼擨欸丅")
+MSG("对了对了，|我想遗迹里面会有很多打不开的『门』。")
+MSG("为了打开门，|本店卖的『钥匙』是必备物品哦。")
+MSG("如果去调查遗迹的话，|最好买一些备用。")
+MSG("……这么说的话，我好像是|为了卖钥匙才把遗迹的地点告诉你的嘛。")
+MSG("哈哈，其实的确可以这么说。")
+MSG("顺便告诉你，|因为钥匙都是手工制作的，|所以如果库存减少的话就会涨价。")
+MSG("如果你能给我作为材料的魔兽之『骨』的话，|钥匙就可以便宜卖给你哦。")
 	room_flag_on(1)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK1_6:
-	MSG("堊椆懪奐堚鐟拞揑栧丆|杮揦攧揑亀鑟嶛亁惀昁旛暔昳欸丅")
-	MSG("弴曋崘慽擨丆|場堊鑟嶛搒惀庤岺惂嶌揑丆|強埲擛壥屔懚尭彮揑榖廇夛燐壙丅")
-	MSG("擛壥擨擻媼変嶌堊嵽椏揑杺廱擵亀崪亁揑榖丆|鑟嶛廇壜埲曋媂攧媼擨欸丅")
+MSG("为了打开遗迹中的门，|本店卖的『钥匙』是必备物品哦。")
+MSG("顺便告诉你，|因为钥匙都是手工制作的，|所以如果库存减少的话就会涨价。")
+MSG("如果你能给我作为材料的魔兽之『骨』的话，|钥匙就可以便宜卖给你哦。")
 	jump EXIT
 
 //仴僎乕儉奐巒捈屻
@@ -466,19 +466,19 @@ TALK1:
 	check_game_flag(3512)
 	on_jump TALK1_2
 
-	MSG("惪欉変愢丆婻巑愭惗丅")
-	MSG("嵟嬤丆|堊椆寶憅屔帶孍孈抧柺揑帪岓丆|孍摓椆抧壓堚鐟丅")
-	MSG("杮棃攪槩搰廇摓張惀堚鐟丆|強埲攪栫惀忢桳揑帠乧乧")
-	MSG("乧乧殙丆擨栤堚鐟揑抧揰垿丠|廇嵼捔巕揑搶柺丅")
-	MSG("尰嵼堊椆晄妯彫泈巕恑擖丆|攃栧搒嵔忋椆丅")
-	MSG("鑟嶛婑懚嵼嵳巌浠鉔彫埛撨棦丆|擨嫀栤栤韙欅丅")
+MSG("请听我说，骑士先生。")
+MSG("最近，|为了建仓库而挖掘地面的时候，|挖到了地下遗迹。")
+MSG("本来这个岛就到处是遗迹，|所以这也是常有的事……")
+MSG("……哎，你问遗迹的地点啊？|就在镇子的东面。")
+MSG("现在为了不让小孩子进入，|把门都锁上了。")
+MSG("钥匙寄存在祭司莉丝小姐那里，|你去问问她吧。")
 	game_flag_on(3512)
 	jump EXIT
 
 //丂丂仸埲崀丄孞傝曉偟梡儊僢僙乕僕
 TALK1_2:
-	MSG("堚鐟廇嵼捔巕揑搶柺丅")
-	MSG("鑟嶛婑懚嵼嵳巌浠鉔彫埛撨棦丆|擨嫀栤栤韙欅丅")
+MSG("遗迹就在镇子的东面。")
+MSG("钥匙寄存在祭司莉丝小姐那里，|你去问问她吧。")
 	jump EXIT
 
 EXIT:
@@ -494,7 +494,7 @@ RES("CLICK")
 {
 
 	FOCUS_CHR("Lynette")
-	SET_NAME("LYNETTE","椩撧摿")
+SET_NAME("LYNETTE","琳奈特")
 	SET_MOTION("Lynette", "ATTACK1",-1)
 
 	//仴忈暻徚柵屻
@@ -522,37 +522,37 @@ RES("CLICK")
 
 //仴忈暻徚柵屻
 TALK7:
-	MSG("嵼変橃揑慶愭拞丆|桳槩廦涻搒夛惂憿揑渒椆晄婲揑恖両")
-	MSG("撨槩恖岲憸嫨橍攡崕丅")
-	MSG("扐惀丆晝恊媫拝崘慽変攪審帠丆|媶桧惀堊廦涻欳丠")
+MSG("在我们的祖先中，|有个什么都会制造的很了不起的人！")
+MSG("那个人好像叫做梅克。")
+MSG("但是，父亲急着告诉我这件事，|究竟是为什么呢？")
 	jump EXIT
 //仴婏娾忛弌尰屻
 TALK6:
-	MSG("帺樃忛毱弌尰擵岪丆|晝恊揑條巕廇曄摼渒婏夦椆丅")
-	MSG("暯帪憤惀樃憗濏奐巒|廇夛愢嵄澷阒揑徫榖乧乧")
-	MSG("摓掙惀渻涻夞帠垿丠")
+MSG("自从城堡出现之后，|父亲的样子就变得很奇怪了。")
+MSG("平时总是从早晨开始|就会说些无聊的笑话……")
+MSG("到底是怎么回事啊？")
 	jump EXIT
 //仴僀儞僼僃儖僲愴屻
 TALK5:
-	MSG("変欉愢桳庬晄壜巚媍揑摴嬶丆|梡泙壜埲嵼悈拞屇媧丅")
-	MSG("擛壥恀揑桳撨庬搶惣懚嵼揑榖丆|榓嫑橷堦婲熰塲廇嵞栫晄惀氹憐椆乧乧")
+MSG("我听说有种不可思议的道具，|用它可以在水中呼吸。")
+MSG("如果真的有那种东西存在的话，|和鱼儿一起游泳就再也不是梦想了……")
 	jump EXIT
 //仴僇僯僌儌愴屻
 TALK4:
-	MSG("擛壥桳晉梋揑慘揑榖丆|攦嵄崟囿囗梐旛拝夛渒曽曋欸丅")
-	MSG("婛壜埲攏忋夞摓捔棦丆|栫壜埲曉夞抧壓柪媨棦柺欸丅|瀚慠扅擻梡堦師丅")
+MSG("如果有富余的钱的话，|买些黑玛瑙预备着会很方便哦。")
+MSG("既可以马上回到镇里，|也可以返回地下迷宫里面哦。|虽然只能用一次。")
 	jump EXIT
 //仴僩儗儞僩愴屻
 TALK3:
-	MSG("晝恊憤惀挐挐晄媥欳丅")
-	MSG("晄奩愢揑榖栫愢摼渒婲櫎丆|恀惀妯変扴怱垿丅")
-	MSG("強埲丆|懠骖曣恊憡張摼栫晄惀渒梈煥丅")
+MSG("父亲总是喋喋不休呢。")
+MSG("不该说的话也说得很起劲，|真是让我担心啊。")
+MSG("所以，|他跟母亲相处得也不是很融洽。")
 	jump EXIT
 
 //仴僈乕僨傿傾儞庢摼屻
 TALK2:
-	MSG("嵼抧壓柪媨揑朸張壜擻夛漄摓|壜埲懪攋娾愇榓氃暻揑摴嬶丅")
-	MSG("嵼攪槩搰忋栫嫋娨桳懘懠|奺庬奺條揑晄壜巚媍揑摴嬶懚嵼丅")
+MSG("在地下迷宫的某处可能会找到|可以打破岩石和墙壁的道具。")
+MSG("在这个岛上也许还有其他|各种各样的不可思议的道具存在。")
 	jump EXIT
 
 //仴僎乕儉奐巒捈屻
@@ -561,14 +561,14 @@ TALK1:
 	on_jump TALK1_2
 
 TALK1_1:
-	MSG("変橃壠懓戙戙搒惀庤渒岻揑恖丅")
-	MSG("惀場堊攪槩丆|晝恊榓栮栮嵥宱塩摴嬶揦揑欐丠")
+MSG("我们家族代代都是手很巧的人。")
+MSG("是因为这个，|父亲和爷爷才经营道具店的吗？")
 	jump EXIT
 
 //仱傾僯僄僗偺僀儀儞僩捈屻
 TALK1_2:
-	MSG("撨槩彈恖惀嵟嬤揑忢媞丅")
-	MSG("韙憤惀嵼堚鐟恑恑弌弌丆|摓掙惀嫀姳廦涻揑欳丠")
+MSG("那个女人是最近的常客。")
+MSG("她总是在遗迹进进出出，|到底是去干什么的呢？")
 	jump EXIT
 
 EXIT:
@@ -584,7 +584,7 @@ DEF("Rospo")
 RES("CLICK")
 {
 	FOCUS_CHR("Rospo")
-	SET_NAME("ROSPO","梾巣攲")
+SET_NAME("ROSPO","罗斯伯")
 	SET_MOTION("Rospo", "ATTACK1",-1)
 
 	//仴忈暻徚柵屻
@@ -615,63 +615,63 @@ TALK7:
 	check_room_flag(2)
 	on_jump TALK7_2
 
-	MSG("帺樃撨槩忛毱弌尰埲棃丆|楢敀拫揑揤嬻搒曄摼崹埫椆丅")
-	MSG("晄娗渻涻娕栫娕晄弌|攪惀桳岲帠忣敪惗揑慜挍垿丅")
-	MSG("栫桳揱暦愢椞庡戝恖揑昦忣|墇棃墇埆壔椆丅")
-	MSG("懠彈橷岲憸栫杤桳夞棃丆|恀惀壜楓垿乧乧")
-	MSG("乧乧椦摽帰屛孮抧嬫|埲岪摓掙夛曄惉廦涻條巕欳丠")
+MSG("自从那个城堡出现以来，|连白昼的天空都变得昏暗了。")
+MSG("不管怎么看也看不出|这是有好事情发生的前兆啊。")
+MSG("也有传闻说领主大人的病情|越来越恶化了。")
+MSG("他女儿好像也没有回来，|真是可怜啊……")
+MSG("……林德尔湖群地区|以后到底会变成什么样子呢？")
 	room_flag_on(2)
 	jump EXIT
 
 //丂丂仚孞傝曉偟
 TALK7_2:
-	MSG("帺樃撨槩忛毱弌尰埲棃丆|楢敀拫揑揤嬻搒曄摼崹埫椆丅")
-	MSG("栫桳揱暦愢椞庡戝恖揑昦忣|墇棃墇埆壔椆丅")
-	MSG("乧乧椦摽帰屛孮抧嬫|埲岪摓掙夛曄惉廦涻條巕欳丠")
+MSG("自从那个城堡出现以来，|连白昼的天空都变得昏暗了。")
+MSG("也有传闻说领主大人的病情|越来越恶化了。")
+MSG("……林德尔湖群地区|以后到底会变成什么样子呢？")
 	jump EXIT
 //仴婏娾忛弌尰屻
 TALK6:
-	MSG("忢棃攪槩揦揑撨槩戝埛|岲憸嫀椆婏娾忛丅")
-	MSG("晄抦摴韙嵼憐廦涻丆|桧慠梫嫀撨庬妯恖栄崪湠慠揑忛毱丅")
-	MSG("韙摓掙桳廦涻栚揑乧乧")
+MSG("常来这个店的那个大姐|好像去了奇岩城。")
+MSG("不知道她在想什么，|竟然要去那种让人毛骨悚然的城堡。")
+MSG("她到底有什么目的……")
 	jump EXIT
 //仴僀儞僼僃儖僲愴屻
 TALK5:
 	check_room_flag(2)
 	on_jump TALK5_2
 
-	MSG("攪槩椦摽帰屛孮抧嬫揑椞庡|惀埵渒榓錦揑恖丅")
-	MSG("晄夁場堊摼椆堦庬嫨橍愮擭氹揑昦丆|攪嵄擭堦捈夌昦嵼彴丅")
-	MSG("婰摼椞庡桳堦槩撈惗彈丆|晄夁乧乧")
-	MSG("悩愢榓宲曣揑娭宯張摼晄岲丆|強埲棧壠弌憱椆丅")
+MSG("这个林德尔湖群地区的领主|是位很和蔼的人。")
+MSG("不过因为得了一种叫做千年梦的病，|这些年一直卧病在床。")
+MSG("记得领主有一个独生女，|不过……")
+MSG("据说和继母的关系处得不好，|所以离家出走了。")
 	room_flag_on(2)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK5_2:
-	MSG("攪槩椦摽帰屛孮抧嬫揑椞庡|惀埵渒榓錦揑恖丅")
-	MSG("晄夁場堊摼椆堦庬嫨橍愮擭氹揑昦丆|攪嵄擭堦捈夌昦嵼彴丅")
-	MSG("婰摼椞庡桳堦槩撈惗彈丆|晄夁乧乧")
-	MSG("悩愢榓宲曣揑娭宯張摼晄岲丆|強埲棧壠弌憱椆丅")
+MSG("这个林德尔湖群地区的领主|是位很和蔼的人。")
+MSG("不过因为得了一种叫做千年梦的病，|这些年一直卧病在床。")
+MSG("记得领主有一个独生女，|不过……")
+MSG("据说和继母的关系处得不好，|所以离家出走了。")
 	jump EXIT
 
 //仴僇僯僌儌愴屻
 TALK4:
-	MSG("惛楈摪揑浠鉔彫埛瀚慠擭寉丆|媝惀槩椻惷帶枖桳埿尩揑恖丅")
-	MSG("帶妿丆娨惀槩戝旤彈欳丅")
-	MSG("瀚慠攪涻愢桳嵄幐楃丆|擨晄妎摼攪妯恖桳嵄忣晄帺嬛欐丠")
+MSG("精灵堂的莉丝小姐虽然年轻，|却是个冷静而又有威严的人。")
+MSG("而且，还是个大美女呢。")
+MSG("虽然这么说有些失礼，|你不觉得这让人有些情不自禁吗？")
 	jump EXIT
 //仴僩儗儞僩愴屻
 TALK3:
-	MSG("攪棦揑揦庡宱忢澆弌堦暃榓慞揑柺岴丆|晄夁懘幚惀槩旕忢婃屌揑壠氺丅")
-	MSG("瀚慠暯帪懠懳変渒恊愗丆|晄夁変憤夰媈惀晄惀桳廦涻撪忣丅")
+MSG("这里的店主经常摆出一副和善的面孔，|不过其实是个非常顽固的家伙。")
+MSG("虽然平时他对我很亲切，|不过我总怀疑是不是有什么内情。")
 	jump EXIT
 
 //仴僈乕僨傿傾儞庢摼屻
 TALK2:
-	MSG("攪槩搰揑堚鐟棦|摓張搒愝抲椆奺幃奺條揑娮鈜丅")
-	MSG("懘拞栫桳堦嵄|廀梫峣恠擼廯嵥擻夝檙揑丅")
-	MSG("扅桳懱椡惀晄峴揑垿丅")
+MSG("这个岛的遗迹里|到处都设置了各式各样的陷阱。")
+MSG("其中也有一些|需要绞尽脑汁才能解决的。")
+MSG("只有体力是不行的啊。")
 	jump EXIT
 
 //仴僎乕儉奐巒捈屻
@@ -680,18 +680,18 @@ TALK1:
 	on_jump TALK1_2
 
 TALK1_1:
-	MSG("埲慜杤桳尒夁擨垿乧乧|惀棃椃峴揑欐丠")
-	MSG("埥幰惀棃扵嶕堚鐟揑|嵿曮椔恖丠")
-	MSG("晄娗渻涻愢丆|尰嵼晄擻摓捔奜嫀椆丅")
-	MSG("欉愢杒绮揑堚鐟崉崉敪惗椆廦涻埬審丅")
-	MSG("歈丆巄帪榁幚抧曫嵼捔棦欅丅")
+MSG("以前没有见过你啊……|是来旅行的吗？")
+MSG("或者是来探索遗迹的|财宝猎人？")
+MSG("不管怎么说，|现在不能到镇外去了。")
+MSG("听说北边的遗迹刚刚发生了什么案件。")
+MSG("唉，暂时老实地呆在镇里吧。")
 	room_flag_on(2)
 	jump EXIT
 
 //丂丂仛孞傝曉偟
 TALK1_2:
-	MSG("尰嵼晄擻摓捔奜嫀椆丅")
-	MSG("欉愢杒绮揑堚鐟崉崉敪惗椆廦涻埬審丅")
+MSG("现在不能到镇外去了。")
+MSG("听说北边的遗迹刚刚发生了什么案件。")
 	jump EXIT
 
 EXIT:
@@ -708,7 +708,7 @@ RES("CLICK")
 {
 
 	FOCUS_CHR("Aniece")
-	SET_NAME("ANIECE","垻擈鋱鉔")
+SET_NAME("ANIECE","阿尼艾丝")
 
 	// TK 涋彈昉偺媩傪攦偭偨
 	check_game_flag(3720)
@@ -729,9 +729,9 @@ RES("CLICK")
 // 攦偭偨屻
 TALK4:
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("懳椆懳椆丆|擨抦摴廦涻娭槹婏娾忛揑帠欐丠")
-	MSG("変欉愢擨惀榓|堦槩妛幰泈巕堦婲棃揑丅")
-	MSG("擛壥桳廦涻娭槹堚鐟揑徚懅丆|惪崘慽変丅")
+MSG("对了对了，|你知道什么关于奇岩城的事吗？")
+MSG("我听说你是和|一个学者孩子一起来的。")
+MSG("如果有什么关于遗迹的消息，|请告诉我。")
 
 	jump EXIT
 
@@ -740,54 +740,54 @@ TALK4:
 //丂丂抐偭偨屻偵嵞搙榖偟偐偗偨傜埲壓偺儊僢僙乕僕丅
 TALK3:
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("渻涻條丆憐攦攪挘媩欐丠")
-	MSG("攪條揑榖丆|変攨杮戝漌攧俁侽侽侽攧媼擨椆丅")
+MSG("怎么样，想买这张弓吗？")
+MSG("这样的话，|我赔本大甩卖３０００卖给你了。")
 
-	SEL("丂攦媩欐丠丂|#C2攦|晄攦")
+SEL("　买弓吗？　|#C2买|不买")
 
 	CHECK_SELECT(0)
 	ON_JUMP SEL_YES3_1
 
 //丂丂佀乽攦傢側偄乿偺応崌
-	MSG("屇丆晄抦摴攪攃媩揑壙抣丆|恀惀桳怞婻巑擵柤垿丅")
-	MSG("嶼椆丆擨梫惀夵曄庡堄嵞棃栫峴丅")
+MSG("呼，不知道这把弓的价值，|真是有辱骑士之名啊。")
+MSG("算了，你要是改变主意再来也行。")
 
 	jump EXIT
 
 //丂丂佀乽攦偆乿偺応崌
 SEL_YES3_1:
-	MSG("恀揑丠")
-	MSG("撨涻廇惪漒岲椆両")
+MSG("真的？")
+MSG("那么就请拿好了！")
 
 	CHECK_GOLD(3000)
 	ON_JUMP YES3_2
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("乧乧歘丆擛壥杤慘揑榖惀晄夛媼擨揑欸丅")
-	MSG("攃慘弝旛岲椆嵞棃欅丅")
+MSG("……喂，如果没钱的话是不会给你的哦。")
+MSG("把钱准备好了再来吧。")
 	jump EXIT
 
 YES3_2:
 	CHECK_MAX_ITEM(0)
 	OFF_JUMP YES3_3
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("乧乧歘丆擨揑峴棝涍宱憰枮椆丅")
-	MSG("惍棟岲擵岪嵞棃欅丅")
+MSG("……喂，你的行李已经装满了。")
+MSG("整理好之后再来吧。")
 	jump EXIT
 
 YES3_3:
 	SE("SE_GETITEM")
 //	sys("#C2涋彈昉偺媩傪庤偵擖傟偨")
-	SYS_EX("摼摓亂涋彈岞庡擵媩亃丅",-1,0X00000200)
+SYS_EX("得到【巫女公主之弓】。",-1,0X00000200)
 	GET_GOLD(-3000)
 	GET_ITEM(70, 1)
 
 
-	MSG("殙欈乣晄溋惀婻巑丆恀惀宒娽垿両")
+MSG("哎呀～不愧是骑士，真是慧眼啊！")
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("懳椆懳椆丆|擨抦摴廦涻娭槹婏娾忛揑帠欐丠")
-	MSG("変欉愢擨惀榓|堦槩妛幰泈巕堦婲棃揑丅")
-	MSG("擛壥桳廦涻娭槹堚鐟揑徚懅丆|惪崘慽変丅")
-	MSG("擛壥擻嫦慘揑榖丆|澷榑廦涻変搒涶擨丅")
+MSG("对了对了，|你知道什么关于奇岩城的事吗？")
+MSG("我听说你是和|一个学者孩子一起来的。")
+MSG("如果有什么关于遗迹的消息，|请告诉我。")
+MSG("如果能赚钱的话，|无论什么我都帮你。")
 
 	// TK 涋彈昉偺媩傪攦偭偨
 	game_flag_on(3720)
@@ -798,62 +798,62 @@ YES3_3:
 
 TALK2:
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("変嵼堚鐟拞漄摓椆堦攃婏夦揑媩丅")
-	MSG("娕攪槩憰忺廇抦摴椆丆|峬掕惀擭戙媣墦揑搶惣杤嶖乧乧")
-	MSG("晄夁丆媩尫樄慠渒桳抏椡丆|媩恎栫堦揰杹懝搒杤桳丅")
-	MSG("欼丆崻悩変揑嗳應丆|攪攃媩塀憼拝晄壜巚媍揑椡検丅")
-	MSG("乧乧懳椆両")
-	MSG("歘丆擨晄憐梫攪攃媩欐丠")
-	MSG("娕嵼擨変岎忣晄嶖揑樚忋曋媂攧媼擨椆丅")
-	MSG("尰嵼摿暿戝尭壙丆|係侽侽侽俧渻涻條丠")
+MSG("我在遗迹中找到了一把奇怪的弓。")
+MSG("看这个装饰就知道了，|肯定是年代久远的东西没错……")
+MSG("不过，弓弦仍然很有弹力，|弓身也一点磨损都没有。")
+MSG("唔，根据我的猜测，|这把弓隐藏着不可思议的力量。")
+MSG("……对了！")
+MSG("喂，你不想要这把弓吗？")
+MSG("看在你我交情不错的份上便宜卖给你了。")
+MSG("现在特别大减价，|４０００Ｇ怎么样？")
 
 	// EV C-1 涋彈昉偺媩
 	game_flag_on(3722)
 
-	SEL("丂攦媩欐丠丂|#C2攦|晄攦")
+SEL("　买弓吗？　|#C2买|不买")
 
 	CHECK_SELECT(0)
 	ON_JUMP SEL_YES
 
 //丂丂佀乽攦傢側偄乿偺応崌
-	MSG("屇丆晄抦摴攪攃媩揑壙抣丆|恀惀桳怞婻巑擵柤垿丅")
-	MSG("嶼椆丆擨梫惀夵曄庡堄嵞棃栫峴丅")
+MSG("呼，不知道这把弓的价值，|真是有辱骑士之名啊。")
+MSG("算了，你要是改变主意再来也行。")
 
 	jump EXIT
 
 //丂丂佀乽攦偆乿偺応崌
 SEL_YES:
-	MSG("恀揑丠")
-	MSG("撨涻廇惪漒岲椆両")
+MSG("真的？")
+MSG("那么就请拿好了！")
 
 	CHECK_GOLD(4000)
 	ON_JUMP YES2
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("乧乧歘丆擛壥杤慘揑榖惀晄夛媼擨揑欸丅")
-	MSG("攃慘弝旛岲椆嵞棃欅丅")
+MSG("……喂，如果没钱的话是不会给你的哦。")
+MSG("把钱准备好了再来吧。")
 	jump EXIT
 
 YES2:
 	CHECK_MAX_ITEM(0)
 	OFF_JUMP YES3
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("乧乧歘丆擨揑峴棝涍宱憰枮椆丅")
-	MSG("惍棟岲擵岪嵞棃欅丅")
+MSG("……喂，你的行李已经装满了。")
+MSG("整理好之后再来吧。")
 	jump EXIT
 
 YES3:
 	SE("SE_GETITEM")
 //	sys("#C2涋彈昉偺媩傪庤偵擖傟偨")
-	SYS_EX("摼摓亂涋彈岞庡擵媩亃丅",-1,0X00000200)
+SYS_EX("得到【巫女公主之弓】。",-1,0X00000200)
 	GET_GOLD(-4000)
 	GET_ITEM(70, 1)
 
-	MSG("殙欈乣晄溋惀婻巑丆恀惀宒娽垿両")
+MSG("哎呀～不愧是骑士，真是慧眼啊！")
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("懳椆懳椆丆|擨抦摴廦涻娭槹婏娾忛揑帠欐丠")
-	MSG("変欉愢擨惀榓|堦槩妛幰泈巕堦婲棃揑丅")
-	MSG("擛壥桳廦涻娭槹堚鐟揑徚懅丆|惪崘慽変丅")
-	MSG("擛壥擻嫦慘揑榖丆|澷榑廦涻変搒涶擨丅")
+MSG("对了对了，|你知道什么关于奇岩城的事吗？")
+MSG("我听说你是和|一个学者孩子一起来的。")
+MSG("如果有什么关于遗迹的消息，|请告诉我。")
+MSG("如果能赚钱的话，|无论什么我都帮你。")
 
 	// TK 涋彈昉偺媩傪攦偭偨
 	game_flag_on(3720)
@@ -864,10 +864,10 @@ YES3:
 
 TALK1:
 
-	SET_NAME("ANIECE","崅橖揑彈惈")
-	MSG("攪廇惀晻報椆庣岇惛楈揑摶曅垿乧乧")
+SET_NAME("ANIECE","高傲的女性")
+MSG("这就是封印了守护精灵的卡片啊……")
 	//set_motion("Aniece", "EMPTY20",-1)撈傝尵傜偟偄偺偱僇僢僩
-	MSG("擛壥変栫擻梡揑榖丆|栫嫋扵嶕堚鐟廇夛曄摼寉徏嫋懡椆丅")
+MSG("如果我也能用的话，|也许探索遗迹就会变得轻松许多了。")
 
 	jump EXIT
 
@@ -928,27 +928,27 @@ EV2:
 	wait(140)
 
 	ACTIVE_CHR("Aniece")
-	MSG("俁侽侽侽両")
+MSG("３０００！")
 
 	ACTIVE_CHR("Spence")
-	MSG("俀俈侽侽渻涻條丠")
+MSG("２７００怎么样？")
 
 	ACTIVE_CHR("Aniece")
-	MSG("晄峴丆俀俋侽侽両")
+MSG("不行，２９００！")
 
 	ACTIVE_CHR("Spence")
-	MSG("俀俉侽侽丅")
+MSG("２８００。")
 
 	ACTIVE_CHR("Aniece")
-	MSG("撨廇俀俉俆侽両")
+MSG("那就２８５０！")
 
 	ACTIVE_CHR("Spence")
-	MSG("乧乧欼乣懳変棃愢|俀俉侽侽廇涍宱惀嬌尷椆垿丅")
-	MSG("擛壥惀寱揑榖丆|摉嶌屆摕攧媼婱懓夛桳槩岲壙慘揑乧乧")
-	MSG("廇嶼惀垻擈鋱鉔彫埛擨媮変丆|栫晄擻斾攪槩壙慘嵞崅椆丅")
+MSG("……唔～对我来说|２８００就已经是极限了啊。")
+MSG("如果是剑的话，|当作古董卖给贵族会有个好价钱的……")
+MSG("就算是阿尼艾丝小姐你求我，|也不能比这个价钱再高了。")
 
 	ACTIVE_CHR("Aniece")
-	MSG("殩丆澆拝堦暃壏榓揑昞忣丆|媝娨惀撨涻擄懳晅垿乧乧")
+MSG("嘁，摆着一副温和的表情，|却还是那么难对付啊……")
 
 	set_deg("Aniece", 0)
 	set_deg("Spence", 261)
@@ -990,49 +990,49 @@ EV1:
 
 //	FOCUS_CHR("Aniece")
 //	SET_NAME("Aniece", "傾僯僄僗")
-	SET_NAME("ANIECE","崅橖揑彈惈")
+SET_NAME("ANIECE","高傲的女性")
 
-	SET_NAME("SPENCE","摴嬶揦榁斅巎枾巣")
+SET_NAME("SPENCE","道具店老板史密斯")
 	SET_MOTION("Spence", "ATTACK1",-1)
 
 	ACTIVE_CHR("Aniece")
-	MSG("嵟嬤丆変嵼堚鐟棦漄摓椆昤奊拝惛楈恾埬揑恄婏摶曅丅")
+MSG("最近，我在遗迹里找到了描绘着精灵图案的神奇卡片。")
 
 	ACTIVE_CHR("Spence")
-	MSG("恄婏揑摶曅惀欐丠|晄夘堄揑榖惪妯変娕娕丅")
-	MSG("乧乧攪晄惀晻報拝亀庣岇惛楈亁揑摶曅欐丠")
+MSG("神奇的卡片是吗？|不介意的话请让我看看。")
+MSG("……这不是封印着『守护精灵』的卡片吗？")
 
 	ACTIVE_CHR("Aniece")
-	MSG("庣岇惛楈丠")
+MSG("守护精灵？")
 
 	ACTIVE_CHR("Spence")
-	MSG("嵼椦摽帰屛孮抧嬫|樃渒媣埲慜廇棳揱拝堦庬晽懎丅")
-	MSG("彫泈巕堦惗壓棃廇梫嵼惛楈摪愙庴愻楃丆|嵼懠恎忋婑廻庣岇惛楈丅")
+MSG("在林德尔湖群地区|从很久以前就流传着一种风俗。")
+MSG("小孩子一生下来就要在精灵堂接受洗礼，|在他身上寄宿守护精灵。")
 
 	ACTIVE_CHR("Aniece")
-	MSG("欼乣|橍攪條揑帠忣桳廦涻嶌梡欐丠")
+MSG("唔～|做这样的事情有什么作用吗？")
 
 	ACTIVE_CHR("Spence")
-	MSG("恖惗壓棃揑撨堦弖娫丆崻悩柦塣擵惎丆|懠揑擻椡榓惈奿廇涍宱檙掕椆丅")
-	MSG("斾擛懱椡丄杺椡丄塣焹丄庤楈岻梌斲乧乧")
-	MSG("廇嶼捠夁惉挿榓搘椡帶桳強採崅丆|扐惀奺恖擵娫揑嵎嫍桪楎娨樄慠夛懚嵼揑丅")
-	MSG("捠夁庣岇惛楈|廇壜埲懳攪嵄擻椡恑峴栱曗榓採崅丅")
+MSG("人生下来的那一瞬间，根据命运之星，|他的能力和性格就已经决定了。")
+MSG("比如体力、魔力、运气、手灵巧与否……")
+MSG("就算通过成长和努力而有所提高，|但是各人之间的差距优劣还仍然会存在的。")
+MSG("通过守护精灵|就可以对这些能力进行弥补和提高。")
 
 	ACTIVE_CHR("Aniece")
 	set_motion("Aniece", "EMPTY20",-1)
-	MSG("殦乣|恀惀戝奐娽奅椆垿丅")
+MSG("嘿～|真是大开眼界了啊。")
 
 	ACTIVE_CHR("Spence")
-	MSG("婑廻嵼恎忋堦攜巕揑庣岇惛楈|扅擻惀嵟弶慖弌揑堦扅丅")
-	MSG("強埲泈巕揑曣恊堊椆慖堦槩岲揑惛楈|捠忢夛峣恠擼廯憐攋摢丅")
+MSG("寄宿在身上一辈子的守护精灵|只能是最初选出的一只。")
+MSG("所以孩子的母亲为了选一个好的精灵|通常会绞尽脑汁想破头。")
 
 	ACTIVE_CHR("Aniece")
-	MSG("尨棃惀攪條乧乧")
-	MSG("扐惀丆|攪庬惛楈扅擻嵼崉弌惗揑帪岓婑廻丅")
+MSG("原来是这样……")
+MSG("但是，|这种精灵只能在刚出生的时候寄宿。")
+MSG("不管怎么说，|这个卡片对我来说是没什么用了。")
 
 	ACTIVE_CHR("Spence")
-	MSG("晄娗渻涻愢丆|攪槩摶曅懳変棃愢惀杤廦涻梡椆丅")
-	MSG("惀欐丆恀堚姸乧乧")
+MSG("是吗，真遗憾……")
 
 	FOCUS_CHR("PC")
 	cross_fade(80)
@@ -1065,10 +1065,10 @@ EXIT:
 // 弶擖揦帪HELP儊僢僙乕僕乮摴嬶壆曇乯
 @help
 {
-	MSG_EX("#W0丂",70,0X00000002)
-	SYS_EX("#F0#C2娭槹亂摴嬶揦亃",-1,0X20000400)
-	SYS_EX("#F0#C2嵼摴嬶揦壜埲峸攦摓懳扵尟桳梡揑摴嬶丅",-1,0X20000400)
-	SYS_EX("#F0#C2彍椆栻悈摍夞暅栻昳擵奜丆|娨弌歋鑟嶛榓庺暥彂丅",-1,0X20000400)
-	SYS_EX("#F0#C2慖潰彜昳楍昞忋柺昞帵椶宆揑昗庥丆|慠岪揰寕廀梫揑彜昳丅",-1,0X20000400)
-	SYS_EX("#F0#C2擛壥憐攧漿晄廀梫揑暔昳丆|惪揰寕強帩桳暔昳揑恾昗丅",-1,0X20000400)
+MSG_EX("#W0　",70,0X00000002)
+SYS_EX("#F0#C2关于【道具店】",-1,0X20000400)
+SYS_EX("#F0#C2在道具店可以购买到对探险有用的道具。",-1,0X20000400)
+SYS_EX("#F0#C2除了药水等回复药品之外，|还出售钥匙和咒文书。",-1,0X20000400)
+SYS_EX("#F0#C2选择商品列表上面表示类型的标签，|然后点击需要的商品。",-1,0X20000400)
+SYS_EX("#F0#C2如果想卖掉不需要的物品，|请点击所持有物品的图标。",-1,0X20000400)
 }
