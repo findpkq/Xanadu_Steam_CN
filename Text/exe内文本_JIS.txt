@@ -580,9 +580,13 @@ Level
 Class
 称号
 Experience
+経験値
 Next-Experience
+下一級所需経験
 Hit Points
+生命力
 Skill Points
+技能点数
 Strength
 Intelligence
 Reflex
@@ -595,8 +599,11 @@ Resistance
 Accuracy
 Evasion
 Guardian Level
+精霊等級
 Guardian Exp.
+精霊経験値
 Guardian Ability
+精霊能力
 Weapon Slot
 武器欄
 Shield Slot

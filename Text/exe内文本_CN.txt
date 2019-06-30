@@ -587,8 +587,11 @@ Resistance
 Accuracy
 Evasion
 Guardian Level
+精灵等级
 Guardian Exp.
+精灵经验值
 Guardian Ability
+精灵能力
 Weapon Slot
 武器栏
 Shield Slot
