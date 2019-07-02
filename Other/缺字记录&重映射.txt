@@ -153,3 +153,4 @@ U+6254	扔	扨	DOWN！
 {U+6A5B}    橛	杁	DOWN！
 {U+5B7D}    孽	芟	DOWN！
 {U+8FDD}    违 	違	DOWN！
+{U+9570}  镰	鎌	DOWN！
