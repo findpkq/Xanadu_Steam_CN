@@ -331,7 +331,7 @@ START:
 	MSG_EX("#S3#C0貝亜特里奇「騎士大人，我們来幇忙了哦。」",-1,2)
 
 	INIT_WALK_DST("Tiowald")
-	set_walk_dst("Tiowald", 1.43,2.06,-12.88)
+	set_walk_dst("Tiowald", 1.43,2.06,-12.82)
 	walk_pos("Tiowald",0,0.01)
 	MSG_EX("#S3#C0提欧巴特「好久不見了，莉絲洛特公主……」",-1,2)
 	wait_walk("Tiowald")
