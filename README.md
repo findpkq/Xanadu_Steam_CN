@@ -1,18 +1,26 @@
 # Xanadu_Steam_CN
 
-```
-*本项目仅应用于Steam版Xanadu Next（当前官方版本 1.0.2.0）
 
-*计划中所有的汉化文本、汉化图像均移植自娱乐通代理版《迷城的国度》，目前在方块平台仍有销售。本次汉化移植离不开代理商与原汉化人员的付出，希望大家享受本次移植的同时尽可能支持原代理商。
 
-```
+> *本项目仅应用于Steam版Xanadu Next（当前官方版本 1.0.2.0）
+>
+> *计划中所有的汉化文本、汉化图像均移植自娱乐通代理版《迷城的国度》，目前在方块平台仍有销售。本次汉化移植离不开代理商与原汉化人员的付出，希望大家享受本次移植的同时尽可能支持原代理商。
+>
+> [方块平台上本作原代理版的传送门](http://store.cubejoy.com/html/en/store/goodsdetail/detail200.html)
 
 
 
 ## 下载地址
 
-当前补丁版本为1.00，更新日期2019.07.09[list]
-度盘链接：https://pan.baidu.com/s/1UZguqK8B6bZNhs76QqkGow 提取码: 5v86 
+当前补丁版本为1.00，更新日期2019.07.09
+
+##### 度盘链接：
+
+https://pan.baidu.com/s/1UZguqK8B6bZNhs76QqkGow 提取码: 5v86 
+
+##### MEGA盘链接：
+
+https://mega.nz/#!CX5kkawJ!5X8lJGDJBUYO9PRRbU62DiU5-CxzFUpevhX-YO_qEoo
 
 
 
