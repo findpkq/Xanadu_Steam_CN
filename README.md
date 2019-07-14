@@ -41,10 +41,11 @@ ZenHax论坛的[Ekey](https://www.zenhax.com/viewtopic.php?f=9&t=3347&hilit=xana
 
 ## 使用工具
 
-- quickbms（解包封包）
-- [falcnvrt/itm Converter/itp Converter/iti Converter](falcnvrt/itm Converter/itp Converter/iti Converter)等
-- [MadEdit-Mod](https://sourceforge.net/projects/madedit-mod/)
-- CrystalTile2
+- [Quickbms](http://aluigi.altervista.org/)（解包封包）
+- [falcnvrt](falcnvrt/itm Converter/itp Converter/iti Converter)
+- [MadEdit-Mod](https://sourceforge.net/projects/madedit-mod/)（日文汉字转换、文本编辑）
+- [TiledGlyph](https://github.com/wmltogether/TiledGlyph)（字模制作）
+- CrystalTile2（字模替换）
 - Steamless（脱壳工具）
   
 
@@ -54,13 +55,12 @@ ZenHax论坛的[Ekey](https://www.zenhax.com/viewtopic.php?f=9&t=3347&hilit=xana
    有任何汉化方面的问题请直接回复反馈，将会尽量修正
 
 2. 有一处拿精灵卡片的跳跳乐，和60帧黑魂类似会有跳跃判定上的变化，游戏内刷新率设置改为粗糙后有奇效
-   死者的异界没有经过比较完整的测试，同样有问题可以尽快反馈
-
-3. 测试过程中有极个别角色原地转圈的情况（原版即存在该bug），终盘一处过场里npc转圈已通过改动脚本
-
-4. 的方式修正，其他地方主角出现原地转圈时直接移动就会恢复，不影响游戏进程，有发现可以报告具体位置，但是短时间不会太快修复。
-
    
+3. 死者的异界没有经过比较完整的测试，同样有问题可以尽快反馈
+
+4. GOG版请额外下载对应exe文件替换
+
+    
 
 ## TODO LIST
 
