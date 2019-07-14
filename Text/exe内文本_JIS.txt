@@ -168,6 +168,8 @@ Please choose a save file for this data
 
 You haven't finished allocating everything. Proceed? |#c2OK|#c2CANCEL
 点数還没有全部分配,這様就可以呎? |#c2確定|#c2取消
+%d Gold
+金銭 %d
 
 Quit Game
 結束游戯
@@ -244,11 +246,13 @@ has fainted...
 体力耗尽了.
 %s %s → %s dodges!attacks
 %s的%s→%sＭＩＳＳ!
+attacks
+攻撃
 
 %s split into %d!
 %s分離為%d个!
 %s has summoned %s!
-%s召喚%s
+%s召喚%s!
 
 
 通関評価（分割線前渉及特殊字体暫不修改）
@@ -292,7 +296,7 @@ Level(人物等級)
 Level(等級)
 Level                           %2d
 Total Time(Total Time)
-Total Time(Total Time)
+Total Time(総用時)
 Total Time                %02d:%02d:%02
 
 
@@ -560,15 +564,20 @@ Castle Strangerock - Central
 奇岩城　中央処
 
 Strength attribute.Affects physical attack power.
-表示肌宍力量.主要影響物理攻撃力.
+表示肌宍力量。
+主要影響物理攻撃力。
 Intelligence attribute.Affects magic power.
-表示知識.主要影響魔法攻撃力.
+表示知識。
+主要影響魔法攻撃力。
 Reflex attribute.Affects hit accuracy and evasion rate.
-表示反射神経.主要影響命中率和回避率.
+表示反射神経。
+主要影響命中率和回避率。
 Constitution attribute.Affects physical defense and vitality.
-表示耐久力.主要影響物理防御力.
+表示耐久力。
+主要影響物理防御力。
 Mind attribute. Affects magic resistance.
-表示精神力.主要影響魔法防御力.
+表示精神力。
+主要影響魔法防御力。
 
 STR
 INT
@@ -620,57 +629,57 @@ Overall strength of the character
 角色綜合強度
 
 Current title. Will change according to your level
-現在的称号. 会根据等級而改変.
+現在的称号。会根据等級而改変。
 Current experience earned from monsters slain.
-角色的経験値,会在戦斗中累積.
+角色的経験値,会在戦斗中累積。
 Indicates total amount of experience required to level up.
-升到下个等級所需的経験値.
+升到下个等級所需的経験値。
 This is your vitality.If you run out of HP,your life will be forfeit.
-角色的生命力,減為0時就会GAMEOVER.
+角色的生命力,減為0時就会GAMEOVER。
 These are spent to use a selected skill or spell.
-選擇中技能/魔法的使用次数,各技能上限不同.
+選擇中技能/魔法的使用次数,各技能上限不同。
 
 Strength attribute.Affects physical attack power.
-表示肌宍力量.主要影響物理攻撃力.
+表示肌宍力量。主要影響物理攻撃力。
 Intelligence attribute.Affects magic power.
-表示知識.主要影響魔法攻撃力.
+表示知識。主要影響魔法攻撃力。
 Reflex attribute.Affects hit accuracy and evasion rate.
-表示反射神経.主要影響命中率和回避率.
+表示反射神経。主要影響命中率和回避率。
 Constitution attribute.Affects physical defense and vitality.
-表示耐久力.主要影響物理防御力.
+表示耐久力。主要影響物理防御力。
 Mind attribute. Affects magic resistance.
-表示精神力.主要影響魔法防御力.
+表示精神力。主要影響魔法防御力。
 
 Physical attack strength.
-攻撃力. 表示綜合物理攻撃力.
+表示綜合物理攻撃力。
 Magical attack power.
-魔法攻撃力.表示魔法的威力.
+表示魔法的威力。
 Physical attack resistance
-防御力.表示綜合物理防御力.
+表示綜合物理防御力。
 Magical attack resistance.
-魔法防御力.表示対魔法的抗性
+表示対魔法的抗性。
 Accuracy of physical attacks.
-命中率.表示武器攻撃的命中机率.
+表示武器攻撃的命中机率。
 Ability to evade physical attacks.
-回避率.表示対物理攻撃的回避机率.
+表示対物理攻撃的回避机率。
 Current level of the Guardian dwelling within.
-表示現在附身的精霊的等級.
+表示現在附身的精霊的等級。
 Amount of experience shared with the Guardian dwelling within.
-表示現在附身的精霊的経験値.
+表示現在附身的精霊的経験値。
 The passive ability of the Guardian dwelling within
-表示現在附身的精霊的特殊能力.
+表示現在附身的精霊的特殊能力。
 Slot to place your weapon.
-装備武器欄.
+装備武器欄。
 Slot to place your shield.
-装備盾欄.
+装備盾欄。
 Slot to place your armor.
-装備鎧甲欄.
+装備鎧甲欄。
 Slot to place your helmet.
-装備頭橿欄.
+装備頭橿欄。
 Slot to place consumable and special items.
-使用消費道具和装備特殊道具欄.
+使用消費道具和装備特殊道具欄。
 A slot for skills or spells.
-使用技能魔法欄.
+使用技能魔法欄。
 
 
 Not only can you #c4break#c1 wooden crates, but you can also #c4push#c1 them!
@@ -682,37 +691,37 @@ Start by pushing from the left or right!
 You can also stand on top of a crate.
 也可以跳到箱子上.
 When a crate is broken, you can push another crate on top of it.
-可以把木箱推到半坏的木箱上.
+可以把木箱推到半坏的木箱上。
 It's a neat trick to get even higher.
-好好利用上面的木箱叺.
+好好利用上面的木箱叺。
 Make use of these two on the left.
-2个好像是从左邊通来的.
+2个好像是从左邊通来的。
 Start by putting the first crate in the center...
 先把左邊的箱子推到中央….
 Keep pushing it until it hits an obstacle.
-滑動的箱子在矼到障碍物前都会滑動.
+滑動的箱子在矼到障碍物前都会滑動。
 You can make use of unbreakable boxes.
-好好利用没坏的箱子叺.
+好好利用没坏的箱子叺。
 You'll need three boxes of the same color to break them.
-同顔色的3个箱子放在一起就会毀坏哦.
+同顔色的3个箱子放在一起就会毀坏哦。
 They'll remove obstacles whose color matches the boxes.
-有顔色的障碍物矼到有顔色的箱子就会消失.
+有顔色的障碍物矼到有顔色的箱子就会消失。
 Now if we partially destroy the box in the back on the right...
 把右邊最里面的箱子打到半坏…
 There is a switch on the left side.
-左邊有開関哦.
+左邊有開関哦。
 You'll need three boxes of the same color to break them.
-同顔色的3个箱子放在一起就会毀坏哦.
+同顔色的3个箱子放在一起就会毀坏哦。
 To use the switch you'll need to place a box of the same color on it.
-有顔色的開関和同顔色的箱子是対応的.
+有顔色的開関和同顔色的箱子是対応的。
 To clear the puzzle on the left, place a matching color box on it.
-有顔色的障碍物矼到有顔色的箱子就会消失.
+有顔色的障碍物矼到有顔色的箱子就会消失。
 
 
 Weapon Shop
 武器店
 Welcome, welcome!|Lookin' for anythin' in particular?
-啌,歓迎光臨.|来買什麼咾?
+啌,歓迎光臨。|来買什麼咾?
 Leavin' so soon? | Hope ta see you again!
 要回去了呎? |以后再来姶!
 We've got weapons, breastplates, shields,|and helmets of all kinds! So what'll it be?
@@ -730,24 +739,24 @@ Not so fast, there, Sir Knight!|You don't have enough gold!
 I don't think I'll be buyin' that...
 我不収購那種東西姶…
 You don't have enough room for this.|You need ta sell or stow somethin'!
-已経没屶法再帯更多了姶!|買還是留着,快点决定叺.
+已経没屶法再帯更多了姶!|買還是留着,快点决定叺。
 Many thanks, Sir Knight!
 謝謝啀,騎士先生。
 Pleasure doin' business with you!
-好,那我買下了.
+好,那我買下了。
 Sorry, not in the market for that stuff.|You should take that ta the Curio Shop
-不好意思,那个我不買.|道具店的史密斯也許会対它有興趣叺.
+不好意思,那个我不買。|道具店的史密斯也許会対它有興趣叺。
 
 Curio Shop
 道具店
 Welcome, welcome!|Have a look 'round!
-歓迎歓迎!|請随便挑選叺.
+歓迎歓迎!|請随便挑選叺。
 That all for today?|Well, come back soon!
 要回去了呎?有空再来姶!
 We have a variety of medicines, keys, tomes,|and other oddities here. See anything ya like?
-這里有各種道具,薬品,鑰匙,呪文書.|請随便看看叺.
+這里有各種道具,薬品,鑰匙,呪文書。|請随便看看叺。
 Lookin' ta sell? Sure thing!|Just show me what you've got.
-要売這个呎?|真是多謝恵顧了.
+要売這个呎?|真是多謝恵顧了。
 This what ya were lookin' for?
 這个可以呎?
 I can buy this? You certain?
@@ -755,23 +764,23 @@ I can buy this? You certain?
 I'm really sorry, but it doesn't seem like ya have the funds...
 不好意思|銭好像不駈姶……
 ...I just don't think I can buy somethin' that valuable.
-…那様貴重的物品這里不収購.
+…那様貴重的物品這里不収購。
 Seems your bags are full, sir.|Don't believe I can sell ya this.
 已経不能再帯更多的東西了哦……
 Thanks for your patronage!
-多謝恵顧啀.
+多謝恵顧啀。
 Yes, truly....|I am ever so grateful.
-好的……|非常感謝.
+好的……|非常感謝。
 ...Dependin' on the amount of bones I have in stock,|the price of keys may fluctuate from time to time.
-……鑰匙的制作材料(骨)的価格|会根据交易情况而不断浮動的.
+……鑰匙的制作材料(骨)的価格|会根据交易情况而不断浮動的。
 Ah, this'll make a fine key, and should|help keep costs low. Many thanks!
-姶姶,多謝!|這様鑰匙的価格就降下来了.
+姶姶,多謝!|這様鑰匙的価格就降下来了。
 
 Storehouse
 倉庫
 
 Need me to hold any of your items for you?|I'll keep a close eye on them!
-要整理道具呎?|不用的東西可以先交給我保管.
+要整理道具呎?|不用的東西可以先交給我保管。
 Is...that all you needed, then?
 哦,已経好了呎?
 Something you need to take with you?
@@ -779,7 +788,7 @@ Something you need to take with you?
 Something I can hold for you?
 想寄存什麼咾?
 I can hold some of your money, as well.|Just make sure you keep enough with you!
-銭也可以寄存哦.|身上的銭駈呎?
+銭也可以寄存哦。|身上的銭駈呎?
 
 
 Card Selection
@@ -789,7 +798,7 @@ Brave Sir Knight...|Do you wish to exchange your Guardian?
 Is everything in order, then?
 要中止降霊呎?
 Please choose a Guardian for the binding.
-請選擇新的寄宿精霊.
+請選擇新的寄宿精霊。
 ★2 normal lines
 通常台詞2
 Are you satisfied with this infusion?
@@ -807,11 +816,11 @@ Temple
 寺院
 
 I shall commence the ritual of allocation,|through which your powers may be enhanced.
-那麼将要進行属性点的分配.
+那麼将要進行属性点的分配。
 Is everything in order, then?
 要中止呎?
 Please distribute your points, and remember that|you may decrease attributes to replenish points.
-請進行分配叺.|也可以将能力点数還原. 
+請進行分配叺。|也可以将能力点数還原。
 Is everything allocated to your liking?
 這様分配可以呎?
 May your new power grant you|many blessings on your journey.
